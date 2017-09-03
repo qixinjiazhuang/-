@@ -1,0 +1,102 @@
+<include file="./Public/lay.html"/>
+<script src="__PUBLIC__/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+
+<!-- Content Wrapper. Contains page content -->
+  <!-- <div class="content-wrapper"> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        技工管理
+        <small>添加技工</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">技工</a></li>
+        <li class="active">添加技工</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">添加</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="__CONTROLLER__/update" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$data.uid}">
+        
+              <div class="box-body">
+      
+                <div class="form-group">
+                  <label for="exampleInputName">账号</label>
+                  <input style="width:50%;" type="text" name="name" required="required" class="form-control" value="{$data.name}" id="exampleInputName" placeholder="请输入用户名">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputEmail1">邮箱</label>
+                  <input style="width:50%;" type="email" name="email" required="required" class="form-control" value="{$data.email}" id="exampleInputEmail1" placeholder="请输入邮箱地址">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputPassword3">真实姓名</label>
+                  <input style="width:50%;" type="text" required="required" name="truename" value="{$data.truename}" class="form-control" id="exampleInputPassword3" placeholder="请输入真实姓名">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">等级</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="level">
+                      <option value="1" <?php if($data['level']==1){ ?> selected="selected" <?php } ?> >普通技工</option>
+                      <option value="2" <?php if($data['level']==2){ ?> selected="selected" <?php } ?> >高级技工</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">QQ</label>
+                  <input style="width:50%;" type="text" required="required" name="qq" value="{$data.qq}" class="form-control" id="exampleInputPassword3" placeholder="请输入QQ号">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">手机号</label>
+                  <input style="width:50%;" type="text" required="required" name="phone" value="{$data.phone}" class="form-control" id="exampleInputPassword3" placeholder="请输入手机号">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">城市</label><br/>
+                  <select class="form-control" style="width:10%;float:left;" id="s_province" name="province"></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_city" name="city" ></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_county" name="county"></select>
+                        <script class="resources library" src="__PUBLIC__/area.js" type="text/javascript"></script>
+                        <script type="text/javascript">_init_area();</script>
+                </div> 
+                <br/>
+                  <label for="exampleInputPassword4">工种</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="type">
+                      <option value="1" <?php if($data['types']==1){ ?> selected="selected" <?php } ?> >木工</option>
+                      <option value="2" <?php if($data['types']==2){ ?> selected="selected" <?php } ?> >泥瓦工</option>
+                      <option value="3" <?php if($data['types']==3){ ?> selected="selected" <?php } ?> >油漆工</option>
+                      <option value="3" <?php if($data['types']==4){ ?> selected="selected" <?php } ?> >水电工</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">头像</label><br/>
+                  <a href="javascript:;" style="background-color:#33AECC;" class="file">选择文件<input type="file" name="pic" id=""></a>
+                </div>
+              </div>
+              
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">添加</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->  
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+<!-- /.content-wrapper -->

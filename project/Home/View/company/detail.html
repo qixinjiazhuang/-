@@ -1,0 +1,371 @@
+<include file="./project/Home/View/head/head.html"/>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>装修公司详情</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/company_details.css">
+<script type="text/javascript" src="__ROOT__/Public/js/jquery-3.2.1.min.js"></script>
+
+    <div class="nav-wrap">
+		<div class="crumbs_nav">
+			<a href="index.html" title="恋家网">恋家网</a>
+			<span class="sep">></span>
+			<a href="#" title="装修设计">装修设计</a>
+			<span class="sep">></span>
+			<a href="#" title="杭州装修">杭州装修</a>
+			<span class="sep">></span>
+			<a href="#" title="杭州装修公司">杭州装修公司</a>
+			<span class="sep">></span>
+			<span title="至美焕新" class="curPage">{$res.c_name}</span>
+		</div>
+    </div>
+    <div class="zxPany-wrap">
+		<div class="zxPany-txtWrap">
+			<div class="txt-title">
+				<ul class="clearfix">
+					<li class="info clearfix">
+						<div class="pic"><img src="__ROOT__/Uploads{$res.banner}"></div>
+						<div class="des">
+							<h3>
+								<span id="shop_name_val">{$res.c_name}</span>
+								<!-- <span class="icon">
+									<i class="z-i" title="恋家认证商家"></i>
+									<i class="b-i" title="恋家宝服务"></i>
+								</span> -->
+							</h3>
+							<div class="item-des clearfix">
+								<span class="i-title">服务区域：</span>
+								<div class="i-txt i-dTxt">拱墅、上城、下城、江干、滨江、西湖、新余杭</div>
+							</div>
+							<div class="item-des clearfix">
+								<span class="i-title">擅长类型：</span>
+								<div class="i-txt">局装、三房、二手房</div>
+							</div>
+							<div class="item-des clearfix">
+								<span class="i-title">公司简介：</span>
+								<div class="i-txt">
+									<span class="s-con">{$res.introduce}</span>
+									<span class="zx-expand zx-expandMore" style="display: inline;">
+										更多<i class="arrow s-more"></i>
+									</span>
+									<span class="zx-expand zx-expandLess" style="display: none;">
+										收起<i class="arrow c-more"></i>
+									</span>
+									<a href="javascript:;" id="h-book">查看店铺资质 ></a>
+								</div>
+								<textarea class="txt-con hide">
+									{$res.introduce}
+								</textarea>
+							</div>
+						</div>
+					</li>
+					<li class="apply">
+						<div class="t-apply">
+							<div class="list">
+								<p class="num">{$vcompany.m_value}</p>
+								<p class="name">口碑值</p>
+								<span class="s-1"></span>
+							</div>
+							<!-- <div class="list">
+								<p class="num">暂无评论</p>
+								<p class="name">好评率</p>
+								<span class="s-1"></span>
+							</div> -->
+							<!-- <div class="list">
+								<p class="num">407</p>
+								<p class="name">以服务业主</p>
+							</div>
+ -->						</div>
+						<div class="m-btn">
+							<a href="javascript:;" class="company-appBtn popup_order_button" id="fast_apply">免费设计与报价</a>
+						</div>
+						<a href="javascript:;" class="app-tel">
+							<i></i>
+							预约热线
+							<span>400-</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="zxPany-contain">
+			<div class="comFix-nav-wrap">
+				<div class="comFix-nav">
+					<div class="navCon-rel">
+						<div class="nav-a clearfix">
+							<a href="#" class="active">首页</a>
+							<a href="#">设计案例</a>
+							<a href="#">装修工地</a>
+							<!-- <a href="#">促销活动</a> -->
+							<!-- <a href="#">业主评论</a> -->
+							<a href="#">设计团队</a>
+							<a href="#">工长团队</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="zxPany-list zxPany-ser">
+				<ul class="clearfix">
+					<li class="ser-l fl">
+						<div class="title clearfix">
+							<h5>
+								最新申请设计服务
+								<a href="javascript:;" class="apply-pop popup_order_button" id="new_design_service_apply">我要申请</a>
+							</h5>
+						</div>
+						<dl>
+							<dt>
+								<span class="item">业主</span>
+								<span class="item">区域</span>
+								<span class="item">户型</span>
+								<span class="item">面积</span>
+								<span class="item">预算</span>
+							</dt>
+							<dd>
+								<span class="item">曾令梅</span>
+								<span class="item">润达花园</span>
+								<span class="item">三房</span>
+								<span class="item">127m²</span>
+								<span class="item">10-12万</span>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="zxPany-list zxPany-case">
+				<div class="title clearfix">
+					<h5>设计案例<span class="num">（8）</span></h5>
+					<a href="#" class="m-l">更多></a>
+				</div>
+				<div class="case-list">
+					<ul class="clearfix">
+					<foreach name="case" item="val">
+						<li class="list">
+			                <a href="#" target="_blank">
+			                    <div class="pic"><img src="__ROOT__/Uploads{$val.logo}" height="183" width="275" class="trans"></div>
+			                    <div class="txt">
+			                        <p class="m-t" title="{$val.title}">{$val.title}</p>
+			                        <p class="s-t">
+			                        	<span><?=$type[$val['type']]?></span>
+			                        	<!-- <i>|</i>
+			                        	<span>130平米</span>
+			                        	<i>|</i>
+			                        	<span>欧式</span> -->
+			                        </p>
+			                    </div>
+			                </a>
+			            </li>
+			         
+			      	</foreach>
+					</ul>
+				</div>
+			</div>
+			<div class="zxPany-list zxPany-person">
+				<div class="title clearfix">
+					<h5>设计团队<span class="num">（5）</span></h5>
+					<a href="#" class="m-l">更多></a>
+				</div>
+				<div class="person-info">
+					<ul class="clearfix">
+						<li class="list">
+							<a href="#">
+								<img src="__ROOT__/Public/images/head1.jpg" width="120" height="120">
+								<p class="name">陈慧</p>
+								<p class="position">主任设计师</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="#">
+								<img src="__ROOT__/Public/images/head2.jpg" width="120" height="120">
+								<p class="name">张光华</p>
+								<p class="position">总监设计师</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="zxPany-list zxPany-person">
+				<div class="title clearfix">
+					<h5>工长团队<span class="num">（1）</span></h5>
+					<a href="#" class="m-l">更多></a>
+				</div>
+				<div class="person-info">
+					<ul class="clearfix">
+						<li class="list">
+							<a href="#">
+								<img src="__ROOT__/Public/images/head5.jpg" width="120" height="120">
+								<p class="name">付优松</p>
+								<p class="position"></p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="zxPany-list zxPany-case zxPany-c" style="display: none;">
+				<div class="case-list">
+					<ul class="clearfix">
+						<li class="list">
+							<a href="#" target="_blank">
+								<div class="pic">
+									<img src="__ROOT__/Public/images/case6.jpg" width="275" height="183" class="trans">
+								</div>
+								<div class="txt">
+									<p class="m-t" title="美式工业">美式工业</p>
+									<p class="s-t"></p>
+								</div>
+							</a>
+						</li>
+						<li class="list">
+							<a href="#" target="_blank">
+								<div class="pic">
+									<img src="__ROOT__/Public/images/case6.jpg" width="275" height="183" class="trans">
+								</div>
+								<div class="txt">
+									<p class="m-t" title="美式工业">美式工业</p>
+									<p class="s-t"></p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="zxPany-list zxPany-place zxPany-placePage" style="display: none;">
+				<div class="place-info">
+					<dl class="info-list">
+						<dt><a href="#"><img src="__ROOT__/Public/images/zxgd.jpg" width="210" height="165" class="trans"></a></dt>
+						<dd>
+							<p class="name"><a href="#">袁先生/女士家的工地直播</a></p>
+							<p class="txt">
+								<span>类型：新房装修</span>
+								<span>方式：全包</span>
+								<span>户型：一房</span>
+								<span>风格：简约</span>
+								<span>造价：97000元</span>
+							</p>
+							<div class="proccess">
+								<ul class="clearfix">
+									<li class="pred"><i></i><span>准备开工</span></li>
+									<li><i></i><span>水电阶段</span></li>
+									<li><i></i><span>泥木阶段</span></li>
+									<li><i></i><span>油漆阶段</span></li>
+									<li><i></i><span>竣工阶段</span></li>
+								</ul>
+							</div>
+							<div class="btm-txt clearfix">
+								<p class="w-txt fl"><span>（监理）发布新动态：</span>开门大吉</p>
+								<div class="t-txt fr">
+									<span class="p-num">8</span>
+									<span class="p-c">3</span>
+									<span class="p-t">2017年07月30日</span>
+								</div>
+							</div>
+							<a href="#" class="place-link">查看工地</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="desInfo-con" style="display: none;">
+				<div class="con-list">
+					<ul class="clearfix">
+						<li class="con-left">
+							<div class="person-info">
+								<a href="#" class="photo"><img src="__ROOT__/Public/images/designer1.jpg" width="100" height="100"></a>
+								<div class="name-txt">
+									<p class="name">陈玲</p>
+									<p class="pos">青年设计师</p>
+									<a href="#" class="des-designer">了解详情 ></a>
+								</div>
+								<div class="skill">擅长：美式、欧式</div>
+							</div>
+							<div class="skill-des">
+								<div class="year-txt">
+									<span class="t-s">5年</span>
+									<span>从业年限</span>
+								</div>
+								<div class="case-txt">
+									<span class="t-s">0套</span>
+									<span>案例个数</span>
+								</div>
+							</div>
+						</li>
+						<li class="con-right">
+							<div class="img-wrap">
+								<div class="img-list">
+									<a href="#">
+										<img src="__ROOT__/Public/images/zxgs.jpg" title="欧式风格">
+										<span class="p-bg"></span>
+										<p>欧式风格</p>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="gzTeam-wrap" style="display: none;">
+				<ul class="clearfix">
+					<li class="team-list">
+						<div class="pic"><img src="__ROOT__/Public/images/gz.jpg"></div>
+						<p class="name">yuanfeng</p>
+						<div class="exp-info clearfix">
+							<div class="year-des">
+								<span class="y-s">15年</span>
+								<span class="y-t">从业年限</span>
+							</div>
+							<div class="info-sep"></div>
+							<div class="gd-des">
+								<span class="y-s">0个</span>
+								<span class="y-t">工地个数</span>
+							</div>
+						</div>
+						<a href="#">了解详情</a>
+					</li>
+				</ul>
+			</div>
+			<div class="p_pageNav p_ListpageNav" style="display: none;">
+				<div class="p_page_inline">
+					<div class="p_page">
+						<span class="none">< 上一页</span>
+						<span class="cur">1</span>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#" class="changedown">下一页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="footer">
+		<div class="footer_info">
+			<div class="footer_con">
+				<p class="footer_link">
+					<a href="#" target="_blank">关于我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">联系我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">媒体报道</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">法律声明</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">企业文化</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">友情链接</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">加入我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">诚聘英才</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">网站地图</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">帮助中心</a>
+				</p>
+			</div>
+			<p>恋家网 版权所有Copyright © 2017-2028 www.lian.com All rights reserved</p>
+			<p>浙ICP备13002314号 浙B2-20090108 组织机构代码证：66439109—1</p>
+			<p>中国互联网协会信用评价中心网信认证 网信编码:1664391091 举报电话：021-69108618</p>
+		</div>
+	</div>
+    <script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/js/company_details.js"></script>
+</body>
+</html>

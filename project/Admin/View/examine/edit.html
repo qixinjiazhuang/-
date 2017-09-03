@@ -1,0 +1,74 @@
+<include file="./Public/lay.html"/>
+<script src="__PUBLIC__/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+
+<!-- Content Wrapper. Contains page content -->
+  <!-- <div class="content-wrapper"> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        认证管理
+        <small>修改认证信息</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">认证管理</a></li>
+        <li class="active">修改认证信息</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">修改</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="__CONTROLLER__/update?id={$res.uid}" method="post" enctype="multipart/form-data">
+        
+              <div class="box-body">
+      
+                <div class="form-group">
+                  <label for="exampleInputName">姓名/企业名</label>
+                  <input style="width:50%;" type="text" name="e_name" required="required" class="form-control" value="{$res.e_name}" id="exampleInputName" placeholder="请输入姓名/企业名">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputEmail1">证件号码</label>
+                  <input style="width:50%;" type="text" name="number" required="required" class="form-control" value="{$res.number}" id="exampleInputEmail1" placeholder="请输入证件号码">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">手机号码</label>
+                  <input style="width:50%;" type="text" required="required" name="e_phone" value="{$res.e_phone}" class="form-control" id="exampleInputPassword3" placeholder="请输入手机号">
+                </div>
+                <br/>
+                  <label for="exampleInputPassword4">审核状态</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="audit">
+                      <option value="1" <?php if($res['audit']==1){ ?> selected="selected" <?php } ?> >未通过</option>
+                      <option value="2" <?php if($res['audit']==2){ ?> selected="selected" <?php } ?> >已通过</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">证件图片</label><br/>
+                  <a href="javascript:;" style="background-color:#33AECC;" class="file">选择文件<input type="file" name="pic" id=""></a>
+                </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">修改</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->  
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+<!-- /.content-wrapper -->

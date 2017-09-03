@@ -1,0 +1,128 @@
+<include file="./Public/lay.html"/>
+<script src="__PUBLIC__/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+
+<!-- Content Wrapper. Contains page content -->
+  <!-- <div class="content-wrapper"> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        商家管理
+        <small>修改商家</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">商家</a></li>
+        <li class="active">修改商家</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">修改</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="__CONTROLLER__/update" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="id" value="{$res.uid}">
+              <div class="box-body">
+      
+                 <div class="form-group">
+                  <label for="exampleInputEmail1">店铺标题</label>
+                  <input style="width:50%;" type="text" name="title" required="required" class="form-control" value="{$res.title}" id="exampleInputEmail1" placeholder="请输入店铺标题">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputPassword3">商店名称</label>
+                  <input style="width:50%;" type="text" required="required" name="b_name" value="{$res.b_name}" class="form-control" id="exampleInputPassword3" placeholder="请输入商店名称">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">传真</label>
+                  <input style="width:50%;" type="text" required="required" name="fax" value="{$res.fax}" class="form-control" id="exampleInputPassword3" placeholder="请输入传真">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">QQ</label>
+                  <input style="width:50%;" type="text" required="required" name="qq" value="{$res.qq}" class="form-control" id="exampleInputPassword3" placeholder="请输入QQ号">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">手机号码</label>
+                  <input style="width:50%;" type="text" required="required" name="b_phone" value="{$res.b_phone}" class="form-control" id="exampleInputPassword3" placeholder="请输入手机号">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">公司邮箱</label>
+                  <input style="width:50%;" type="text" required="required" name="email" value="{$res.email}" class="form-control" id="exampleInputPassword3" placeholder="请输入公司邮箱">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">营业时间</label>
+                  <input style="width:50%;" type="text" required="required" name="bushour" value="{$res.bushour}" class="form-control" id="exampleInputPassword3" placeholder="请输入营业时间">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">公告</label>
+                  <input style="width:50%;" type="text" required="required" name="notice" value="{$res.notice}" class="form-control" id="exampleInputPassword3" placeholder="请输入公告">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">店铺介绍</label>
+                  <input style="width:50%;" type="text" required="required" name="introduce" value="{$res.introduce}" class="form-control" id="exampleInputPassword3" placeholder="请输入店铺介绍">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">城市</label><br/>
+                  <select class="form-control" style="width:10%;float:left;" id="s_province" name="province"></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_city" name="city" ></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_county" name="county"></select>
+                        <script class="resources library" src="__PUBLIC__/area.js" type="text/javascript"></script>
+                        <script type="text/javascript">_init_area();</script>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">分类</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="type">
+                      <option value="1"<?php if($res['b_type']==1){ ?> selected="selected" <?php } ?>>基础建材</option>
+                      <option value="2"<?php if($res['b_type']==2){ ?> selected="selected" <?php } ?>>家具</option>
+                      <option value="3"<?php if($res['b_type']==3){ ?> selected="selected" <?php } ?>>家电</option>
+                      <option value="4"<?php if($res['b_type']==4){ ?> selected="selected" <?php } ?>>软装配饰</option>
+                      <option value="5"<?php if($res['b_type']==5){ ?> selected="selected" <?php } ?>>其他</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">等级</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="level">
+                      <option value="1"<?php if($res['level']==1){ ?> selected="selected" <?php } ?>>普通商家</option>
+                      <option value="2"<?php if($res['level']==2){ ?> selected="selected" <?php } ?>>钻石商家</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">公司banner</label><br/>
+                  <a href="javascript:;" style="background-color:#33AECC;" class="file">选择文件<input type="file" name="pic1" id=""></a>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">长方形LOGO</label><br/>
+                  <a href="javascript:;" style="background-color:#33AECC;" class="file">选择文件<input type="file" name="pic2" id=""></a>
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputPassword1">正方形LOGO</label><br/>
+                  <a href="javascript:;" style="background-color:#33AECC;" class="file">选择文件<input type="file" name="pic3" id=""></a>
+                </div>
+
+              </div>
+              
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">修改</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->  
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+<!-- /.content-wrapper -->

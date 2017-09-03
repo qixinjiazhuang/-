@@ -1,0 +1,176 @@
+<include file="./project/Home/View/head/head.html"/>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>装修案例列表页</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
+	<script type="text/javascript" src="__ROOT__/Public/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="case-main clearfix">
+		<div class="combo-screen">
+			<div class="scheme-store">
+				<label>装修案例</label>
+				<em>></em>
+				<a href="#">经济型 ×</a>
+			</div>
+			<dl class="tag-list clearfix">
+				<dt>预算</dt>
+				<dd>
+					<div class="self-adaption">
+						<ul class="clearfix">
+							<li><a href="#">3万以下</a></li>
+							<li><a href="#">3-5万</a></li>
+							<li class="active"><a href="#">5-10万</a></li>
+							<li><a href="#">10-15万</a></li>
+							<li><a href="#">15-20万</a></li>
+							<li><a href="#">20万以上</a></li>
+							<li><a href="#">经济型</a></li>
+							<li><a href="#">富裕型</a></li>
+							<li><a href="#">豪华型</a></li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+			<dl class="tag-list clearfix">
+				<dt>风格</dt>
+				<dd class="area-choice">
+					<div class="self-adaption">
+						<ul class="clearfix">
+							<li><a href="#">简约</a></li>
+							<li><a href="#">现代</a></li>
+							<li class="active"><a href="#">中式</a></li>
+							<li><a href="#">欧式</a></li>
+							<li><a href="#">美式</a></li>
+							<li><a href="#">田园</a></li>
+							<li><a href="#">地中海</a></li>
+							<li><a href="#">新古典</a></li>
+							<li><a href="#">混搭</a></li>
+							<li><a href="#">东南亚</a></li>
+							<li><a href="#">宜家</a></li>
+							<li><a href="#">简欧</a></li>
+							<li><a href="#">北欧</a></li>
+							<li><a href="#">日式</a></li>
+							<li><a href="#">韩式</a></li>
+						</ul>
+					</div>
+				</dd>
+				<dd class="more-shrink">
+					<a href="javascript:;" class="more"><span>更多</span><em></em></a>
+				</dd>
+			</dl>
+			<dl class="tag-list clearfix">
+				<dt>户型</dt>
+				<dd>
+					<div class="self-adaption">
+						<ul class="clearfix">
+							<li><a href="#">小户型</a></li>
+							<li><a href="#">一居室</a></li>
+							<li class="active"><a href="#">二居室</a></li>
+							<li><a href="#">三居室</a></li>
+							<li><a href="#">四房</a></li>
+							<li><a href="#">公寓</a></li>
+							<li><a href="#">复式</a></li>
+							<li><a href="#">别墅</a></li>
+							<li><a href="#">跃层</a></li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+			<dl class="tag-list clearfix">
+				<dt>面积</dt>
+				<dd>
+					<div class="self-adaption">
+						<ul class="clearfix">
+							<li><a href="#">40平米</a></li>
+							<li><a href="#">50平米</a></li>
+							<li class="active"><a href="#">60平米</a></li>
+							<li><a href="#">70平米</a></li>
+							<li><a href="#">80平米</a></li>
+							<li><a href="#">90平米</a></li>
+							<li><a href="#">100平米</a></li>
+							<li><a href="#">110平米</a></li>
+							<li><a href="#">120平米</a></li>
+							<li><a href="#">130平米</a></li>
+							<li><a href="#">140平米以上</a></li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="case-content">
+			<ul class="masonry clearfix" style="width: 1180px;">
+				<li class="masonry-brick">
+					<div class="beauty_show">
+						<a href="__CONTROLLER__/detail" target="_blank">
+							<img src="__ROOT__/Public/images/case1.jpg">
+						</a>
+					</div>
+					<div class="ths_again">
+						<div class="cost">
+							<b>造价：</b><span>￥270000</span>
+						</div>
+						<h2><a href="{:U('/admin/case/detail')}" target="_blank">紫御华府</a></h2>
+						<div class="again_tag clearfix">
+							<div class="again_label">
+								<span>欧式</span><span>三居室</span><span>120平米</span>
+							</div>
+						</div>
+						<div class="ths_bal">
+							<span>
+								<label>提供方：</label>
+								<a href="#" target="_blank">品韵装饰</a>
+							</span>
+							<span>共<em class="scarlet">2</em>张图</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="p_pageNav p_ListpageNav">
+			<div class="p_page_inline">
+				<div class="p_page">
+					<span class="none">< 上一页</span>
+					<span class="cur">1</span>
+					<span class="none">下一页</a>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="footer">
+		<div class="footer_info">
+			<div class="footer_con">
+				<p class="footer_link">
+					<a href="#" target="_blank">关于我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">联系我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">媒体报道</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">法律声明</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">企业文化</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">友情链接</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">加入我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">诚聘英才</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">网站地图</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">帮助中心</a>
+				</p>
+			</div>
+			<p>恋家网 版权所有Copyright © 2017-2028 www.lian.com All rights reserved</p>
+			<p>浙ICP备13002314号 浙B2-20090108 组织机构代码证：66439109—1</p>
+			<p>中国互联网协会信用评价中心网信认证 网信编码:1664391091 举报电话：021-69108618</p>
+		</div>
+	</div>
+    <script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/js/list.js"></script>
+</body>
+</html>

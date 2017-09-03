@@ -1,0 +1,90 @@
+<include file="./project/Home/View/head/head.html"/>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>装修案例详情页</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/case_details.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/galleria.classic.css">
+	<script type="text/javascript" src="__ROOT__/Public/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="subwd clearfix">
+		<div class="sub_case_lt lt">
+			<div class="mb10 sub_case_top">
+				<h3 class="clearfix"><span class="lt">紫御华府</span></h3>
+				<div class="case_pic_top mb10" style="height: 600px;" id="galleria">
+					
+							<a href="__ROOT__/Public/images/1.jpg" class="img_a">
+								<img src="__ROOT__/Public/images/1_small.jpg" data-big="1.jpg"/>
+							</a>
+						
+							<a href="__ROOT__/Public/images/2.jpg" class="img_a">
+								<img src="__ROOT__/Public/images/2_small.jpg" data-big="2.jpg"/>
+							</a>
+						
+				</div>
+			</div>
+		</div>
+		<div class="side_content lt">
+			<div class="area">
+				<h3>相关案例</h3>
+				<div class="sub_case_rtpic">
+					<a href="#"><img src="__ROOT__/Public/images/zx1.jpg"></a>
+					<a href="#"><img src="__ROOT__/Public/images/zx2.jpg"></a>
+					<a href="#"><img src="__ROOT__/Public/images/zx1.jpg"></a>
+					<a href="#"><img src="__ROOT__/Public/images/zx2.jpg"></a>
+					<a href="#"><img src="__ROOT__/Public/images/zx1.jpg"></a>
+					<a href="#"><img src="__ROOT__/Public/images/zx2.jpg"></a>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="footer">
+		<div class="footer_info">
+			<div class="footer_con">
+				<p class="footer_link">
+					<a href="#" target="_blank">关于我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">联系我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">媒体报道</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">法律声明</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">企业文化</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">友情链接</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">加入我们</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">诚聘英才</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">网站地图</a>
+					<span class="split">|</span>
+					<a href="#" target="_blank">帮助中心</a>
+				</p>
+			</div>
+			<p>恋家网 版权所有Copyright © 2017-2028 www.lian.com All rights reserved</p>
+			<p>浙ICP备13002314号 浙B2-20090108 组织机构代码证：66439109—1</p>
+			<p>中国互联网协会信用评价中心网信认证 网信编码:1664391091 举报电话：021-69108618</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script src="__ROOT__/Public/plugins/galleria.js"></script>
+	<script src="__ROOT__/Public/plugins/galleria.classic.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){  
+      
+        if($('#galleria')){  
+            //加载Galleria插件  
+            
+            Galleria.run('#galleria');
+              
+        }  
+    });  
+	</script>
+</body>
+</html>

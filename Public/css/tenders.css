@@ -1,0 +1,57 @@
+.mainwd{ width:1160px; margin:20px auto 0;}
+.mb20{ margin-bottom:20px;}
+ul.tenders_zb_list li{ cursor:pointer; border:1px solid #ddd; background:#f8f8f8; width:110px; height:40px; text-align:center; line-height:40px; font-size:18px; color:#333; float:left; margin-right:10px;}
+ul.tenders_zb_list li.current{ background:#d00; border:none;color: #fff;}
+ul.tenders_zb_list li a{ color:#333;}
+.tenders_zb_box{ padding:30px 20px; background:#fff; border:1px solid #ddd; margin-top:-1px;}
+.tenders_zb_form{ border:2px solid #d00; width:560px; background:#f8f8f8; }
+.pding{padding: 10px;}
+.mbt{margin-bottom: 20px;}
+.tenders_zb_form table{ width:100%; font-size:14px;}
+.tenders_zb_form h3{ border-bottom:1px solid #ddd;}
+.tenders_zb_form table tr td{ height:45px; max-width:480px;}
+.tenders_zb_form table tr td.title{ text-align:right; padding-right:5px; min-width:65px;}
+input.text,select.text,textarea.text{outline:none; border:1px solid #e3e3e3; height:26px; line-height:26px; padding:3px 0px 3px 5px;font-size:12px; color:#555;} 
+.tenders_zb_form input.long{ width:190px;}
+.tenders_zb_form input.all{ width:465px;}
+.tenders_zb_form select.text{ height:32px;}
+.tenders_zb_form select.long{ width:197px; }
+.tenders_zb_form select.short{ width:155px;}
+.tenders_zb_form textarea{ width:465px; height:50px; margin-bottom:5px;resize: none;}
+.tenders_zb_form input.text,.tenders_zb_form select.text{box-shadow:0px 0px 3px #eee inset; }
+.tenders_zb_form p.pro{ font-size:12px; color:#999;}
+.btn_sub_tuan{ width:130px;line-height:36px;background:#e7691e;  font-size:18px; }
+.tenders_zb_form span.tel{ margin-left:10px; font-size:16px;}
+.btn{ display:inline-block;opacity:1;cursor:pointer; text-align:center; color:#fff;border-radius:3px; outline:none;-webkit-appearance: none;text-decoration: none;cursor: pointer;border-radius: 0;border:none;}
+.btn:hover{opacity:0.9;filter:alpha(opacity=90); color:#fff; text-decoration:none;}
+.tenders_step{ height:125px; background:url(../images/tenders_step.jpg) no-repeat;background-size: contain;}
+.tenders_step ul{margin-left:200px;}
+.tenders_step ul li{ float:left; margin:0px 27px;; text-align:center; width:140px; line-height:20px;}
+.tenders_step ul li h3{ margin-top:50px;}
+.tenders_step ul li.last{width: 130px;}
+.tenders_step ul li.last p.tel{ color:#fff; text-align:right; margin-right:5px; width:130px; margin-top:12px;}
+.tenders_step ul li.last h3{margin-top: 16px;}
+h1.zb_ten_Tit{ border-bottom:1px solid #bbb; height:30px; text-align:center; margin-bottom:20px; font-size:24px; font-weight:bold;}
+h1.zb_ten_Tit span{ display:inline-block; position:relative; top:10px; background:#fff; padding:0px 20px;}
+.ten_tieshi{ margin-bottom:40px; overflow:hidden;}
+.ten_tieshi li{ margin:20px 0px 0px 0px; float: left;}
+.ten_tieshi li img{ width:180px; height:180px;}
+.tieshi_text{ margin:10px; width:380px; height:165px; overflow:hidden;}
+.tieshi_text h3{ font-size:24px; color:#333; line-height:40px;}
+.tieshi_text h3 span.ts{ display:inline-block; padding:0px 15px; background:#f43606; border-radius:20px; color:#fff; margin-right:5px;}
+ul.zb_ten_mn li{ float:left; width:346px; margin:10px 15px 10px 0px; background:#e5f4fb; padding:10px 15px; height:140px; overflow:hidden; line-height:27px;}
+ul.zb_ten_mn li:nth-child(3n+3){ margin-right:0px;}
+ul.zb_ten_mn li h3{ text-align:center; color:#ff4400; font-size:18px; line-height:35px;}
+.tenders_order{ background:#f8f8f8; border:1px solid #ddd;}
+.tenders_order_tit{ background:#424242; height:45px; line-height:45px;}
+.tenders_order_tit span{color:#fff;}
+.tenders_order ul span.fontcl2{text-decoration:underline;}
+.tenders_order_box ul li span{ display:inline-block;width:15%; text-align:center;}
+.tenders_order .tenders_order_tit span{float: left;width: 15%;text-align: center;}
+.tenders_order .tenders_order_tit span.long{ width:25%;}
+.tenders_order_box ul li span.long{width: 23%;}
+.tenders_order_box{ width:100%; height:450px; overflow:hidden;}
+.tenders_order_box ul li{line-height:45px; border-bottom:1px dashed #ddd;}
+.tenders_order_box ul li:hover{ background:#fff;}
+ul.group-list{width:90%;max-width:1000px;min-width:400px;margin:auto 5px;}
+ul.group-list li{white-space: nowrap;float:left;width:100px;height:25px;padding:3px 5px;}
