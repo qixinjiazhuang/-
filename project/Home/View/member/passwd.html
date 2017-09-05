@@ -1,0 +1,87 @@
+<include file="./project/Home/View/head/head.html"/>
+<title>修改资料</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="javascript:;" class="on">个人中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>账户管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/index">个人中心</a></li>
+							<li><a href="javascript:;" class="on">修改资料</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>内容管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/substance/index">我的装修</a></li>
+							<li><a href="__MODULE__/substance/myzxb">我的装修保</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>我的订单</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/order/index">我的招标</a></li>
+							<li><a href="__MODULE__/order/company">我的预约</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li><a href="__MODULE__/member/info">基本信息</a></li>
+							<li class="on"><a>修改密码</a></li>
+							<li><a href="__MODULE__/member/mail">更换邮箱</a></li>
+							<li><a href="__MODULE__/member/face">修改头像</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<form>
+							<table cellspacing="0" cellpadding="0" class="form">
+								<tbody>
+									<tr>
+										<th>用户名：</th>
+										<td><b class="blue">{$user.name}</b></td>
+									</tr>
+									<tr>
+										<th>原密码：</th>
+										<td><input type="password" name="oldpwd" class="input"></td>
+									</tr>
+									<tr>
+										<th>新密码：</th>
+										<td><input type="newpassword" name="newpwd" class="input"></td>
+									</tr>
+									<tr>
+										<th>确认密码：</th>
+										<td><input type="repassword" name="confirmpwd" class="input"></td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="submit" name="refer" class="green_btn" value="提交数据"></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

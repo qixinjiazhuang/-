@@ -30,7 +30,7 @@ class DesignerController extends Controller {
 
         $res = $stu->join('__DESIGNER__ ON __USERS__.id = __DESIGNER__.uid')->field('uid,city,truename,qq,phone,status,delete,photo,school,concept,gid,audit,status')->where($data)->where($u)->select();
 
-        //遍历然后查询出公司名
+        //遍历然后查询出公司
         foreach ($res as $key => $value) {
             
             //实例化
@@ -201,7 +201,7 @@ class DesignerController extends Controller {
         //实例化
         $company = M('company');
 
-        $com = $company->where('gid='.$res['gid'])->field('id,c_name')->find();
+        $com = $company->where('id='.$res['gid'])->field('id,c_name')->find();
 
         $data = $company->field('id,c_name')->select();
 
@@ -225,30 +225,29 @@ class DesignerController extends Controller {
         //获取id
         $id = I('post.id');
 
-        //实例化文件上传类
-        $file = new \Think\Upload();
+         //实例化模型
+        $designer = M('designer');
 
-        //设置上传配置信息
-        $file->savePath  =  '/designer/'; // 设置附件上传根目录
-        $filename = $file->saveName = time().mt_rand(00000000,99999999);
+        if(!empty($_FILES['pic']['name'])){
 
-        //执行上传
-        $info = $file->upload();
+            //实例化文件上传类
+            $file = new \Think\Upload();
 
-       	if(!$info){
-       		$this->error($file->getError());
-            die;
-       	}else{
-       		 //实例化模型
-            $designer = M('designer');
+            //设置上传配置信息
+            $file->savePath  =  '/designer/'; // 设置附件上传根目录
+            $filename = $file->saveName = time().mt_rand(00000000,99999999);
+
+            //执行上传
+            $info = $file->upload();
 
             $oldname = $designer->where('uid='.$id)->find()['photo'];
 
             @unlink('./Uploads/'.$oldname);
 
             //拼接路径
-            $path = $info['pic']['savepath'].$info['pic']['savename'];
-
+            $num['photo'] = $info['pic']['savepath'].$info['pic']['savename'];
+        }
+        
 			$data['name'] = I('post.name');
 			$data['email'] = I('post.email');
 			$data['truename'] = I('post.truename');
@@ -260,25 +259,25 @@ class DesignerController extends Controller {
             $city['city'] = I('post.city');//市
             $city['county'] = I('post.county');//区
             $data['city'] = implode(',',$city);//数组拼接字符串
-            $data['audit'] = I('post.audit');
+
             $model = M('users');
             $res = $model->where('id='.$id)->save($data);
 
             $num['school'] = I('post.school');
             $num['company'] = I('post.company');
             $num['concept'] = I('post.concept');
-            $num['photo'] = $path;
+            $num['gid'] = I('post.gid');
             $num['qq'] = I('post.qq');
 
             $result = $designer->where('uid='.$id)->save($num);
 
-            if($res && $result){
+            if($res || $result){
             	$this->success('修改成功','/admin/designer/index');
             }else{
             	$this->error('修改失败',$_SERVER['HTTP_REFERER']);
             }
 
-       	}
+       	
 	}
 
 	public function delete(){

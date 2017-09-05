@@ -103,39 +103,39 @@
 		</div>
 		<div class="case-content">
 			<ul class="masonry clearfix" style="width: 1180px;">
-				<li class="masonry-brick">
-					<div class="beauty_show">
-						<a href="__CONTROLLER__/detail" target="_blank">
-							<img src="__ROOT__/Public/images/case1.jpg">
-						</a>
-					</div>
-					<div class="ths_again">
-						<div class="cost">
-							<b>造价：</b><span>￥270000</span>
+				<foreach name="res" item="v">
+					<li class="masonry-brick">
+						<div class="beauty_show">
+							<a href="__CONTROLLER__/detail?id={$v.id}" target="_blank">
+								<img src="__ROOT__/Uploads{$v.logo}">
+							</a>
 						</div>
-						<h2><a href="{:U('/admin/case/detail')}" target="_blank">紫御华府</a></h2>
-						<div class="again_tag clearfix">
-							<div class="again_label">
-								<span>欧式</span><span>三居室</span><span>120平米</span>
+						<div class="ths_again">
+							<div class="cost">
+								
+							</div>
+							<h2><a href="__CONTROLLER__/detail?id={$v.id}" target="_blank">{$v.title}</a></h2>
+							<div class="again_tag clearfix">
+								<div class="again_label">
+									<span><?=$type[$v['type']]?></span>
+								</div>
+							</div>
+							<div class="ths_bal">
+								<span>
+									<label>提供方：</label>
+									<a href="#" target="_blank">{$v.c_name}</a>
+								</span>
+								
 							</div>
 						</div>
-						<div class="ths_bal">
-							<span>
-								<label>提供方：</label>
-								<a href="#" target="_blank">品韵装饰</a>
-							</span>
-							<span>共<em class="scarlet">2</em>张图</span>
-						</div>
-					</div>
-				</li>
+					</li>
+				</foreach>
 			</ul>
 		</div>
 		<div class="p_pageNav p_ListpageNav">
 			<div class="p_page_inline">
 				<div class="p_page">
-					<span class="none">< 上一页</span>
-					<span class="cur">1</span>
-					<span class="none">下一页</a>
+					{$show}
 				</div>
 			</div>
 		</div>

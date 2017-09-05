@@ -14,17 +14,13 @@
     <div class="subwd clearfix">
 		<div class="sub_case_lt lt">
 			<div class="mb10 sub_case_top">
-				<h3 class="clearfix"><span class="lt">紫御华府</span></h3>
+				<h3 class="clearfix"><span class="lt">{$res.title}</span></h3>
 				<div class="case_pic_top mb10" style="height: 600px;" id="galleria">
-					
-							<a href="__ROOT__/Public/images/1.jpg" class="img_a">
-								<img src="__ROOT__/Public/images/1_small.jpg" data-big="1.jpg"/>
+						<foreach name="res.pic" item="p">
+							<a href="__ROOT__/Uploads{$p}" class="img_a">
+								<img src="__ROOT__/Uploads{$p}" data-big="1.jpg"/>
 							</a>
-						
-							<a href="__ROOT__/Public/images/2.jpg" class="img_a">
-								<img src="__ROOT__/Public/images/2_small.jpg" data-big="2.jpg"/>
-							</a>
-						
+						</foreach>
 				</div>
 			</div>
 		</div>

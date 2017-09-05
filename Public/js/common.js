@@ -27,8 +27,8 @@ $(document).ready(function(){
 	$(".zx_input input").blur(function(){
 		$(this).css({"border-color":""});
 	});
-	$(".huxing_solo").click(function(){
-		$(this).addClass("on");
+	$(".huxing_btn").click(function(){
+		$(this).parent().addClass("on");
 	});
 	$(".huxing_solo").mouseleave(function(){
 		$(this).removeClass("on");
@@ -80,10 +80,40 @@ $(document).ready(function(){
 	$(".case-content li.masonry-brick").mouseleave(function(){
 		$(this).css({"border-color":""});
 	});
-
+	$(".search-item ul li").click(function(){
+        $(this).addClass("on").siblings().removeClass("on");
+        var text = $(this).children().text();
+        $(".search-item span").html(text+"<em></em>");
+        $(".search-item ul").css({"display":"none"});
+    });
+    $(".huxing_solo").each(function(){
+        $(this).find("li").on("click",function(){
+            $(this).addClass("on").siblings().removeClass("on");
+            var text = $(this).children().text();
+            $(this).parent().parent().find(".huxing_item").html(text);
+            $(this).parent().parent().removeClass("on");
+        });
+    });
+    $(".top_nav .lt").mouseenter(function(){
+    	$(".region_box").css("display","block");
+    });
+    $(".top_nav .lt").mouseleave(function(){
+    	$(".region_box").css("display","none");
+    });
+    $(".region_list li").hover(function(){
+    	$(this).addClass("region_on").siblings().removeClass("region_on");
+    	var index = $(this).index();
+    	$(".region_con").eq(index).addClass("region_show").siblings().removeClass("region_show");
+    });
+	$(".address-li select").change(function(){
+		var val = $(this).val();
+		$(this).parent().parent().find(".location").text(val);
+		$(".address-li #city #sel-pro").remove();
+	});
 	var win=$(window); //得到窗口对象
 		win.scroll(function(){
-	   if(document.body.scrollTop>=600){
+		var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+	   if(scrollTop>=600){
 	   		$(".shortcutBox a.btnBox").css({"height":"40px","transition":"height ease 0.3s","border":"1px solid #e0e0e0"});
 	   }else{
 	  	 	$(".shortcutBox a.btnBox").css({"height":"0px","transition":"height ease 0.3s","border":"none"});

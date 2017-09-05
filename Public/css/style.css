@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{
 	content: "";
 	clear:both;
 }
-ul{
+ul,ol{
 	list-style: none;
 }
 a{
@@ -59,6 +59,57 @@ body .hide{
 	padding-left: 5px;
 	padding-right: 5px;
 	background-color: #f7f7f7;
+}
+.region_box{
+	border: 1px solid #eceaeb;
+	background: #fff;
+	position: absolute;
+	top: 26px;
+	left: 25px;
+	z-index: 999;
+}
+.region_list{
+	width: 422px;
+	height: 32px;
+	background: #f7f7f7;
+	margin-bottom: 7px;
+	padding-left: 8px;
+}
+.region_list li{
+	color: #333;
+	line-height: 32px;
+	height: 32px;
+	margin-right:6px;
+	width: 64px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+.region_list li.cn_mark{
+	font-family: "微软雅黑";
+}
+.region_list li.region_on{
+	border-bottom: 2px solid #d00;
+	color: #d00;
+}
+.region_con{
+	display: none;
+}
+.region_con.region_show{
+	display: block;
+}
+.region_con li{
+	padding-left: 15px;
+	width: 63px;
+	float: left;
+	height: 28px;
+	line-height: 28px;
+}
+.region_con li a{
+	color: #333;
+}
+.region_con li.city_more a{
+	color: #999;
 }
 .top_nav .rt{
 	float: right;
@@ -207,6 +258,9 @@ body .hide{
 .search-item ul li a:hover{
 	color: #d00;
 }
+.search-item ul li.on a{
+	color: #d00;
+}
 .search-con{
 	width:350px;
 	height: 34px;
@@ -299,6 +353,9 @@ body .hide{
 }
 .fst-li .ln-layer a.fst-ln:hover{
 	color: #d00;
+}
+.current-nav .ln-layer i{
+	border-top-color: #d00;
 }
 .current-nav .ln-layer .fst-ln{
 	color: #d00;
@@ -442,7 +499,7 @@ body .hide{
 	position: relative;
 	cursor:pointer;
 }
-.huxing_wrap .huxing_solo>em{
+.huxing_wrap .huxing_solo em{
 	position: absolute;
 	width:9px;
 	height: 5px;
@@ -451,7 +508,7 @@ body .hide{
 	top:15px;
 	transition: transform linear 0.3s;
 }
-.huxing_wrap .huxing_solo.on>em{
+.huxing_wrap .huxing_solo.on em{
 	transform: rotate(180deg);
 }
 .huxing_wrap .huxing_solo ul{
@@ -479,6 +536,9 @@ body .hide{
 	display: block;
 	width:100%;
 	height: 100%;
+}
+.huxing_wrap .huxing_solo ul li.on a{
+	color: #d00;
 }
 .huxing_wrap .huxing_solo ul li a:hover{
 	background-color: #dfdfdf;
@@ -555,7 +615,7 @@ body .hide{
 	padding:13px 9px 10px 28px;
 }
 .service_loan{
-	padding:5px 13px 4px 15px;
+	padding:5px 13px 10px 15px;
 }
 .service_jianli{
 	padding:9px 10px 11px 19px;
@@ -1868,4 +1928,97 @@ ul.register_list li:nth-child(3n+3){
 	min-height: 480px;
 	display: flex;
 	align-items: center;
+}
+#formid .tips{
+    position: relative;
+    height: 15px;
+    line-height: 15px;
+    color: #ff0000;
+}
+.zbform{
+	border: 2px solid #e7691e;
+	background: #fff;
+	padding: 10px;
+	text-align: center;
+}
+.mb10{
+	margin-bottom:10px;
+}
+.zbform h4{
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #d0d0d0;
+	font-size: 24px;
+	line-height: 36px;
+	color: #333;
+	font-weight: normal;
+}
+.zbform form{
+	border-top: 1px dashed #fff;
+}
+.zbform input.text,.zbform select.text{
+	outline: none;
+	border: 1px solid #c7c7c7;
+	height: 26px;
+	line-height: 26px;
+	padding: 3px 0px 3px 5px;
+	font-size: 12px;
+	color: #555;
+	margin:6px 0px;
+}
+.zbform input.full{
+	width: 98%;
+}
+.zbform .address-li{
+	width: 32%;
+	float: left;
+	height: 26px;
+	position: relative;
+	padding: 3px 10px;
+	box-sizing: border-box;
+	border: 1px solid #D9D9D9;
+	margin-right: 2%;
+}
+.zbform .address-li:last-child{
+	margin-right: 0;
+}
+.zbform .address-li i{
+	float: right;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	transform: rotate(135deg);
+	width: 4px;
+	height: 4px;
+	content: '';
+	display: inline-block;
+	position: relative;
+	top: 6px;
+}
+.zbform .address-li .select-item{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 26px;
+	opacity: 0;
+}
+.zbform .address-li .select-item select{
+	width: 100%;
+}
+.zbform .btn{
+	display: inline-block;
+	opacity: 1;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	border-radius: 0px;
+	outline: none;
+	border: none;
+}
+.zbform .btn_sub_apply{
+	width: 100%;
+	line-height: 32px;
+	height: 32px;
+	background: #e7691e;
+	font-size: 18px;
+	margin:10px 0 6px;
 }

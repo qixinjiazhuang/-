@@ -312,7 +312,7 @@
 			</div>
 			<div class="zxPany-list zxPany-case">
 				<div class="title clearfix">
-					<h5>设计案例<span class="num">（8）</span></h5>
+					<h5>设计案例<span class="num">（<?php echo ($case_count); ?>）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="case-list">
@@ -337,42 +337,35 @@
 			</div>
 			<div class="zxPany-list zxPany-person">
 				<div class="title clearfix">
-					<h5>设计团队<span class="num">（5）</span></h5>
+					<h5>设计团队<span class="num">（<?php echo ($des_count); ?>）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="person-info">
 					<ul class="clearfix">
-						<li class="list">
+					<?php if(is_array($designer)): foreach($designer as $key=>$des): ?><li class="list">
 							<a href="#">
-								<img src="/Public/images/head1.jpg" width="120" height="120">
-								<p class="name">陈慧</p>
+								<img src="/Uploads<?php echo ($des["photo"]); ?>" width="120" height="120">
+								<p class="name"><?php echo ($des["truename"]); ?></p>
 								<p class="position">主任设计师</p>
 							</a>
-						</li>
-						<li class="list">
-							<a href="#">
-								<img src="/Public/images/head2.jpg" width="120" height="120">
-								<p class="name">张光华</p>
-								<p class="position">总监设计师</p>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>	
 					</ul>
 				</div>
 			</div>
 			<div class="zxPany-list zxPany-person">
 				<div class="title clearfix">
-					<h5>工长团队<span class="num">（1）</span></h5>
+					<h5>工长团队<span class="num">（<?php echo ($for_count); ?>）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="person-info">
 					<ul class="clearfix">
-						<li class="list">
+						<?php if(is_array($foreman)): foreach($foreman as $key=>$f): ?><li class="list">
 							<a href="#">
-								<img src="/Public/images/head5.jpg" width="120" height="120">
-								<p class="name">付优松</p>
+								<img src="/Uploads<?php echo ($f["photo"]); ?>" width="120" height="120">
+								<p class="name"><?php echo ($f["truename"]); ?></p>
 								<p class="position"></p>
 							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 				</div>
 			</div>

@@ -1,0 +1,103 @@
+<include file="./project/Home/View/head/head.html"/>
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="javascript:;" class="on">个人中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>账户管理</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">个人中心</a></li>
+							<li><a href="__MODULE__/member/info">修改资料</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>内容管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/myzx">我的装修</a></li>
+							<li><a href="__MODULE__/member/myzxb">我的装修保</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>我的订单</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/order/index">我的招标</a></li>
+							<li><a href="__MODULE__/order/company">我的预约</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:973px;padding: 12px;margin:0 auto;" class="clearfix">
+					<div class="index_rt_top">
+						<a href="javascript:;" class="lt"><img src="__ROOT__/Uploads<?=session('home_type')['photo']?>" width="120" height="120"></a>
+						<div class="shop_top_lt lt">
+							<p class="title">{$user.name}</p>
+							<p>帐户类型：<?=$arr[$user['type']]?></p>
+							<p>邮箱地址：<a href="__MODULE__/member/mail">{$user.email}</a>[已认证]</p>
+							<p>手机号码：<a href="__MODULE__/member/mobile">{$user.phone}</a></p>
+						</div>
+						<div class="shop_top_rt personal_top_rt rt">
+							<p>注册时间：<span><?=date('Y-m-d H:i:s',$user['regtime'])?></span></p>
+							<p>最后登录：<span><?=date('Y-m-d H:i:s',$user['lastlogin'])?></span></p>
+							<p>登录地点：<span>浙江杭州</span></p>
+						</div>
+					</div>
+					<div class="index_cont_lt lt">
+						<div class="index_c_lt">
+							<p class="title"><font class="index_c_lt_icon2"></font>交易统计</p>
+							<p class="txt">我的预约</p>
+							<p class="txt">
+								<a href="__MODULE__/order/company" class="green">预约公司(0)</a>
+								<a href="__MODULE__/order/designer" class="green">预约设计师(0)</a>
+								<a href="__MODULE__/order/mechanic" class="green">预约技工(0)</a>
+								<a href="__MODULE__/order/gz" class="green">预约工长(0)</a>
+								<a href="__MODULE__/order/shop" class="green">预约商铺(0)</a>
+							</p>
+							<!-- <p class="txt">我的订单</p>
+							<p class="txt">
+								<a href="javascript:;" class="green">新订单(0)</a>
+								<a href="javascript:;" class="green">待收货(0)</a>
+								<a href="javascript:;" class="green">待付款(0)</a>
+							</p> -->
+						</div>
+						<!-- <div class="index_c_lt">
+							<p class="title"><font class="index_c_lt_icon3"></font>财务信息</p>
+							<p class="txt">我的金币余额：<font class="red">10</font></p>
+							<p>
+								<a href="javascript:;" class="green">在线充值</a>
+								<a href="javascript:;" class="green">收支明细</a>
+							</p>
+						</div> -->
+					</div>
+					<div class="index_cont_rt rt">
+						<div class="index_c_rt">
+							<p class="title"><font class="index_c_rt_icon1"></font>公告</p>
+							<p class="txt"></p>
+						</div>
+						<div class="index_c_rt">
+							<p class="title"><font class="index_c_rt_icon2"></font>平台联系方式</p>
+							<p class="txt">客服电话：<font>400-880-2600</font></p>
+							<p>服务时间：9:00-18:00(周一至周日)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

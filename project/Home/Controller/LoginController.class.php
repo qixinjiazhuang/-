@@ -24,6 +24,8 @@ class LoginController extends Controller {
 
 			$dd = $model->where('remember_token',$remember_token)->find();
 
+			$model->where('id='.$dd['id'])->save(['lastlogin'=>time()]);
+
 			session('home_user',$dd);
 
 			$this->success('登录成功','/home/index/index');
@@ -56,6 +58,9 @@ class LoginController extends Controller {
 				cookie('remember_token',$res['remember_token'],3600);
 			}
 
+			//修改最后登录时间
+			$model->where('id='.$res['id'])->save(['lastlogin'=>time()]);
+			
 			$this->success('登录成功','/home/index/index');
 
 		}

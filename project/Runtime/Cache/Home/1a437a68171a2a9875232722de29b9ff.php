@@ -24,7 +24,7 @@
 					<img src="/Public/images/lr.jpg">
 				</div>
 				<div class="rel-right fl">
-					<form action="/index.php/Home/Login/dologin" method="post">
+					<form action="/home/login/dologin" method="post">
 		            <table border="0" style="width:370px; font-size:14px; margin-top:30px;" cellspacing="0" cellpadding="0">
 		              <tr height="50" valign="top">
 		              	<td width="55">&nbsp;</td>

@@ -1,0 +1,126 @@
+<include file="./project/Home/View/head/head.html"/>
+<title>修改资料</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="javascript:;" class="on">个人中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>账户管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/index">个人中心</a></li>
+							<li><a href="javascript:;" class="on">修改资料</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>内容管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/substance/index">我的装修</a></li>
+							<li><a href="__MODULE__/substance/myzxb">我的装修保</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>我的订单</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/order/index">我的招标</a></li>
+							<li><a href="__MODULE__/order/company">我的预约</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li><a href="__MODULE__/member/info">基本信息</a></li>
+							<li><a href="__MODULE__/member/passwd">修改密码</a></li>
+							<li><a href="__MODULE__/member/mail">更换邮箱</a></li>
+							<li class="on"><a>修改头像</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<div id="swfContainer"></div>
+						<p style="text-align:center;display: none;"><button type="button" id="upload">自定义上传按钮</button></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/swfobject.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/fullAvatarEditor.js"></script>
+
+	<script>
+		var full_swf_url='__PUBLIC__/fullAvatarEditor.swf';  
+		var ex_swf_url='__PUBLIC__/expressInstall.swf';  
+		swfobject.addDomLoadEvent(function () {
+                var swf = new fullAvatarEditor("swfContainer", {
+					    id: 'swf',
+						upload_url: '__MODULE__/member/myface',
+						src_upload:0
+					}, function (msg) {
+						switch(msg.code)
+						{
+							case 1 : //alert("页面成功加载了组件！");
+									 break;
+							case 2 : //alert("已成功加载默认指定的图片到编辑面板。");
+									 break;
+							case 3 :
+								if(msg.type == 0)
+								{
+									alert("摄像头已准备就绪且用户已允许使用。");
+								}
+								else if(msg.type == 1)
+								{
+									alert("摄像头已准备就绪但用户未允许使用！");
+								}
+								else
+								{
+									alert("摄像头被占用！");
+								}
+							break;
+							case 5 : 
+								if(msg.type == 0)
+								{
+									if(msg.content.sourceUrl)
+									{
+										alert("原图已成功保存至服务器，url为：\n" +　msg.content.sourceUrl);
+									}
+									alert("头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n"));
+								}
+								if(msg.type == 1)
+								{
+									alert('头像上传失败，原因：' + json.content.msg);//will output:头像上传失败，原因：上传的原图文件大小超出
+								}
+								if(msg.type == 2){
+									alert('头像上传失败，原因：指定的上传地址不存在或有问题！');
+								}
+								if(msg.type == 3){
+									alert('头像上传失败，原因：发生了安全性错误！请联系站长添加crossdomain.xml到网站根目录。');
+								}
+							break;
+						}
+					}
+				);
+				document.getElementById("upload").onclick=function(){
+					swf.call("upload");
+				};
+            });
+	</script>
+	<script type="text/javascript">
+
+	</script>
+</body>
+</html>

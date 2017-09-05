@@ -56,6 +56,101 @@ class RegisterController extends Controller {
 
         $res = $model->add($data);
 
+        //如果type=1 用户类型为业主
+        if($type == 1){
+
+        	//实例化member表
+        	$member = M('member');
+
+        	//获取uid
+        	$mm['uid'] = $res;
+
+        	//分类id
+        	$mm['tid'] = $type;
+
+        	//执行添加
+        	$member->add($mm);
+        }
+
+        //如果type=2 用户类型为装修公司
+        if($type == 2){
+
+        	//实例化company表
+        	$company = M('company');
+
+        	//获取uid
+        	$cc['uid'] = $res;
+
+        	//获取分类id
+        	$cc['tid'] = $type;
+
+        	$company->add($cc);
+        }
+
+        //如果type=3 用户类型为设计师designer
+        if($type == 3){
+
+        	//实例化desigber表
+        	$designer = M('designer');
+
+        	//获取uid
+        	$dd['uid'] = $res;
+
+        	//获取tid
+        	$dd['tid'] = $type;
+
+        	//执行添加
+        	$designer->add($dd):
+        }
+
+        //如果type=4 用户类型为商家
+        if($type == 4){
+
+        	//实例化business
+        	$business = M('business');
+
+        	//获取uid
+        	$bb['uid'] = $res;
+
+        	//获取tid 
+        	$bb['tid'] = $type;
+
+        	$business->add($bb);
+        }
+
+        //如果type=5 用户类型为技工
+        if($type == 5){
+
+        	//实例化
+        	$mechanic = M('mechanic');
+
+        	//获取uid
+        	$mm['uid'] = $res;
+
+        	//获取tid
+        	$mm['tid'] = $type;
+
+        	//执行添加
+        	$mechanic->add($mm);
+        }
+
+        //如果type=6 用户类型工长
+        if($type == 6){
+
+        	//实例化
+        	$foreman = M('foreman');
+
+        	//获取uid
+        	$ff['uid'] = $res;
+
+        	//获取tid
+        	$ff['tid'] = $type;
+
+        	//执行添加
+        	$foreman->add($ff);
+        }
+
+
         $num = $model->where('id='.$res)->find();
 
         //存入session

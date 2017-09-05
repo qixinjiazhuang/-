@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-  <link rel="stylesheet" href="/Public/dist/css/AdminLTE.min.css">
+  <!-- <link rel="stylesheet" href="/Public/dist/css/AdminLTE.css"> -->
   <link rel="stylesheet" href="/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <link href="/Public/bootstrap/css/main.css" rel="stylesheet">
   <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -94,8 +94,10 @@
                   <input style="width:50%;" type="text" required="required" name="school" value="<?php echo ($res["school"]); ?>" class="form-control" id="exampleInputPassword3" placeholder="请输入毕业院校">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword3">装修公司</label>
-                  <input style="width:50%;" type="text" required="required" name="company" value="<?php echo ($res["company"]); ?>" class="form-control" id="exampleInputPassword3" placeholder="请输入装修公司">
+                  <label for="exampleInputPassword4">装修公司</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="gid">
+                      <?php if(is_array($data)): foreach($data as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($com['id']==$v['id']){ ?> selected="selected" <?php } ?> ><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; ?>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword3">QQ</label>

@@ -185,32 +185,28 @@ class TenderController extends controller {
         $city['county'] = I('post.county');//区
         $data['city'] = implode(',',$city);//数组拼接字符串
 
-        //实例化文件上传类
-    	$file = new \Think\Upload();
+        if(!empty($_FILES['pic']['name'])){
 
-    	//设置上传配置信息
-	    $file->savePath  =  '/tender/'; // 设置附件上传根目录
-	    $filename = $file->saveName = time().mt_rand(00000000,99999999);
+        	//实例化文件上传类
+	    	$file = new \Think\Upload();
 
-    	//执行上传
-    	$info = $file->upload();
+	    	//设置上传配置信息
+		    $file->savePath  =  '/tender/'; // 设置附件上传根目录
+		    $filename = $file->saveName = time().mt_rand(00000000,99999999);
 
-    	//判断
-    	if(!$info){
-    		$this->error($file->getError());
-    	}
+	    	//执行上传
+	    	$info = $file->upload();
 
-    	//实例化模型
-		$tender = M('tender');
+			//根据id查询出该条数据的图片路径信息
+			$oldname = $model->where('id='.$id)->find()['photo'];
 
-		//根据id查询出该条数据的图片路径信息
-		$oldname = $tender->where('id='.$id)->find()['photo'];
+			//删除原图片以便于节省资源
+			@unlink('./Uploads/'.$oldname);
 
-		//删除原图片以便于节省资源
-		@unlink('./Uploads/'.$oldname);
-
-		//拼接图片路径信息并压入数组
-		$data['pic'] = $info['pic']['savepath'].$info['pic']['savename'];
+			//拼接图片路径信息并压入数组
+			$data['pic'] = $info['pic']['savepath'].$info['pic']['savename'];
+        }
+        
 
 		//修改数据库中的内容
 		$res = $model->where('id='.$id)->save($data);

@@ -76,17 +76,19 @@
 			</div>
 			<div class="designer-content">
 				<ul class="designer-list">
+					<foreach name="res" item="v">
 					<li class="designer-item">
 						<div class="ordinary clearfix">
 							<a href="/home/designer/detail" class="pany-logo fl"><img src="__ROOT__/Public/images/designer1.jpg" class="lazyload"></a>
 							<div class="list-middle fl">
 								<h2>
-									<a href="/home/designer/detail" target="_blank" id="shop_name">陈玲</a>
+									<a href="/home/designer/detail?id={$v.id}" target="_blank" id="shop_name">{$v.truename}</a>
 									<div><span class="sift"></span><span class="auth"></span><span class="bao"></span></div>
 								</h2>
-								<p>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：<span class="zw">设计助理</span></p>
-								<p>擅长类型：<span class="sclx">中式</span></p>
-								<p>从业年限：<span class="cynx">6年</span></p>
+								<p>毕业院校：<span class="zw">{$v.school}</span></p>
+								<p>案 例 数：<span class="zw"></span></p>
+								<p>擅长类型：<span class="sclx"></span></p>
+								<p>设计理念：<span class="cynx"></span></p>
 							</div>
 							<div class="list-right fl">
 								<div class="kbval">
@@ -97,6 +99,7 @@
 							</div>
 						</div>
 					</li>
+					</foreach>
 				</ul>
 			</div>
 			<div class="p_pageNav p_ListpageNav">

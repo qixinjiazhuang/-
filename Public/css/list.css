@@ -16,7 +16,7 @@
 .combo-screen .tag-list dd.more-shrink a span{margin-right:3px;}
 .combo-screen .tag-list dd.more-shrink em{display:inline-block;width:7px;height:5px;background: url(../images/anli_ico.png) no-repeat 0 -54px;opacity: .6;vertical-align: middle;}
 .combo-screen .tag-list dd.more-shrink .more-to em{background-position:-9px -54px;}
-.combo-screen .tag-list dd li{float:left;width:87px;height:40px;line-height: 40px;overflow: hidden;}
+.combo-screen .tag-list dd li{float:left;width:87px;height:40px;line-height: 40px;}
 .combo-screen .tag-list dd li a{color: #333;}
 .combo-screen .tag-list dd li.active a,.combo-screen .tag-list dd li a:hover{color: #f26122;}
 .zx-btn{color: #fff;background: #f26122;}.zx-btn:hover{color:#fff;background: #ea5000;}

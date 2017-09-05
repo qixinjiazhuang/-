@@ -24,8 +24,11 @@
         </div>
         <div class="rt">
         	<div class="entry">
+                <?php if(session('home_user')): ?><a target="_blank" href="<?php echo U('/home/login/index');?>"><?=session('home_user')['name']?></a>
+                <a target="_blank" href="<?php echo U('/home/login/logout');?>">退出</a>
+                <?php else: ?>
                 <a target="_blank" href="<?php echo U('/home/login/index');?>">登录</a>
-                <a target="_blank" href="register.html">注册</a>
+                <a target="_blank" href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
             </div>
         	<ul>
 				<li class="myorder">
@@ -97,7 +100,7 @@
 			<ul class="clearfix fst-ul">
         		<li class="fst-li current-nav">
         			<div class="ln-layer">
-        				<a href="index.html" id="nav_home" class="fst-ln">首页</a>
+        				<a href="/home/index" id="nav_home" class="fst-ln">首页</a>
         			</div>
         		</li>
         		<li class="fst-li" id="nav_wyzx">
@@ -119,7 +122,7 @@
         				</ul>
         			</div>
         		</li>	        		
-        		<li class="with-sub-nav fst-li" id="nav_wawj">
+        		<!-- <li class="with-sub-nav fst-li" id="nav_wawj">
         			<div class="ln-layer">
         				<a href="#" class="fst-ln">我爱我家</a>
         				<i></i>
@@ -130,7 +133,7 @@
         					<li><a href="#">团装小区</a></li>        			
         				</ul>
         			</div>
-        		</li>
+        		</li> -->
         		<li class="fst-li" id="zxsl">
         			<div class="ln-layer">
         				<a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
@@ -147,7 +150,7 @@
         				</ul>
         			</div>
         		</li>
-        		<li class="with-sub-nav fst-li" id="nav_yhhd">
+        		<<!-- li class="with-sub-nav fst-li" id="nav_yhhd">
         			<div class="ln-layer">
         				<a href="#" class="fst-ln">优惠活动</a>
         				<i></i>
@@ -155,13 +158,13 @@
         					<li><a href="#">优惠券</a></li>
         				</ul>
         			</div>
-        		</li>
+        		</li> -->
         		<li class="fst-li" id="nav_ztz">
         			<div class="ln-layer">
         				<a href="#" id="nav_home" class="fst-ln">整体装</a>
         			</div>
         		</li>
-        		<li class="with-sub-nav fst-li" id="nav_jjsc">
+        		<!-- <li class="with-sub-nav fst-li" id="nav_jjsc">
         			<div class="ln-layer">
         				<a href="#" class="fst-ln">家居商城</a>
         				<i></i>
@@ -170,7 +173,7 @@
         					<li><a href="#">商城列表</a></li>
         				</ul>
         			</div>
-        		</li>
+        		</li> -->
         	</ul>
     	</div>
     </div>
@@ -189,17 +192,11 @@
     <div class="subwd clearfix">
 		<div class="sub_case_lt lt">
 			<div class="mb10 sub_case_top">
-				<h3 class="clearfix"><span class="lt">紫御华府</span></h3>
+				<h3 class="clearfix"><span class="lt"><?php echo ($res["title"]); ?></span></h3>
 				<div class="case_pic_top mb10" style="height: 600px;" id="galleria">
-					
-							<a href="/Public/images/1.jpg" class="img_a">
-								<img src="/Public/images/1_small.jpg" data-big="1.jpg"/>
-							</a>
-						
-							<a href="/Public/images/2.jpg" class="img_a">
-								<img src="/Public/images/2_small.jpg" data-big="2.jpg"/>
-							</a>
-						
+						<?php if(is_array($res["pic"])): foreach($res["pic"] as $key=>$p): ?><a href="/Uploads<?php echo ($p); ?>" class="img_a">
+								<img src="/Uploads<?php echo ($p); ?>" data-big="1.jpg"/>
+							</a><?php endforeach; endif; ?>
 				</div>
 			</div>
 		</div>

@@ -32,9 +32,19 @@ class ForemanController extends Controller {
         $u = [];
         $u['delete'] = 1;
 
-    	$res = $stu->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,city,truename,qq,phone,status,delete,level,age,photo')->where($data)->where($u)->select();
-    
-       	$count = $stu->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,city,truename,qq,phone,status,delete,level,age')->where($data)->where($u)->count();
+    	$res = $stu->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,city,truename,qq,phone,status,delete,level,age,photo,gid')->where($data)->where($u)->select();
+        
+        //遍历
+        foreach ($res as $key => $value) {
+
+            //实例化
+            $company = M('company');
+
+            //遍历添加数据到数组（公司名称）
+            $res[$key]['c_name'] = $company->field('c_name')->where('id='.$value['gid'])->find()['c_name'];
+        }
+
+       	$count = $stu->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,city,truename,qq,phone,status,delete,level,age,gid')->where($data)->where($u)->count();
 
        	//实例化分页模型
         $fors = new \Think\Page($count,5);
@@ -72,6 +82,15 @@ class ForemanController extends Controller {
     		$this->error('请先登录','/admin/login/index',1);
     	}
 
+        //实例化
+        $model = M('company');
+
+        //查询公司名字id
+        $res = $model->field('id,c_name')->select();
+
+        //发送数据
+        $this->assign('res',$res);
+
     	$this->display();
     }
 
@@ -91,6 +110,22 @@ class ForemanController extends Controller {
          if(!$model->field('name,password,email,phone')->validate($rule)->create()){
             $this->error($model->getError());
          }
+
+         //随机函数
+        function getRandChar($length){
+           $str = null;
+           $strPol = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
+           $max = strlen($strPol)-1;
+
+           for($i=0;$i<$length;$i++){
+            $str.=$strPol[rand(0,$max)];//rand($min,$max)生成介于min和max两个数之间的一个随机整数
+           }
+
+           return $str;
+        }
+
+        // 处理token
+        $data['remember_token'] = getRandChar(50);
 
     	//实例化模型
     	$data['name'] = I('post.name');//用户名
@@ -134,7 +169,7 @@ class ForemanController extends Controller {
     	$for['idea'] = I('post.idea');//服务理念
     	$for['age'] = I('post.age');//工龄
     	$for['photo'] = $path;
-    	
+    	$for['gid'] = I('post.gid');
     	//实例化
     	$foreman = M('foreman');
 
@@ -156,9 +191,22 @@ class ForemanController extends Controller {
     	//根据id查询两表数据
     	$model = M('users');
 
-    	$res = $model->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,name,email,truename,level,qq,phone,idea,age')->where('uid='.$id)->find();
+    	$res = $model->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('uid,name,email,truename,level,qq,phone,idea,age,gid')->where('uid='.$id)->find();
     	
-    	dump($res);
+        //实例化公司表
+        $company = M('company');
+
+        //查询当前公司
+        $com = $company->field('id,c_name')->where('id='.$res['gid'])->find();
+
+        //查询所有公司
+        $data = $company->field('id,c_name')->select();
+    
+        //发送当前公司
+        $this->assign('com',$com);
+
+        //发送所有公司
+        $this->assign('data',$data);
 
     	$this->assign('res',$res);
 
@@ -170,36 +218,29 @@ class ForemanController extends Controller {
     	//获取id
     	$id = I('get.id');
 
-    	//实例化文件上传类
-    	$file = new \Think\Upload();
+        //实例化模型
+        $foreman = M('foreman');
 
-    	//设置上传配置信息
-	    $file->savePath  =  '/foreman/'; // 设置附件上传根目录
-	    $filename = $file->saveName = time().mt_rand(00000000,99999999);
+        if(!empty($_FILES['pic']['name'])){
 
-    	//执行上传
-    	$info = $file->upload();
+        	//实例化文件上传类
+        	$file = new \Think\Upload();
 
-    	//判断
-    	if(!$info){
-    		$this->error($file->getError());
-    		die;
-    	}else{
+        	//设置上传配置信息
+    	    $file->savePath  =  '/foreman/'; // 设置附件上传根目录
+    	    $filename = $file->saveName = time().mt_rand(00000000,99999999);
 
-			//实例化模型
-			$foreman = M('foreman');
+        	//执行上传
+        	$info = $file->upload();
 
-			$oldname = $foreman->where('id='.$id)->find()['photo'];
 
-	    	@unlink('./Uploads/'.$oldname);
+    		$oldname = $foreman->where('id='.$id)->find()['photo'];
 
-	    	// if($b==false){
-	    	// 	$this->error('请先去添加一张头像照片');
-	    	// }
+        	@unlink('./Uploads/'.$oldname);
 
     		//拼接路径
-    		$path = $info['pic']['savepath'].$info['pic']['savename'];
-
+    		$res['photo'] = $info['pic']['savepath'].$info['pic']['savename'];
+        }    
     		//实例化模型
 	    	$model =  M('users');
 	    	$data['name'] = I('post.name');//用户名
@@ -220,7 +261,7 @@ class ForemanController extends Controller {
 	    	$res['qq'] = I('post.qq');//qq
 	    	$res['idea'] = I('post.idea');//服务理念
 	    	$res['age'] = I('post.age');//工龄
-	    	$res['photo'] = $path;
+            $res['gid'] = I('post.gid');
 	    		
 	    	$num = $foreman->where('uid='.$id)->save($res);
 	    	
@@ -230,7 +271,7 @@ class ForemanController extends Controller {
 	    	}else{
 	    		$this->error('修改失败,请联系管理员',$_SERVER['HTTP_REFERER'],1);
 	    	}
-    	}
+    	
 
     }
 

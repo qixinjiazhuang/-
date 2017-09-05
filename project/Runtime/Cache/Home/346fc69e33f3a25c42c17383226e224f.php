@@ -24,7 +24,7 @@
 					<img src="/Public/images/lr.jpg">
 				</div>
 				<div class="rel-right fl">
-					<form action="/index.php/Home/Register/doreg?type=<?php echo ($type); ?>" method="post">
+					<form action="/home/register/doreg?type=<?php echo ($type); ?>" method="post">
 			            <table border="0" style="width:420px; font-size:14px; margin-top:20px;" cellspacing="0" cellpadding="0">
 			              <tr height="50" valign="top">
 			              	<td width="95">&nbsp;</td>

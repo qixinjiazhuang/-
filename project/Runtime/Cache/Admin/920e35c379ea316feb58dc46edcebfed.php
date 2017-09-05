@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-  <link rel="stylesheet" href="/Public/dist/css/AdminLTE.min.css">
+  <!-- <link rel="stylesheet" href="/Public/dist/css/AdminLTE.css"> -->
   <link rel="stylesheet" href="/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <link href="/Public/bootstrap/css/main.css" rel="stylesheet">
   <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -102,7 +102,6 @@
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="gid">
                   <?php if(is_array($res)): foreach($res as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; ?>
                   </select>
-
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword3">QQ</label>
