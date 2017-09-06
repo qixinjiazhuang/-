@@ -103,12 +103,12 @@ a:active{text-decoration: blink; color: yellow;}
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        装修保管理
+        意向业主
         <small>列表</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li><a href="#">装修保管理</a></li>
+        <li><a href="#">意向业主</a></li>
         <li class="active">列表</li>
       </ol>
     </section>
@@ -119,20 +119,18 @@ a:active{text-decoration: blink; color: yellow;}
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">快速查看装修保列表</h3>
+              <h3 class="box-title">快速查看列表</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <!--<div class="alert alert-danger">
                   
                 </div>  -->  
-            <form action="/admin/insurance/index" method="get">
+            <form action="/admin/tender/small" method="get">
                 <div class="row"> 
                     <!-- select -->
                     <div class="col-md-2">
-                        <div class="form-group">
-                            <a href="/admin/insurance/add">添加</a>
-                        </div>
+            
                     </div>
                     <div class="col-md-4 col-md-offset-6">
                        <div class="input-group input-group">
@@ -148,13 +146,9 @@ a:active{text-decoration: blink; color: yellow;}
                 <thead>
                 <tr>
                   <th style="text-align:center;">ID</th>
-                   <th style="text-align:center;">用户</th>
-                  <th style="text-align:center;">装修公司</th>
-                  <th style="text-align:center;">联系人</th>
-                  <th style="text-align:center;">联系电话</th>
-                  <th style="text-align:center;">创建时间</th>
-                  <th style="text-align:center;">备注</th>
-                  <th style="text-align:center;">查看招标</th> 
+                  <th style="text-align:center;">电话</th>
+                  <th style="text-align:center;">城市</th>
+                  <th style="text-align:center;">真实姓名</th>
                   <th style="text-align:center;">状态</th>
                   <th style="text-align:center;">操作</th>
                 </tr>
@@ -162,21 +156,19 @@ a:active{text-decoration: blink; color: yellow;}
                 <tbody> 
                 <?php if(is_array($res)): foreach($res as $key=>$v): ?><tr class="parent">
                     <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["id"]); ?></td>
-	                  <td class="ids" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["name"]); ?></td>
-                    <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["c_name"]); ?></td>
-	                  <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["i_name"]); ?></td>
-                    <td style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["i_phone"]); ?></td>
-	                  <td style="text-overflow:ellipsis;text-align:center;"><?= date('Y-m-d H:i:s',$v['time']) ?></td>
-                    <td style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["content"]); ?></td>
-                    <td style="text-overflow:ellipsis;text-align:center;"><a href="/admin/insurance/see?id=<?php echo ($v["bid"]); ?>">查看招标</a></td>
-	                  <td style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["status"]); ?></td>
+                    <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["phone"]); ?></td>
+                    <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["city"]); ?></td>
+                     <td class="ids" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["truename"]); ?></td>
+                     <?php if($v["status"] == 1): ?><td class="ids" id="did" style="text-overflow:ellipsis;text-align:center;"><?=$sta[$v['status']]?></td><?php endif; ?>
+                     <?php if($v["status"] == 2): ?><td class="ids" id="did" style="text-overflow:ellipsis;text-align:center;color:#e7ce1e;"><?=$sta[$v['status']]?></td><?php endif; ?>
+                     <?php if($v["status"] == 3): ?><td class="ids" id="did" style="text-overflow:ellipsis;text-align:center;color:green;"><?=$sta[$v['status']]?></td><?php endif; ?>
+                     <?php if($v["status"] == 4): ?><td class="ids" id="did" style="text-overflow:ellipsis;text-align:center;color:red;"><?=$sta[$v['status']]?></td><?php endif; ?>
 	                  <td style="text-overflow:ellipsis;text-align:center;">
-	                  	  <a href="/admin/insurance/edit?id=<?php echo ($v["id"]); ?>">编辑</a> | 
-	                      <a onClick="javascript:del()" href="/admin/examine/back?id=<?php echo ($v["id"]); ?>">删除</a> 
+	                  	  <a href="/admin/tender/agree?id=<?php echo ($v["id"]); ?>">同意</a> | <a href="/admin/tender/think?id=<?php echo ($v["id"]); ?>">考虑中</a> | <a href="/admin/tender/refuse?id=<?php echo ($v["id"]); ?>">拒绝</a> |
+	                      <a onClick="javascript:del()" href="/admin/tender/delete?id=<?php echo ($v["id"]); ?>">删除</a> 
+                       
 	                  </td>
 	                </tr><?php endforeach; endif; ?>
-	           
-
                 </tbody>
                 
               </table>

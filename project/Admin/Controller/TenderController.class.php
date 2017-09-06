@@ -5,6 +5,7 @@ use Think\Upload;
 class TenderController extends controller {
 
 	public function index(){
+
 		if(!session('user')){
 
     		$this->error('请先登录','/admin/login/index',1);
@@ -86,12 +87,21 @@ class TenderController extends controller {
 	//add
 	public function add(){
 
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
+
 		$this->display();
 	}
 
 	//执行添加动作方法
 	public function insert(){	
 
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
 
         //实例化模型
         $tender = M('tender');
@@ -150,6 +160,11 @@ class TenderController extends controller {
 	//修改页面方法
 	public function edit(){
 
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
+
 		//获取id
 		$id = I('get.id');
 
@@ -168,6 +183,11 @@ class TenderController extends controller {
 
 	//执行修改update
 	public function update(){
+
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
 
 		//获取id
 		$id = I('get.id');
@@ -223,6 +243,11 @@ class TenderController extends controller {
 	//执行删除动作
 	public function delete(){
 
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
+
 		//获取id
 		$id = I('get.id');
 		dump($id);
@@ -258,5 +283,118 @@ class TenderController extends controller {
         }else{
             $this->ajaxReturn(2);
         }
+	}
+
+	public function small(){
+
+		//判断
+		if(!session('user')){
+
+    		$this->error('请先登录','/admin/login/index',1);
+    	}
+
+    	//实例化
+    	$model = M('small_tender');
+
+    	 //限制分页
+        if(!$_GET['p']){
+            $_GET['p'] = 1;
+        }
+
+        //限制搜索
+        if(!$_GET['keywords']){
+            $_GET['keywords'] = '';
+        }
+
+        //搜索
+        $con = $_GET['keywords'];
+        
+        $data['phone'] = array('like', "%$con%");
+
+		//查询所有small_tender表信息
+		$res = $model->where($data)->order('status desc')->select();
+
+		//统计条数
+		$count = count($res);
+
+		//实例化分页模型
+        $fors = new \Think\Page($count,5);
+
+        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+
+        $res = array_slice($res, $fors->firstRow,$fors->listRows);
+
+        //分页展示
+        $show = $fors->show();
+
+        $sta = ['1'=>'未联系','2'=>'考虑中','3'=>'同意','4'=>'拒绝'];
+
+        //发送数据
+        $this->assign('res',$res);
+
+        $this->assign('show',$show);
+
+        $this->assign('sta',$sta);
+
+        $this->display();
+	}
+
+	//同意
+	public function agree(){
+
+		//获取id
+		$id = I('get.id');
+
+		//实例化
+		$small = M('small_tender');
+
+		//执行修改
+		$res = $small->where('id='.$id)->save(['status'=>3]);
+
+		//判断
+		if($res){
+			$this->success('修改成功','/admin/tender/small');
+		}else{
+			$this->error('修改失败',$_SERVER['HTTP_REFERER']);
+		}
+	}
+
+	//拒绝
+	public function refuse(){
+
+		//获取id
+		$id = I('get.id');
+
+		//实例化
+		$small = M('small_tender');
+
+		//执行修改
+		$res = $small->where('id='.$id)->save(['status'=>4]);
+
+		//判断
+		if($res){
+			$this->success('修改成功','/admin/tender/small');
+		}else{
+			$this->error('修改失败',$_SERVER['HTTP_REFERER']);
+		}
+	}
+
+	public function think(){
+
+		//获取id
+		$id = I('get.id');
+
+		//实例化
+		$small = M('small_tender');
+
+		//执行修改
+		$res = $small->where('id='.$id)->save(['status'=>2]);
+
+		//判断
+		if($res){
+			$this->success('修改成功','/admin/tender/small');
+		}else{
+			$this->error('修改失败',$_SERVER['HTTP_REFERER']);
+		}
 	}
 }

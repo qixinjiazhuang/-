@@ -97,7 +97,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <if condition="$_SESSION['home']['phone']"><a href="__MODULE__/member/index">欢迎您,<if condition="$_SESSION['home']['username']">{$_SESSION['home']['username']}<else/>{$_SESSION['home']['phone']}</if></a>&nbsp;&nbsp;<a href="__MODULE__/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                <if condition="session('home_user')"><a href="__MODULE__/member/index">欢迎您,<if condition="session('home_user').name">
+                <?=session('home_user')['name']?>
+                </a>&nbsp;&nbsp;<a href="__MODULE__/Login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <else/>
                 <a href="{:U('/home/login/index')}">登录</a>
                 <a href="{:U('/home/register/index')}">注册</a>

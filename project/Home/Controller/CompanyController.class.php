@@ -109,4 +109,45 @@ class CompanyController extends Controller {
 		
 		$this->display();
 	}
+
+	public function add(){
+
+		//表单验证 手机号码
+		$rule = array(
+            array('phone','/^1[3|4|5|8][0-9]\d{4,8}$/','手机号格式不正确',0,'regex',1),          
+        );
+
+		//实例化模型
+		$model = M('small_tender');
+
+		if(!$model->field('phone')->validate($rule)->create()){
+		 	$this->error($model->getError());
+		 }
+		
+		//准备城市数组
+        $city = [];
+        $city['province'] = I('post.province');//省
+        $city['city'] = I('post.city');//市
+        $city['county'] = I('post.county');//区
+        $data['city'] = implode(',',$city);//数组拼接字符串
+
+        //电话号码
+        $data['phone'] = I('post.phone');
+
+        //真实姓名
+        $data['truename'] = I('post.truename');
+
+    	//实例化
+    	$model = M('small_tender');
+
+    	//执行添加
+    	$res = $model->add($data);
+
+    	//判断是否添加成功
+    	if($res){
+    		$this->success('恭喜您, 申请成功',$SERVER['HTTP_REFERER']);
+    	}else{
+    		$this->error('抱歉, 申请失败',$SERVER['HTTP_REFERER']);
+    	}
+	}
 }

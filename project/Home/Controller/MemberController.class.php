@@ -174,6 +174,10 @@ class  MemberController extends Controller {
 	}
 
 	public function passwd(){
+		//判断用户是否登录
+		if(!session('home_user')){
+			$this->error('请前去登录','/home/login/index');
+		}
 
 		//获取session中的id
 		$id = session('home_user')['id'];
@@ -193,22 +197,104 @@ class  MemberController extends Controller {
 
 	//执行修改密码
 	public function dopwd(){
-	dump($_POST);
-	die;
-		$rule=array(
-            array('password','checkPwd','密码格式不正确',0,'function'),
-            array('name','unique','帐号名称已经存在！',0,'unique',1),
-            array('email','unique','该邮箱已经存在！',0,'unique',1),
-            array('phone','/^1[3|4|5|8][0-9]\d{4,8}$/','手机号格式不正确',0,'regex',1),          
-        );
-
+		//判断用户是否登录
+		if(!session('home_user')){
+			$this->error('请前去登录','/home/login/index');
+		}
+	
 		//实例化模型
 		$model = M('users');
 
-		 if(!$model->field('name,password,email,phone')->validate($rule)->create()){
-		 	$this->error($model->getError());
-		 }
+		//根据用户查询该用户密码
+		$data = $model->where('id='.session('home_user')['id'])->find();
 		
+		$oldpassword = md5(I('post.oldpassword'));
+
+		if($data['password']!=$oldpassword){
+			$this->error('旧密码输入错误',$_SERVER['HTTP_REFERER']);
+			die;
+		}
+
+		//获取新密码
+		$res['password'] = md5(I('post.newpassword'));
+		
+		//执行修改
+		$sta = $model->where('id='.$data['id'])->save($res);
+
+		//判断是否修改成功
+		if($sta){
+
+			//销毁session
+			session('home_user',null);
+
+			//重新登录
+			$this->success('恭喜，修改成功,请重新登录','/home/login/index');
+		}else{
+			$this->error('抱歉，修改失败',$_SERVER['HTTP_REFERER']);
+		}
+	}
+
+	//加载邮箱页面
+	public function mail(){
+
+		//获取session
+		$user = session('home_user');
+		
+		//获取id
+		$id = $user['id'];
+
+		//实例化
+		$model = M('users');
+
+		//查询数据
+		$mail = $model->where('id='.$id)->find()['email'];
+
+		//发送数据到模板
+		$this->assign('mail',$mail);
+
+		$this->assign('id',$id);
+
+		//加载模板
+		$this->display();
+	}
+
+	//执行修改
+	public function domail(){
+
+		//获取输入的密码
+		$password = I('post.password');
+
+		//获取邮箱
+		$email = I('post.email');
+
+		//获取id
+		$id = session('home_user')['id'];
+
+		//实例化users
+		$model = M('users');
+
+		//查询原密码
+		$user_password = $model->field('password')->where('id='.$id)->find()['password'];
+
+
+		$password = md5($password);
+
+		//判断
+		if($user_password!=$password){
+			$this->error('密码输入错误,请重新输入',$_SERVER['HTTP_REFERER']);
+			die();
+		}
+
+		//修改邮箱
+		$res = $model->where('id='.$id)->save(['email'=>$email]);
+
+		//判断是否修改成功
+		if($res){
+			$this->success('修改成功',$_SERVER['HTTP_REFERER']);
+		}else{
+			$this->error('修改失败',$_SERVER['HTTP_REFERER']);
+		}
+
 	}
 
 	public function myzx(){

@@ -97,7 +97,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if($_SESSION['home']['phone']): ?><a href="/home/member/index">欢迎您,<?php if($_SESSION['home']['username']): echo ($_SESSION['home']['username']); else: echo ($_SESSION['home']['phone']); endif; ?></a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
+                <?=session('home_user')['name']?>
+                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <?php else: ?>
                 <a href="<?php echo U('/home/login/index');?>">登录</a>
                 <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>

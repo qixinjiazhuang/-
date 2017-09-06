@@ -50,7 +50,7 @@
 						</ul>
 					</div>
 					<div class="ucenter_c">
-						<form>
+						<form action="__CONTROLLER__/dopwd" method="post">
 							<table cellspacing="0" cellpadding="0" class="form">
 								<tbody>
 									<tr>
@@ -59,19 +59,23 @@
 									</tr>
 									<tr>
 										<th>原密码：</th>
-										<td><input type="password" name="oldpwd" class="input"></td>
+										<td><input type="password" name="oldpassword" class="input"></td>
 									</tr>
 									<tr>
 										<th>新密码：</th>
-										<td><input type="newpassword" name="newpwd" class="input"></td>
+										<td><input type="newpassword" id="newpwd" name="newpassword" class="input"></td>
 									</tr>
 									<tr>
 										<th>确认密码：</th>
-										<td><input type="repassword" name="confirmpwd" class="input"></td>
+										<td><input type="repassword" id="repwd" name="repassword" class="input"></td>
+									</tr>
+									<tr>
+										<th style="display:none" id="tid"></th>
+										<td style="color:red; display:none" id="did"></td>
 									</tr>
 									<tr>
 										<th></th>
-										<td><input type="submit" name="refer" class="green_btn" value="提交数据"></td>
+										<td><input type="submit" id="btn" class="green_btn" value="提交数据"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -83,5 +87,63 @@
 	</div>
 	<include file="./project/Home/View/foot/foot.html"/>
 	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script>
+		var pas = false;
+		var repas = false;
+
+		$('#newpwd').on('blur',function(){
+			//获取新密码输入的内容
+			var newpwd = $(this).val();
+			//获取确认密码的内容 然后进行对比
+			var repwd = $('#repwd').val();
+
+			//判断两个结果是否一致
+			if(newpwd != repwd){
+				$('#tid').css('display','');
+				$('#did').css('display','');
+				$('#did').html('两次密码不一致，请检查');
+			}else{
+
+				//改变初始状态
+				pas = true;
+				$('#tid').css('display','none');
+				$('#did').css('display','none');
+				$('#did').html('');
+			}
+		});
+
+		$('#repwd').on('blur',function(){
+
+			//获取当前确认密码输入的内容
+			var repwd = $(this).val();
+
+			//获取新密码内容
+			var newpwd = $('#newpwd').val();
+
+			//判断两个结果是否一致
+			if(newpwd != repwd){
+				$('#tid').css('display','');
+				$('#did').css('display','');
+				$('#did').html('两次密码不一致，请检查');
+			}else{
+
+				//改变初始状态
+				repas = true;
+				$('#tid').css('display','none');
+				$('#did').css('display','none');
+				$('#did').html('');
+			}
+		});
+
+		//提交点击事件
+		$('#btn').on('click',function(){
+
+			if(pas && repas){
+				return true;
+			}else{
+				return false;
+			}
+		});
+	</script>
 </body>
 </html>

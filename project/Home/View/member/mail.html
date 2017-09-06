@@ -50,24 +50,24 @@
 						</ul>
 					</div>
 					<div class="ucenter_c">
-						<form>
+						<form action="__CONTROLLER__/domail?id={$id}" method="post">
 							<table cellspacing="0" cellpadding="0" class="form">
 								<tbody>
 									<tr>
 										<th>原邮箱：</th>
-										<td><b class="blue">a134@sina.com</b></td>
+										<td><b class="blue">{$mail}</b></td>
 									</tr>
 									<tr>
 										<th>新邮箱：</th>
-										<td><input type="text" name="mail" class="input"></td>
+										<td><input type="email" name="email" class="input" placeholder="请输入您的邮箱"></td>
 									</tr>
 									<tr>
 										<th>确认密码：</th>
-										<td><input type="password" name="confirmpwd" class="input"></td>
+										<td><input type="password" name="password" class="input" placeholder="请输入您的密码"></td>
 									</tr>
 									<tr>
 										<th></th>
-										<td><input type="submit" name="refer" class="green_btn" value="更新邮箱"></td>
+										<td><input type="submit" class="green_btn" value="更新邮箱"></td>
 									</tr>
 								</tbody>
 							</table>
