@@ -110,6 +110,19 @@ $(document).ready(function(){
 		$(this).parent().parent().find(".location").text(val);
 		$(".address-li #city #sel-pro").remove();
 	});
+	$(".help_info dl").each(function(){
+		$(this).children("dt").click(function(){
+			if($(this).hasClass("add")){
+				$(this).removeClass("add");
+				$(this).parent().children("dd").css("display","");
+			}else{
+				$(this).addClass("add");
+				$(this).parent().children("dd").css("display","none");
+			}
+		});
+	});
+	
+
 	var win=$(window); //得到窗口对象
 		win.scroll(function(){
 		var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
@@ -120,3 +133,23 @@ $(document).ready(function(){
 	   }
 	});
 });
+/* 设置cookie */
+	    var setCookie = function (name, value) {
+	    	var Days = 7;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	        document.cookie = name + "=" + value + ";path=/;expires=" + exp.toGMTString();
+
+	    };
+
+		function set_city(area_main,city_name){
+			setCookie('area',area_main);
+			setCookie('city',city_name);
+		    
+		}
+
+		//JS操作cookies方法!
+	//写cookies
+	// var username=document.cookie.replace(/[ ]/g,"").split(";").split("=")[1];
+	// $("#J_region").text(username);
+

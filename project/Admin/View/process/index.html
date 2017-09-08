@@ -109,6 +109,7 @@ a:active{text-decoration: blink; color: yellow;}
                   <th style="text-align:center;">完工时间</th>
                   <th style="text-align:center;">装修费用</th>
                   <th style="text-align:center;">当前进度</th>
+                  <th style="text-align:center;">状态</th>
                   <th style="text-align:center;">操作</th>
                 </tr>
                 </thead>
@@ -121,6 +122,7 @@ a:active{text-decoration: blink; color: yellow;}
                     <td class="name" style="text-overflow:ellipsis;text-align:center;">{$v.endtime}</td>
                     <td class="name" style="text-overflow:ellipsis;text-align:center;">{$v.money}元/㎡</td>
                     <td class="name" style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/jindu?id={$v.id}">装修进度</a></td>
+                    <td class="name" style="text-overflow:ellipsis;text-align:center;"><?=$sta[$v['status']]?></td>
 	                  <td class="name" style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/edit?id={$v.id}">修改</a> | <a href="__CONTROLLER__/delete?id={$v.id}">删除</a></td>
 	                </tr>
 	            </foreach>

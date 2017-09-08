@@ -64,9 +64,27 @@
 							    </tr>
 							</thead>
 							<tbody>
-							    <tr>
+
+							<if condition="$res">
+								<foreach name="res" item="v">
+								    <tr>
+										<td>{$v.id}</td>
+										<td>{$v.cellname}</td>
+										<td>{$v.address}</td>
+										<td>{$v.acreage}</td>
+										<td>{$v.money}元/㎡</td>
+										<td>{$v.c_name}</td>
+										<td>{$v.starttime}</td>
+										<td>{$v.endtime}</td>
+										<td><?=$sta[$v['status']]?></td>
+										<td><a href="">查看进度详情</a></td>
+							    	</tr>
+								</foreach>
+							<else/>
+								<tr>
 									<td colspan="10">暂无数据</td>
 							    </tr>
+							</if>
 							</tbody>
 						</table>
 						<div class="p_pageNav p_ListpageNav" style="display: none;">

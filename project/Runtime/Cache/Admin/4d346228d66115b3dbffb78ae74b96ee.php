@@ -153,6 +153,7 @@ a:active{text-decoration: blink; color: yellow;}
                   <th style="text-align:center;">完工时间</th>
                   <th style="text-align:center;">装修费用</th>
                   <th style="text-align:center;">当前进度</th>
+                  <th style="text-align:center;">状态</th>
                   <th style="text-align:center;">操作</th>
                 </tr>
                 </thead>
@@ -164,6 +165,7 @@ a:active{text-decoration: blink; color: yellow;}
                     <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["endtime"]); ?></td>
                     <td class="name" style="text-overflow:ellipsis;text-align:center;"><?php echo ($v["money"]); ?>元/㎡</td>
                     <td class="name" style="text-overflow:ellipsis;text-align:center;"><a href="/admin/process/jindu?id=<?php echo ($v["id"]); ?>">装修进度</a></td>
+                    <td class="name" style="text-overflow:ellipsis;text-align:center;"><?=$sta[$v['status']]?></td>
 	                  <td class="name" style="text-overflow:ellipsis;text-align:center;"><a href="/admin/process/edit?id=<?php echo ($v["id"]); ?>">修改</a> | <a href="/admin/process/delete?id=<?php echo ($v["id"]); ?>">删除</a></td>
 	                </tr><?php endforeach; endif; ?>
 	           

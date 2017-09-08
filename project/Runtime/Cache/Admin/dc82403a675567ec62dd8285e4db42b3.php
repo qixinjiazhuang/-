@@ -96,6 +96,13 @@
                   <label for="exampleInputName">结束时间</label>
                   <input style="width:50%;" type="text" name="endtime" required="required" class="form-control" value="<?php echo ($res["endtime"]); ?>" placeholder="年 / 月 / 日">
                 </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">状态</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="status">
+                      <option value="1" <?php if($v['status'] == 1){ ?> selected="selected" <?php } ?> >装修中</option>
+                      <option value="2" <?php if($v['status'] == 2){ ?> selected="selected" <?php } ?> >已完工</option>
+                  </select>
+                </div>
               </div>
               
               <!-- /.box-body -->

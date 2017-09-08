@@ -98,6 +98,7 @@ class TenderController extends controller {
     	//查询id 名称
     	$res = $model->field('id,c_name')->select();
 
+    	//发送数据到模板
     	$this->assign('res',$res);
 
 		$this->display();

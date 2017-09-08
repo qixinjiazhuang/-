@@ -45,7 +45,6 @@
 
 <script src="/Public/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="/Public/jquery.cityselect.js"></script> 
-<script type="text/javascript" src="/Public/jquery.cityselect.js"></script> 
 
 <!-- Content Wrapper. Contains page content -->
   <!-- <div class="content-wrapper"> -->

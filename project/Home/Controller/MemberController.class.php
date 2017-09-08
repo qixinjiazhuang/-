@@ -318,7 +318,98 @@ class  MemberController extends Controller {
 		$this->display();
 	}
 
-	public function myface(){
-		dump($_FILES);
+	public function pic(){
+
+		//实例化文件上传类
+        $file = new \Think\Upload();
+
+        //设置上传配置信息
+        $file->savePath  =  '/member/'; // 设置附件上传根目录
+
+        $filename = $file->saveName = time().mt_rand(00000000,99999999).'.jpg';
+
+        //执行上传
+        $info = $file->upload();
+      
+        $data['photo'] = $info['__avatar1']['savepath'].$info['__avatar1']['savename'];
+
+        //获取session
+        $id = session('home_user')['id'];
+
+        //根据id查询type
+        $model = M('users');
+
+        //查询
+        $type = $model->field('type')->where('id='.$id)->find()['type'];
+        
+        //判断 1.业主
+        if($type == 1){
+
+        	//实例化member
+        	$member = M('member');
+
+        	//查询原图片路径
+        	$photo = $member->field('photo')->where('uid='.$id)->find()['photo'];
+
+        	//删除图片
+        	@unlink('./Uploads/'.$photo);
+
+        	//修改图片
+        	$member->where('uid='.$id)->save($data);
+        }
+
+
+        //3. 设计师
+        if($type == 3){
+
+        	//实例化company
+        	$designer = M('designer');
+
+        	//查询原图片路径
+        	$photo = $designer->field('photo')->where('uid='.$id)->find()['photo'];
+
+        	//删除图片
+        	@unlink('./Uploads/'.$photo);
+
+        	$designer->where('uid='.$id)->save($data);
+        }
+
+        //5. 技工mechanic
+        if($type == 5){
+
+        	//实例化 mechanic
+        	$mechanic = M('mechanic');
+
+        	//查询原图片路径
+        	$photo = $mechanic->field('photo')->where('uid='.$id)->find()['photo'];
+
+        	//删除图片
+        	@unlink('./Uploads/'.$photo);
+
+        	$mechanic->where('uid='.$id)->save($data);
+        }
+
+        //6 .工长 foreman
+        if($type == 6){
+
+        	//实例化 foreman
+        	$foreman = M('foreman');
+
+        	//查询原图片路径
+        	$photo = $foreman->field('photo')->where('uid='.$id)->find()['photo'];
+
+        	//删除图片
+        	@unlink('./Uploads/'.$photo);
+
+        	$foreman->where('uid='.$id)->save($data);
+
+        }
+
+        if($member || $designer || $mechanic || $foreman){
+        	
+        	$this->ajaxReturn(0);
+        }else{
+        	$this->ajaxReturn(1);
+        }
 	}
 }

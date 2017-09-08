@@ -142,7 +142,7 @@ class CompanyController extends Controller {
 
     	//执行添加
     	$res = $model->add($data);
-
+    	
     	//判断是否添加成功
     	if($res){
     		$this->success('恭喜您, 申请成功',$SERVER['HTTP_REFERER']);

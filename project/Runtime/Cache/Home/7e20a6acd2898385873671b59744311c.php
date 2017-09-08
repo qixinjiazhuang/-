@@ -1,6 +1,20 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="/Public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/Public/css/a.css">
+	<link rel="stylesheet" type="text/css" href="/Public/css/list.css">
+	<script type="text/javascript" src="/Public/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/Public/js/jquery-1.11.1.min_044d0927.js"></script>
+	<script type="text/javascript" src="/Public/js/jquery.bxslider_e88acd1b.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link rel="stylesheet" type="text/css" href="/Public/css/style.css">
@@ -190,13 +204,14 @@
                         <ul class="snd-ul">
                             <li><a href="/home/company/index">找装修公司</a></li>
                             <li><a href="/home/mechanic/index">找工人</a></li>
+                            <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
                             <li><a href="#">优惠信息</a></li>
                         </ul>
                     </div>
                 </li>                   
-                <li class="with-sub-nav fst-li" id="nav_wawj">
+           <!--      <li class="with-sub-nav fst-li" id="nav_wawj">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">我爱我家</a>
                         <i></i>
@@ -207,7 +222,7 @@
                             <li><a href="#">团装小区</a></li>                   
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <li class="fst-li" id="zxsl">
                     <div class="ln-layer">
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
@@ -224,7 +239,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_yhhd">
+             <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
                         <i></i>
@@ -232,13 +247,13 @@
                             <li><a href="#">优惠券</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <li class="fst-li" id="nav_ztz">
                     <div class="ln-layer">
                         <a href="#" id="nav_home" class="fst-ln">整体装</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_jjsc">
+             <!--    <li class="with-sub-nav fst-li" id="nav_jjsc">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">家居商城</a>
                         <i></i>
@@ -247,135 +262,64 @@
                             <li><a href="#">商城列表</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
-<title>恋家网</title>
     <div class="lwrap clearfix">
 		<div class="above_dist clearfix">
 			<div class="zx_dist">
 				<div class="zx_type">
-					<div class="zx_type_wrap">
-						<span class="on">免费报价</span>
-						<span>免费设计</span>
-					</div>
+					<ul class="sec_topr_tab">
+						<li class="on"><a href="javascript:;">免费设计</a></li>
+						<li><a href="javascript:;">免费验房</a></li>
+						<li><a href="javascript:;">免费量房</a></li>
+						<li><a href="javascript:;">免费报价</a></li>
+					</ul>
 				</div>
 				<div class="zx_form_wrap">
-					<form>
-						<p class="zx_form_text">3套设计师方案任性挑选</p>
-						<div class="form_con free_quote">
-							<div class="zx_input">
-                                <label onclick="$(this).siblings('input').focus();" style="display: block;">建筑面积</label>
-                                <input type="text" name="area" onkeydown="$(this).siblings('label').hide();" onblur="if(this.value=='')$(this).siblings('label').show()" class="area_input" onkeyup="this.value=this.value.replace(/\D+/g,'')" autocomplete="off" autofocus="autofocus">
-                                <span class="area_unit">m²</span>
-                            </div>
-                            <div class="zx_input">
-                                <div class="huxing_wrap">
-                                    <div class="huxing_solo">
-                                        <span class="huxing_item">一室</span>
-                                        <em></em>
-                                        <ul style="height: auto;">                            
-                                            <li><a href="javascript:;">一室</a></li>                       
-                                            <li><a href="javascript:;">二室</a></li>                      
-                                            <li><a href="javascript:;">三室</a></li>                        
-                                            <li><a href="javascript:;">四室</a></li>
-                                            <li><a href="javascript:;">五室</a></li>                        
-                                        </ul>
-                                    </div>
-                                    <div class="huxing_solo">
-                                        <span class="huxing_item">一厅</span>
-                                        <em></em>
-                                        <ul style="height: auto;">                            
-                                            <li><a href="javascript:;">一厅</a></li>                   
-                                            <li><a href="javascript:;">二厅</a></li>                      
-                                            <li><a href="javascript:;">三厅</a></li>                         
-                                            <li><a href="javascript:;">四厅</a></li>                       
-                                            <li><a href="javascript:;">五厅</a></li>                        
-                                        </ul>
-                                    </div>
-                                    <div class="huxing_solo mr0" style="margin-right:0;">
-                                        <span class="huxing_item">一卫</span>
-                                        <em></em>
-                                        <ul style="height: auto; overflow: hidden;">                    
-                                            <li><a href="javascript:;">一卫</a></li>                     
-                                            <li><a href="javascript:;">二卫</a></li>                         
-                                            <li><a href="javascript:;">三卫</a></li>                         
-                                            <li><a href="javascript:;">四卫</a></li>                       
-                                            <li><a href="javascript:;">五卫</a></li>                        
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="zx_input">
-                                <label onclick="$(this).siblings('input').focus();" style="display: block;">手机号</label>
-                                <input type="text" name="phone" onkeydown="$(this).siblings('label').hide();" onblur="if(this.value=='')$(this).siblings('label').show()" class="area_input" onkeyup="this.value=this.value.replace(/\D+/g,'')" autocomplete="off" autofocus="autofocus">
-                            </div>
+					<div class="form_hd">
+						<p>10秒登记，免费获取专业设计方案</p>
+						<p class="none">同一小区同批验房须达到10户，可安排免费验房</p>
+						<p class="none">专业人员免费上门，按照行业标准严格验收</p>
+						<p class="none">3套报价对比，获取最靠谱方案，拒绝超预算</p>
+					</div>
+					<form action="<?php echo U('/home/company/add');?>" method="post">
+					<input type="text" name="truename" class="text full" placeholder="请输入您的姓名">
+					<input type="text" name="phone" class="text full" placeholder="请输入您的手机号码">
+					<div class="select clearfix">
+						<div class="address-li">
+							<div>
+								<span class="location" name="province" id="province">省</span>
+								<i></i>
+							</div>
+							<div class="select-item">
+								<select class="form-control"  id="s_province" name="province"></select>
+							</div>
 						</div>
-						<div class="form_con free_design" style="display: none;">
-							<div class="zx_input">
-                                <label onclick="$(this).siblings('input').focus();" style="display: block;">您的姓名</label>
-                                <input type="text" name="u_name" onkeydown="$(this).siblings('label').hide();" onblur="if(this.value=='')$(this).siblings('label').show();" onkeyup="this.value=this.value.replace(/\s+/g,'')" autocomplete="off">
-                            </div>
-                            <div class="zx_input">
-                                <label onclick="$(this).siblings('input').focus();">您的手机号</label>
-                                <input type="text" name="mobile" onkeydown="$(this).siblings('label').hide();" onblur="if(this.value=='')$(this).siblings('label').show();" maxlength="11" onkeyup="this.value=this.value.replace(/\D+/g,'')" autocomplete="off">
-                            </div>
-                            <div class="zx_input select_city clearfix">
-								<input type="text" readonly="readonly" value="" name="anshan" onfocus="$(this).siblings('.Jia_tab_select').fadeIn();" onblur="$(this).siblings('.Jia_tab_select').fadeOut();">
-								<em></em>
-								<div class="tab_select clearfix">
-									<dl class="clearfix">
-										<dt>ABCDEF</dt>
-										<dd>
-											<a href="javascript:;" name="beijing">北京</a>
-											<a href="javascript:;" name="chongqing">重庆</a>
-											<a href="javascript:;" name="chengdu">成都</a>
-											<a href="javascript:;" name="changsha">长沙</a>
-											<a href="javascript:;" name="changchun">长春</a>
-											<a href="javascript:;" name="dalian">大连</a>
-											<a href="javascript:;" name="fuzhou">福州</a>
-											<a href="javascript:;" name="changzhou">常州</a>
-											<a href="javascript:;" name="gddg">东莞</a>
-											<a href="javascript:;" name="ahaq">安庆</a>
-											<a href="javascript:;" name="hncd">常德</a>
-											<a href="javascript:;" name="anshan">鞍山</a>
-											<a href="javascript:;" name="jxfz">抚州</a>
-											<a href="javascript:;" name="baoding">保定</a>
-											<a href="javascript:;" name="gxbh">北海</a>
-										</dd>
-									</dl>
-									<dl class="clearfix">
-										<dt>GHJKLM</dt>
-										<dd>
-											<a href="javascript:;" name="guiyang">贵阳</a>
-											<a href="javascript:;" name="hangzhou">杭州</a>
-											<a href="javascript:;" name="haerbin">哈尔滨</a>
-										</dd>
-									</dl>
-									<dl class="clearfix">
-										<dt>NPQRS</dt>
-										<dd>
-											<a href="javascript:;" name="nanchang">南昌</a>
-											<a href="javascript:;" name="nanning">南宁</a>
-											<a href="javascript:;" name="nantong">南通</a>
-											<a href="javascript:;" name="nanjing">南京</a>
-										</dd>
-									</dl>
-									<dl class="clearfix">
-										<dt>TWXYZ</dt>
-										<dd>
-											<a href="javascript:;" name="tianjin">天津</a>
-											<a href="javascript:;" name="wuhan">武汉</a>
-											<a href="javascript:;" name="xian">西安</a>
-										</dd>
-									</dl>
-								</div>
-                            </div>
+						<div class="address-li">
+							<div>
+								<span class="location" name="city" id="city">市</span>
+								<i></i>
+							</div>
+							<div class="select-item">
+								<select class="form-control"  id="s_city" name="city" ></select>
+							</div>
 						</div>
-						<p class="form_err_tip"><i class="iconfont"></i></p>
-						<a href="javascript:;" class="obtain_btn">立即获取</a>
-					</form>
+						<div class="address-li">
+							<div>
+								<span class="location" name="region" id="region">区</span>
+								<i></i>
+							</div>
+							<div class="select-item">
+								 <select class="form-control"  id="s_county" name="county"></select>
+							</div>
+							<script class="resources library" src="/Public/area.js" type="text/javascript"></script>
+							<script type="text/javascript">_init_area();</script>
+						</div>
+					</div>
+					<input type="submit" value="免费申请" class="btn btn_sub_apply">
+				</form>
 				</div>
 			</div>
 			<div class="intro_dist">
@@ -474,19 +418,19 @@
 				<a href="<?php echo U('/home/tender/index');?>" title="免费验房,钥匙入手质量检测很必要"></a>
 			</li>
 			<li class="icon02">
-				<a href="javascript:;" title=""></a>
+				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 			<li class="icon03">
-				<a href="javascript:;" title=""></a>
+				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 			<li class="icon04">
-				<a href="javascript:;" title=""></a>
+				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 			<li class="icon05">
-				<a href="javascript:;" title=""></a>
+				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 			<li class="icon06">
-				<a href="javascript:;" title=""></a>
+				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 		</ul>
 	</div>
@@ -672,7 +616,7 @@
 		<div class="zhuangxiu_left" style="height: 418px;">
 			<div>
 				<span>
-					<a href="company_list.html">找装修公司</a>
+					<a href="/home/company/index">找装修公司</a>
 					<i>共有979家装修公司</i>
 				</span>
 			</div>
@@ -681,6 +625,7 @@
 					<b><a>等级</a></b>
      				<p> 
                 	<a href="javascript:;" target="_blank">普通装修公司</a>
+                    <a href="javascript:;" target="_blank">黄金装修公司</a>
                     <a href="javascript:;" target="_blank">钻石装修公司</a>
                		</p>
                </li>
@@ -689,6 +634,7 @@
      				<p> 
                 	<a href="javascript:;" target="_blank">家装</a>
                     <a href="javascript:;" target="_blank">公装</a>
+                    <a href="javascript:;" target="_blank">局部</a>
                		</p>
                </li>
                <li> 
@@ -711,7 +657,41 @@
 						<span>专属管家 贴身服务</span>
 					</div>
 				</a>
-				
+				<a href="#" target="_blank" class="fd">
+					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
+					<div>
+						<p>生活家装饰</p>
+						<span>专属管家 贴身服务</span>
+					</div>
+				</a>
+				<a href="#" target="_blank" class="fd">
+					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
+					<div>
+						<p>生活家装饰</p>
+						<span>专属管家 贴身服务</span>
+					</div>
+				</a>
+				<a href="#" target="_blank" class="fd">
+					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
+					<div>
+						<p>生活家装饰</p>
+						<span>专属管家 贴身服务</span>
+					</div>
+				</a>
+				<a href="#" target="_blank" class="fd">
+					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
+					<div>
+						<p>生活家装饰</p>
+						<span>专属管家 贴身服务</span>
+					</div>
+				</a>
+				<a href="#" target="_blank" class="fd">
+					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
+					<div>
+						<p>生活家装饰</p>
+						<span>专属管家 贴身服务</span>
+					</div>
+				</a>
 			</div>
 			<div class="do_firm_r opacity_img">
 				<a href="#" target="_blank">
@@ -767,14 +747,14 @@
 				</div>
 			</li>
 			<img src="/Public/images/caseImg1.jpg" class="img1">
-			<a href="case_list.html"><img src="/Public/images/caseImg2.jpg" class="img2"></a>
+			<a href="/home/case/index"><img src="/Public/images/caseImg2.jpg" class="img2"></a>
 		</ul>
 	</div>
 	<div class="zhuangxiu clearfix">
 		<div class="zhuangxiu_left" style="height:358px;">
 			<div>
 				<span>
-					<a href="case_list.html">装修效果图</a>
+					<a href="/home/case/index">装修效果图</a>
 					<i>共有48888张效果图</i>
 				</span>
 			</div>
@@ -1092,10 +1072,42 @@
 						<a href="#" class="btn_main_sm btn">我要参观</a>
 					</div>
 				</li>
+				<li>
+					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
+					<div class="rt">
+						<p><a href="#">尚城新小区水电</a></p>
+						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
+						<a href="#" class="btn_main_sm btn">我要参观</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
+					<div class="rt">
+						<p><a href="#">尚城新小区水电</a></p>
+						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
+						<a href="#" class="btn_main_sm btn">我要参观</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
+					<div class="rt">
+						<p><a href="#">尚城新小区水电</a></p>
+						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
+						<a href="#" class="btn_main_sm btn">我要参观</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
+					<div class="rt">
+						<p><a href="#">尚城新小区水电</a></p>
+						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
+						<a href="#" class="btn_main_sm btn">我要参观</a>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
-	<<!-- div class="zhuangxiu clearfix">
+	<div class="zhuangxiu clearfix">
 		<div class="zhuangxiu_left" style="height: 416px;">
 			<div>
 				<span>
@@ -1182,8 +1194,8 @@
 				<p class="text">千思装饰</p>
 			</div>
 		</div>
-	</div> -->
-	<!-- <div class="zhuangxiu clearfix">
+	</div>
+	<div class="zhuangxiu clearfix">
 		<div class="zhuangxiu_left" style="height: 416px;">
 			<div>
 				<span>
@@ -1282,7 +1294,7 @@
 				<p class="text">千思装饰</p>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="mb20">
 		<h2 class="index_tit clearfix">
 			<font class="lt">设计师</font>
@@ -1524,8 +1536,8 @@
 					<dt>
 						购物指南
 					</dt>
-					<dd><a href="#" target="_blank">会员注册</a></dd>
-					<dd><a href="#" target="_blank">如何订购</a></dd>
+					<dd><a href="/home/Help/hyzc" target="_blank">会员注册</a></dd>
+					<dd><a href="/home/Help/order" target="_blank">如何订购</a></dd>
 					<dd><a href="#" target="_blank">如何支付</a></dd>
 					<dd><a href="#" target="_blank">订单处理</a></dd>
 					<dd><a href="#" target="_blank">配送方式</a></dd>
@@ -1534,7 +1546,7 @@
 					<dt>
 						装修服务
 					</dt>
-					<dd><a href="#" target="_blank">装修宝</a></dd>
+					<dd><a href="#" target="_blank">装修保</a></dd>
 					<dd><a href="#" target="_blank">免费第三方监理</a></dd>
 				</dl>
 				<dl class="shop_protect">
@@ -1578,9 +1590,9 @@
 		<div class="footer_info">
 			<div class="footer_con">
 				<p class="footer_link">
-					<a href="#" target="_blank">关于我们</a>
+					<a href="/home/About/about" target="_blank">关于我们</a>
 					<span class="split">|</span>
-					<a href="#" target="_blank">联系我们</a>
+					<a href="/home/About/contact" target="_blank">联系我们</a>
 					<span class="split">|</span>
 					<a href="#" target="_blank">媒体报道</a>
 					<span class="split">|</span>
@@ -1612,13 +1624,30 @@
 	</div>
 	<script type="text/javascript" src="/Public/js/common.js"></script>
 	<script type="text/javascript">
-		$('.zx_type_wrap span').click(function(){
+		$('.zx_type .sec_topr_tab li').click(function(){
 			var index = $(this).index();
-			$(".form_con").eq(index).css({"display":"block"}).siblings(".form_con").css({"display":"none"});
+			$(".form_hd p").eq(index).css({"display":"block"}).siblings().css({"display":"none"});
             $(this).addClass('on').siblings().removeClass('on');
-           	
-            
         });
+	</script>
+	<script>
+		$(".select_city .tab_select dl dd a").click(function(){
+			var text = $(this).text();
+			$(".select_city input[type='text']").val(text);
+		});
+	</script>
+	<script>
+	    $("#logout").click(function(){
+	        $.ajax({
+	            type: "POST",
+	            url : "/home/Login/logout",
+	            success: function(json){
+	                if(json.status == 1){
+	                    location.href = json.url;
+	                }
+	            }
+	        })
+	    });
 	</script>
 </body>
 </html>

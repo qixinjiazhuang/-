@@ -190,6 +190,7 @@
                         <ul class="snd-ul">
                             <li><a href="/home/company/index">找装修公司</a></li>
                             <li><a href="/home/mechanic/index">找工人</a></li>
+                            <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
                             <li><a href="#">优惠信息</a></li>
@@ -301,10 +302,12 @@
 							<li class="on"><a>修改头像</a></li>
 						</ul>
 					</div>
-					<div class="ucenter_c">
-						<div id="swfContainer"></div>
-						<p style="text-align:center;display: none;"><button type="button" id="upload">自定义上传按钮</button></p>
-					</div>
+					<form action="/home/member/pic" method="post">
+						<div class="ucenter_c">
+							<div id="swfContainer"></div>
+							<p style="text-align:center;display: none;"><button name="pic" type="button" id="upload">自定义上传按钮</button></p>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -320,7 +323,7 @@
 		swfobject.addDomLoadEvent(function () {
                 var swf = new fullAvatarEditor("swfContainer", {
 					    id: 'swf',
-						upload_url: '/home/member/myface',
+						upload_url: '/home/member/pic',
 						src_upload:0
 					}, function (msg) {
 						switch(msg.code)
@@ -345,7 +348,7 @@
 							break;
 							case 5 : 
 								if(msg.type == 0)
-								{
+								{	
 									if(msg.content.sourceUrl)
 									{
 										alert("原图已成功保存至服务器，url为：\n" +　msg.content.sourceUrl);

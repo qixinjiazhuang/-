@@ -49,10 +49,12 @@
 							<li class="on"><a>修改头像</a></li>
 						</ul>
 					</div>
-					<div class="ucenter_c">
-						<div id="swfContainer"></div>
-						<p style="text-align:center;display: none;"><button type="button" id="upload">自定义上传按钮</button></p>
-					</div>
+					<form action="__MODULE__/member/pic" method="post">
+						<div class="ucenter_c">
+							<div id="swfContainer"></div>
+							<p style="text-align:center;display: none;"><button name="pic" type="button" id="upload">自定义上传按钮</button></p>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -68,7 +70,7 @@
 		swfobject.addDomLoadEvent(function () {
                 var swf = new fullAvatarEditor("swfContainer", {
 					    id: 'swf',
-						upload_url: '__MODULE__/member/myface',
+						upload_url: '__MODULE__/member/pic',
 						src_upload:0
 					}, function (msg) {
 						switch(msg.code)
@@ -93,7 +95,7 @@
 							break;
 							case 5 : 
 								if(msg.type == 0)
-								{
+								{	
 									if(msg.content.sourceUrl)
 									{
 										alert("原图已成功保存至服务器，url为：\n" +　msg.content.sourceUrl);

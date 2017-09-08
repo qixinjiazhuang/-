@@ -134,6 +134,12 @@
                   <label for="exampleInputPassword3">所在小区</label>
                   <input style="width:50%;" type="text" required="required" name="cellname" value="" class="form-control" id="exampleInputPassword3" placeholder="请输入所在小区">
                 </div>
+                 <div class="form-group">
+                  <label for="exampleInputPassword3">装修公司</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="cid">
+                    <?php if(is_array($res)): foreach($res as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; ?>
+                  </select>
+                </div>
                 <div class="form-group">
                   <label for="exampleInputPassword3">装修方式</label>
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="method">

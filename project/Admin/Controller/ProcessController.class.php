@@ -36,8 +36,12 @@ class ProcessController extends controller {
         //分页展示
         $show = $fors->show();
 
+        $sta = ['1'=>'装修中','2'=>'已完工'];
+
         //发送数据
         $this->assign('res',$res);
+
+        $this->assign('sta',$sta);
 
         $this->assign('show',$show);
 
@@ -91,6 +95,8 @@ class ProcessController extends controller {
 		//结束时间
 		$data['endtime'] = I('post.endtime');
 
+		$data['stauts'] = I('post.status');
+
 		//实例化
 		$progress = M('progress');
 
@@ -135,7 +141,6 @@ class ProcessController extends controller {
 
         $tender = $tender->field('id,title')->select();
 
-        dump($res);
         //发送数据
         $this->assign('tender',$tender);
 
