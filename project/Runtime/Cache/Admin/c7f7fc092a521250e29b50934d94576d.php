@@ -56,8 +56,8 @@
         <small>添加招标</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li><a href="#">招标</a></li>
+        <li><a href="<?php echo U('/admin/index/index');?>"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="/admin/tender/index">招标</a></li>
         <li class="active">添加招标</li>
       </ol>
     </section>
@@ -166,6 +166,7 @@
                       <option value="5">现代</option>
                   </select>
                 </div>
+                 <br/>
                 <div class="form-group">
                   <label for="exampleInputPassword4">装修预算</label>
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="budget">

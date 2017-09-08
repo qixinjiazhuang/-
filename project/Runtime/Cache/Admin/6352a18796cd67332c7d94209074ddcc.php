@@ -195,6 +195,9 @@
 					  	<i class='icon-font icon-right'>&#xe60b;</i>
 				  	</a>
 					<ul class='menu-item-child'>
+						<a href='<?php echo U("admin/process/index");?>'>
+						  	<i class='icon-font'>装修进程</i>
+				  		</a>
 						<a href='<?php echo U("admin/tender/small");?>'>
 						  	<i class='icon-font'>意向业主</i>
 				  		</a>
@@ -246,6 +249,20 @@
 			</ul>
 			<ul class="side-menu">
 				<li class='menu-header'>运营</li>
+				<li>
+				  	<a>
+					  	<i style="color:black" class='icon-font'>广告管理</i>
+					  	<i class='icon-font icon-right'>&#xe60b;</i>
+				  	</a>
+					<ul class='menu-item-child'>
+						<a href='<?php echo U("admin/advert/index");?>'>
+						  	<i class='icon-font'>广告列表</i>
+				  		</a>
+				  		<a href='<?php echo U("admin/advert/index");?>'>
+						  	<i class='icon-font'>轮播图</i>
+				  		</a>
+				  	</ul>
+				</li>
 			  	<li>
 				  	<a>
 					  	<i style="color:black" class='icon-font'>关于我们</i>

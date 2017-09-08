@@ -188,9 +188,8 @@
                         <a href="#" class="fst-ln">找装修</a>
                         <i></i>
                         <ul class="snd-ul">
-                            <li><a href="#">一站式整装</a></li>
                             <li><a href="/home/company/index">找装修公司</a></li>
-                            <li><a href="#">找工人</a></li>
+                            <li><a href="/home/mechanic/index">找工人</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
                             <li><a href="#">优惠信息</a></li>
@@ -252,6 +251,7 @@
             </ul>
         </div>
     </div>
+<script type="text/javascript" src="/Public/jquery.cityselect.js"></script> 
 <title>个人中心</title>
 <link rel="stylesheet" type="text/css" href="/Public/css/member.css">
 	<div class="memberwrap">
@@ -278,8 +278,8 @@
 						<font class="menu_open_icon"></font>
 						<span>内容管理</span>
 						<ol class="sub_menu">
-							<li><a href="/home/member/myzx">我的装修</a></li>
-							<li><a href="/home/member/myzxb">我的装修保</a></li>
+							<li><a href="/home/substance/myzx">我的装修</a></li>
+							<li><a href="/home/substance/myzxb">我的装修保</a></li>
 						</ol>
 					</li>
 					<li class="menu open">

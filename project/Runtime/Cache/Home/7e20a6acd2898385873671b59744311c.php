@@ -188,9 +188,8 @@
                         <a href="#" class="fst-ln">找装修</a>
                         <i></i>
                         <ul class="snd-ul">
-                            <li><a href="#">一站式整装</a></li>
                             <li><a href="/home/company/index">找装修公司</a></li>
-                            <li><a href="#">找工人</a></li>
+                            <li><a href="/home/mechanic/index">找工人</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
                             <li><a href="#">优惠信息</a></li>
@@ -252,6 +251,7 @@
             </ul>
         </div>
     </div>
+<title>恋家网</title>
     <div class="lwrap clearfix">
 		<div class="above_dist clearfix">
 			<div class="zx_dist">
@@ -471,7 +471,7 @@
 	<div class="v_indexBox">
 		<ul class="clearfix">
 			<li class="icon01">
-				<a href="javascript:;" title="免费验房,钥匙入手质量检测很必要"></a>
+				<a href="<?php echo U('/home/tender/index');?>" title="免费验房,钥匙入手质量检测很必要"></a>
 			</li>
 			<li class="icon02">
 				<a href="javascript:;" title=""></a>
@@ -681,7 +681,6 @@
 					<b><a>等级</a></b>
      				<p> 
                 	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">黄金装修公司</a>
                     <a href="javascript:;" target="_blank">钻石装修公司</a>
                		</p>
                </li>
@@ -690,7 +689,6 @@
      				<p> 
                 	<a href="javascript:;" target="_blank">家装</a>
                     <a href="javascript:;" target="_blank">公装</a>
-                    <a href="javascript:;" target="_blank">局部</a>
                		</p>
                </li>
                <li> 
@@ -713,41 +711,7 @@
 						<span>专属管家 贴身服务</span>
 					</div>
 				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
+				
 			</div>
 			<div class="do_firm_r opacity_img">
 				<a href="#" target="_blank">
@@ -1120,38 +1084,6 @@
 				<p class="cl"></p>
 			</h3>
 			<ul>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
 				<li>
 					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
 					<div class="rt">

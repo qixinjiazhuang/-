@@ -92,6 +92,14 @@ class TenderController extends controller {
     		$this->error('请先登录','/admin/login/index',1);
     	}
 
+    	//查询公司信息
+    	$model = M('company');
+
+    	//查询id 名称
+    	$res = $model->field('id,c_name')->select();
+
+    	$this->assign('res',$res);
+
 		$this->display();
 	}
 

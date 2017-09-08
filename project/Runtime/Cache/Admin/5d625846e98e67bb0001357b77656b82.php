@@ -182,8 +182,6 @@ a:active{text-decoration: blink; color: yellow;}
           </div>
           <!-- /.box -->
 
-          
-          <!-- /.box -->
         </div>
         <!-- /.col -->
       </div>

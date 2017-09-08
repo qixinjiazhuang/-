@@ -1,0 +1,74 @@
+<include file="./Public/lay.html"/>
+<script src="__PUBLIC__/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+
+<!-- Content Wrapper. Contains page content -->
+  <!-- <div class="content-wrapper"> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        装修招标管理
+        <small>查看招标</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">装修招标</a></li>
+        <li class="active">查看招标</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">查看招标</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div id="sid" style="display:none" class="alert alert-danger">
+            </div>
+            <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">查看招标</div>
+            <!-- Table -->
+            <table class="table table-bordered table-hover" style="table-layout:fixed;">
+              <tr> 
+                <td style="text-overflow:ellipsis;text-align:center;">进度一</td>
+                <td style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/see?pid={$pid}&process=1">查看</a> | <a href="__CONTROLLER__/addjindu?pid={$pid}&process=1">添加</a></td>
+        
+              </tr>
+            <tr> 
+                <td style="text-overflow:ellipsis;text-align:center;">进度二</td>
+                <td style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/see?pid={$pid}&process=2">查看</a> | <a href="__CONTROLLER__/addjindu?pid={$pid}&process=2">添加</a></td>
+            </tr>
+            <tr>
+                <td style="text-overflow:ellipsis;text-align:center;">进度三</td>
+                <td style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/see?pid={$pid}&process=3">查看</a> | <a href="__CONTROLLER__/addjindu?pid={$pid}&process=3">添加</a></td>
+
+            </tr>
+            <tr>
+                <td style="text-overflow:ellipsis;text-align:center;">进度四</td>
+                <td style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/see?pid={$pid}&process=4">查看</a> | <a href="__CONTROLLER__/addjindu?pid={$pid}&process=4">添加</a></td>
+            </tr>
+            <tr>
+                <td style="text-overflow:ellipsis;text-align:center;">进度五</td>
+                <td style="text-overflow:ellipsis;text-align:center;"><a href="__CONTROLLER__/see?pid={$pid}&process=5">查看</a> | <a href="__CONTROLLER__/addjindu?pid={$pid}&process=5">添加</a></td>
+            </tr>
+              </tr>
+            </table>
+          </div>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->  
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+<!-- /.content-wrapper -->

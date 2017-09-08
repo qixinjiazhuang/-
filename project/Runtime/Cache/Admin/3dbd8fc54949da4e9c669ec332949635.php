@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<!-- 
-  <link rel="stylesheet" href="/Public/dist/css/AdminLTE.min.css">
+
+  <!-- <link rel="stylesheet" href="/Public/dist/css/AdminLTE.css"> -->
   <link rel="stylesheet" href="/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <link href="/Public/bootstrap/css/main.css" rel="stylesheet">
   <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
     }
     
   </style>
- -->
+
 <link href="/Public/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="/Public/css/global.css">
 <link rel="stylesheet" href="/Public/css/dialog.css">
