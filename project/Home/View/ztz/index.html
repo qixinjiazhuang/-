@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>整体装</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/ztz.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/plugins/swiper/swiper-3.4.2.min.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="top_banner">
+		<div class="flexslider">
+			<ul class="slides">
+				<li class="list flex-active-slide"></li>
+			</ul>
+		</div>
+		<div class="mainwd banner_posit">
+			<div class="lt banner_form">
+				<div class="banner_form_head">
+					<p>一站式整装全包</p>
+				</div>
+				<div class="banner_form_body zx_form_wrap">
+					<p class="title fontcl1">预算省30% 配置高30%</p>
+					<div class="apply_form">
+						<form action="__CONTROLLER__/add" method="post">
+							<input type="text" name="truename" class="text full" placeholder="请输入您的姓名">
+							<input type="text" name="phone" class="text full" placeholder="请输入您的手机号码">
+							<div class="select clearfix">
+								<div class="address-li">
+									<div>
+										<span class="location" name="province" id="province">省</span>
+										<i></i>
+									</div>
+									<div class="select-item">
+										<select class="form-control"  id="s_province" name="province"></select>
+									</div>
+								</div>
+								<div class="address-li">
+									<div>
+										<span class="location" name="city" id="city">市</span>
+										<i></i>
+									</div>
+									<div class="select-item">
+										<select class="form-control"  id="s_city" name="city" ></select>
+									</div>
+								</div>
+								<div class="address-li">
+									<div>
+										<span class="location" name="region" id="region">区</span>
+										<i></i>
+									</div>
+									<div class="select-item">
+										<select class="form-control"  id="s_county" name="county"></select>
+									</div>
+									<script class="resources library" src="__PUBLIC__/area.js" type="text/javascript"></script>
+							<script type="text/javascript">_init_area();</script>
+								</div>
+							</div>
+							<input type="submit" value="立即预约" class="btn btn_sub_apply">
+						</form>
+					</div>
+					<p class="apply_tip">已有<span class="fontcl2">1111</span>户业主预约成功</p>
+				</div>
+			</div>
+			<div class="rt banner_advert">
+				<ul>
+					<li style="background-position: 0 -768px;">
+						<p class="title fontcl1">极致性价比</p>
+						<p class="content">同材质同工艺<br/>套餐价格净省30%</p>
+					</li>
+					<li style="background-position: -230px -768px;">
+						<p class="title fontcl1">简单省心</p>
+						<p class="content">28项精装全包<br/>装修从未如此简单</p>
+					</li>
+					<li style="background-position: -460px -768px;">
+						<p class="title fontcl1">最强保障</p>
+						<p class="content">装修全程监督<br/>价格、工期、质量<br/>多重保障</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mainwd highlights"></div>
+	<div class="grayBg">
+		<div class="mainwd wholeInstall">
+			<h2>精选整装套餐</h2>
+			<h3>包设计 包材料 包施工 一价全包</h3>
+			<ul>
+				<foreach name="data" item="v">
+					<li class="wholeInstall_list">
+						<div class="lt img_box">
+							<div class="img_mask">
+								<a href="__MODULE__/ztz/detail" target="_blank">查看详情&nbsp;></a>
+							</div>
+							<img src="__ROOT__/Uploads{$v.bpic}">
+						</div>
+						<div class="rt wz">
+							<div class="wz-price">{$v.page}<div>元/m<i>2</i></div></div>
+							<div class="wz-title">{$v.title}</div>
+						</div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+	</div>
+	<div class="mainwd wholeInstall">
+		<h2>最新签约</h2>
+		<div class="signed_box">
+			<div class="lt signed_list">
+				<ul class="signed_list_header">
+					<li>
+						<span class="signed_city">城市</span>
+						<span class="signed_name">业主称呼</span>
+						<span class="signed_area">面积</span>
+						<span class="signed_amount">金额</span>
+						<span class="signed_company">装修公司</span>
+					</li>
+				</ul>
+
+				<div class="signed_list_body swiper-container" id="swiper1">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<span class="signed_city">满城区</span>
+							<span class="signed_name">任亚超</span>
+							<span class="signed_area">88m<i>2</i></span>
+							<span class="signed_amount">6.4万</span>
+							<span class="signed_company">元洲装饰</span>
+						</li>
+						<li class="swiper-slide">
+							<span class="signed_city">上城区</span>
+							<span class="signed_name">燕丹</span>
+							<span class="signed_area">67m<i>2</i></span>
+							<span class="signed_amount">4.4万</span>
+							<span class="signed_company">元洲装饰</span>
+						</li>
+						<li class="swiper-slide">
+							<span class="signed_city">下城区</span>
+							<span class="signed_name">张三</span>
+							<span class="signed_area">29m<i>2</i></span>
+							<span class="signed_amount">0.4万</span>
+							<span class="signed_company">元洲装饰</span>
+						</li>
+						<li class="swiper-slide">
+							<span class="signed_city">萧山区</span>
+							<span class="signed_name">李四</span>
+							<span class="signed_area">33m<i>2</i></span>
+							<span class="signed_amount">1.4万</span>
+							<span class="signed_company">元洲装饰</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rt signed_comment_list_box swiper-container" id="swiper2">
+				<div class="signed_comment_list swiper-wrapper">
+					<div class="signed_comment swiper-slide">
+	                    <div class="profile">
+	                        <div class="avatar">
+	                            <img src="__PUBLIC__/pic/pokemon.jpg" />
+	                        </div>
+	                        <div class="info">
+	                            <span>徐先生<img class="score" src="__PUBLIC__/pic/score.png" /></span><br />杭州 德信泊林春天&nbsp;89m<i>2</i>
+	                        </div>
+	                        <div class="date">2015/09/18</div>
+	                    </div>
+	                    <div class="comment">
+	                        师傅手艺还是很不错的，监理过来验收的时候也说师傅手艺好。之前为了找装修公司看了很多网站，也接到了很多电话，找了几家装修公司都感觉鱼龙混杂很不靠谱，还好选了便装网，小微推荐过来的公司经过接触，都觉得还挺靠谱。
+	                    </div>
+	                </div>
+	                <div class="signed_comment swiper-slide">
+	                    <div class="profile">
+	                        <div class="avatar">
+	                            <img src="__PUBLIC__/pic/pokemon.jpg" />
+	                        </div>
+	                        <div class="info">
+	                            <span>王先生<img class="score" src="__PUBLIC__/pic/score.png" /></span><br />杭州 德鲁冬天&nbsp;69m<i>2</i>
+	                        </div>
+	                        <div class="date">2017/09/18</div>
+	                    </div>
+	                    <div class="comment">
+	                        师傅手艺还是很不错的，监理过来验收的时候也说师傅手艺好。
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="grayBg">
+		<div class="mainwd wholeInstall">
+			<h2>全程服务</h2>
+			<div class="service_process"></div>
+		</div>
+	</div>
+	<div class="four_advantage">
+		<div class="mainwd">
+			<ul>
+				<li>
+					<i class="ico_1"></i>
+					<div>
+						<span>好设计</span>
+						一流设计，实景体验
+					</div>
+				</li>
+				<li>
+					<i class="ico_2"></i>
+					<div>
+						<span>好材料</span>
+						一线大牌，源头直供
+					</div>
+				</li>
+				<li>
+					<i class="ico_3"></i>
+					<div>
+						<span>好施工</span>
+						标准工艺，严苛施工
+					</div>
+				</li>
+				<li>
+					<i class="ico_4"></i>
+					<div>
+						<span>好服务</span>
+						装修管家，专业服务
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/plugins/swiper/swiper-3.4.2.min.js"></script>
+	<script>
+		var mySwiper1 = new Swiper('#swiper1',{
+			direction : 'vertical',
+			autoplay : 2000,
+			loop : true,
+			height:32,
+			autoplayDisableOnInteraction : false
+		});
+		var mySwiper2 = new Swiper('#swiper2',{
+			direction : 'vertical',
+			autoplay : 5000,
+			loop : true,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

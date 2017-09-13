@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>工长详情</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/company_details.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+    <div class="nav-wrap">
+		<div class="crumbs_nav">
+			<a href="index.html" title="恋家网">恋家网</a>
+			<span class="sep">></span>
+			<a href="#" title="装修设计">装修设计</a>
+			<span class="sep">></span>
+			<a href="#" title="杭州装修">杭州装修</a>
+			<span class="sep">></span>
+			<a href="#" title="杭州装修公司">杭州装修公司</a>
+			<span class="sep">></span>
+			<span title="至美焕新">至美焕新</span>
+			<span class="sep">></span>
+			<span title="设计师详情" class="curPage">工长详情</span>
+		</div>
+    </div>
+    <div class="zxPany-wrap">
+		<div class="zxPany-txtWrap">
+			<div class="txt-title">
+				<ul class="clearfix">
+					<li class="info clearfix">
+						<div class="pic"><img src="__ROOT__/Uploads{$data.photo}"></div>
+						<div class="des">
+							<h3 id="designer_name">{$data.truename}</h3>
+							<div class="item-des clearfix">
+								<span class="i-title">施工年限</span>
+								<div class="i-txt i-dTxt">{$data.age}</div>
+							</div>
+							<div class="item-des clearfix">
+								<span class="i-title">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</span>
+								<div class="i-txt">
+									<span class="s-con">{$data.idea}</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="apply">
+						<div class="t-apply">
+							<div class="list" style="width: 142px;">
+								<p class="num">{$data.age}</p>
+								<p class="name">从业年限</p>
+								<span class="s-1"></span>
+							</div>
+							<div class="list" style="width: 142px;">
+								<p class="num">0</p>
+								<p class="name">已开工工地</p>
+								<span class="s-1"></span>
+							</div>
+						</div>
+						<div class="m-btn">
+							<a href="javascript:;" class="company-appBtn popup_order_button">找TA施工</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="zxPany-contain">
+			<div class="zxPany-list zxPany-place">
+				<div class="title clearfix">
+					<h5>装修工地<span class="num">（1）</span></h5>
+					<a href="#" class="m-l">更多></a>
+				</div>
+				<div class="place-info">
+					<dl class="info-list">
+						<dt>
+							<a href="javascript:;"><img src="__PUBLIC__/images/gd1.jpg" class="trans" width="210" height="165"></a>
+						</dt>
+						<dd>
+							<p class="name"><a href="javascript:;">朱先生/女士家的工地直播</a></p>
+							<p class="txt">
+								<span>类型：新房装修</span>
+								<span>方式：全包</span>
+								<span>户型：三房</span>
+								<span>风格：简约</span>
+								<span>造价：158000元</span>
+							</p>
+							<div class="proccess">
+								<ul class="clearfix">
+									<li class="pred"><i></i><span>准备开工</span></li>
+									<li class="pred"><i></i><span>水电阶段</span></li>
+									<li><i></i><span>泥木阶段</span></li>
+									<li><i></i><span>油漆阶段</span></li>
+									<li><i></i><span>安装阶段</span></li>
+									<li><i></i><span>竣工阶段</span></li>
+								</ul>
+							</div>
+							<div class="btm-txt clearfix">
+								<p class="w-txt fl">
+									<span>h（施工队长）发布新动态：</span>
+									感谢绿城蓝庭业主朱女士对杭州放心|环保
+								</p>
+								<div class="t-txt fr">
+									<span class="p-num">15</span>
+									<span class="p-c">3</span>
+									<span class="p-t">2017年05月27日</span>
+								</div>
+							</div>
+							<a href="javascript:;" class="place-link">查看工地</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+    </div>
+    <include file="./project/Home/View/foot/foot.html"/>
+    <script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/js/company_details.js"></script>
+    <script>
+    	$(".header-bottom .fst-ul .fst-li").removeClass("current-nav");
+    	$("#nav_zzx").addClass("current-nav");
+    </script>
+</body>
+</html>

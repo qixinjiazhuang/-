@@ -1,0 +1,81 @@
+<include file="./Public/lay.html"/>
+<script src="__PUBLIC__/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery.cityselect.js"></script> 
+
+
+<!-- Content Wrapper. Contains page content -->
+  <!-- <div class="content-wrapper"> -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        监理
+        <small>修改监理</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">监理</a></li>
+        <li class="active">修改</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">修改</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div id="sid" style="display:none;width:50%;" class="alert alert-danger">
+            </div>
+            <form role="form" action="__CONTROLLER__/update" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="id" value="{$res.id}">
+              <div class="box-body">
+      
+                <div class="form-group">
+                  <label for="exampleInputName">姓名</label>
+                  <input style="width:50%;" id="did" type="text" name="name" required="required" class="form-control" value="{$res.name}" placeholder="请输入姓名">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputName">联系方式</label>
+                  <input style="width:50%;" type="text" name="phone" required="required" class="form-control" value="{$res.phone}" placeholder="请输入联系方式">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputName">地区</label><br/>
+                 <select class="form-control" style="width:10%;float:left;" id="s_province" name="province"></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_city" name="city" ></select>  
+                        <select class="form-control" style="width:10%;float:left;" id="s_county" name="county"></select>
+                        <script class="resources library" src="__PUBLIC__/area.js" type="text/javascript"></script>
+                        <script type="text/javascript">_init_area();</script>
+                </div><br/>
+                  <div class="form-group">
+                  <label for="exampleInputName">简介</label>
+                  <input style="width:50%;" type="text" name="introduce" required="required" class="form-control" value="{$res.introduce}" placeholder="请输入简介">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">状态</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="status">
+                      <option value="1" <?php if($res['status'] == 1){ ?> selected="selected" <?php } ?> >已审核</option>
+                      <option value="2" <?php if($res['status'] == 2){ ?> selected="selected" <?php } ?> >未审核</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button id="btn" type="submit" class="btn btn-primary">修改</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->  
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+<!-- /.content-wrapper -->

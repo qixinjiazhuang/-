@@ -103,8 +103,14 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword4">装修公司</label>
-                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="gid">
+                  <select style="width:50%;" class="form-control" required="required" id="sel" name="gid">
                     <?php if(is_array($res)): foreach($res as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; ?>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">选择工长</label>
+                  <select style="width:50%;" class="form-control" required="required" id="select" name="fid">  
+                      <option value="">请选择</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -169,6 +175,34 @@
                         }
                     });
                    
+                   $('#sel').on('change',function(){
+                    
+                    $('#select').find('option').remove();
+                    //获取id
+                    var id = $(this).val();
+                      //查询所有父分类
+                      $.ajax('/admin/case/myajax',{
+                          type:'GET',
+                              data:{gid:id},
+                              dataType:'json',
+                              success:function(data){
+                                  
+                                  //循环迭代数据
+                                   for(var i = 0; i < data.length; i++){
+                                      
+                                      //迭代创建option标签数据
+                                      option = $('<option value="'+ data[i]['id'] +'">'+ data[i]['truename'] +'</option>'); 
+
+                                      //添加到创建的select框中
+                                      $('#select').append(option);
+                                   
+                                  }        
+                              //返回错误信息
+                              },error:function(){
+                                  alert('数据异常');
+                              }
+                       });
+                   });
                 </script>
               </div>
             </form>

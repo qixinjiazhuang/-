@@ -9,12 +9,21 @@ class CaseController extends Controller {
 		//实例化case表
 		$case = M('b_case');
 
+		//限制搜索
+        if(!$_GET['keywords']){
+            $_GET['keywords'] = '';
+        }
+
 		 //限制分页
         if(!$_GET['p']){
             $_GET['p'] = 1;
         }
 
-		$res = $case->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name')->select();
+        $con = $_GET['keywords'];
+        
+        $data['title'] = array('like', "%$con%");
+
+		$res = $case->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name')->where($data)->select();
 
 		//计算数据条数
 		$count = count($res);

@@ -150,4 +150,55 @@ class CompanyController extends Controller {
     		$this->error('抱歉, 申请失败',$SERVER['HTTP_REFERER']);
     	}
 	}
+
+	//tender
+	public function tender(){
+
+		//获取type类型
+		$type = I('get.type');
+
+		//表单验证 手机号码
+		$rule = array(
+            array('phone','/^1[3|4|5|8][0-9]\d{4,8}$/','手机号格式不正确',0,'regex',1),
+        );
+
+		//实例化模型
+		$model = M('small_tender');
+
+		if(!$model->field('phone')->validate($rule)->create()){
+		 	$this->error($model->getError());
+		 }
+
+		if($type == 1){
+
+			//数据打包
+			$data = $model->create();
+
+			//添加
+			$res = $model->add($data);
+
+			//判断
+			if($res){
+				$this->success('预约成功','/home/index/index');
+			}else{
+				$this->error('预约失败','/home/index/index');
+			}
+		}else if($type == 2){
+
+			//数据打包
+			$data = $model->create();
+
+			//添加
+			$res = $model->add($data);
+
+			//判断
+			if($res){
+				$this->success('预约成功','/home/index/index');
+			}else{
+				$this->error('预约失败','/home/index/index');
+			}
+		}	
+
+
+	}
 }

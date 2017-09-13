@@ -126,7 +126,7 @@
                     </a>
                     <div class="menu_bd hide">
                         <a href="#">我的订单</a>
-                        <a href="#">我的资料</a>
+                        <a href="/home/member/index">我的资料</a>
                     </div>
                 </li>
                 <li class="myorder">
@@ -194,7 +194,7 @@
                 </li>
                 <li class="fst-li" id="nav_wyzx">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">我要装修</a>
+                        <a href="/home/tender/index" id="nav_home" class="fst-ln">我要装修</a>
                     </div>
                 </li>                   
                 <li class="with-sub-nav fst-li" id="nav_zzx">
@@ -207,7 +207,7 @@
                             <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
-                            <li><a href="#">优惠信息</a></li>
+                        <!--     <li><a href="#">优惠信息</a></li> -->
                         </ul>
                     </div>
                 </li>                   
@@ -250,7 +250,7 @@
                 </li> -->
                 <li class="fst-li" id="nav_ztz">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">整体装</a>
+                        <a href="<?php echo U('/home/ztz/index');?>" id="nav_home" class="fst-ln">整体装</a>
                     </div>
                 </li>
              <!--    <li class="with-sub-nav fst-li" id="nav_jjsc">
@@ -485,9 +485,9 @@
 						<a href="javascript:;" target="_blank"><img src="/Public/images/zizhuImg1.jpg" alt="套装修案例"></a>
 					</dt>
 					<dd>
-						<form method="post" action="">
+						<form method="post" action="<?php echo U('/home/case/index');?>">
 							<div class="ipt">
-								<input type="text" placeholder="请输入案例名称" class="input" name="kw">
+								<input type="text" placeholder="请输入案例名称" class="input" name="keywords">
 								<i></i>
 							</div>
 							<input type="submit" value="马上获取免费设计案例" class="btn">
@@ -498,24 +498,23 @@
 					<span><cite>共有 <i class="pointcl">2514</i> 位设计师可以为您提供服务</cite>申请免费设计</span>
 					<dt><font>免费获得3份不同的户型设计及预算方案</font> <cite>累计 <i class="pointcl">3888</i> 人申请成功</cite> <cite>已有 <i class="pointcl">238</i> 名业主找到合适的设计师</cite> </dt>
 					<dd>
-						<form action="" id="tenders-form1" method="post">
-							<input type="hidden" name="data[from]" value="TSJ">
+						<form action="<?php echo U('/home/company/tender');?>?type=1" id="tenders-form1" method="post">
 							<div>我的称呼：
-							<input name="data[contact]" type="text" class="input">
+							<input name="truename" type="text" class="input" required>
 							</div>
 							<div style="width:342px;margin-right:0;">所在小区：
-							<input type="text" name="data[home_name]" class="input" style="width:250px;">
+							<input type="text" name="cellname" class="input" style="width:250px;"required>
 							</div>
 							<div style="padding-left:28px;">户型：
-							<select name="data[house_type_id]">
+							<select name="type">
 								<option value="1" selected="selected">一居</option>
 								<option value="2">二居</option>
 								<option value="3">三居</option>
-								<option value="0">其它</option>
+								<option value="4">其它</option>
 							</select>
 							</div> 
 							<div>手机号码：
-							<input name="data[mobile]" type="text" class="input">
+							<input name="phone" type="text" class="input">
 							</div>
 							<input type="submit" value="立即申请" class="btn">
 						</form>
@@ -531,13 +530,13 @@
 						<li>先行赔付</li>
 					</dd>
 					<dd>
-						<form action="" id="tenders-form2" method="post">
+						<form action="<?php echo U('/home/company/tender');?>?type=2" id="tenders-form2" method="post">
 							<input type="hidden" name="data[from]" value="TZS">
 							<div>我的称呼：
-							<input name="data[contact]" type="text" class="input">
+							<input name="truename" type="text" class="input">
 							</div> 
 							<div>装修预算：
-							<select name="data[budget_id]" class="text long">
+							<select name="budget" class="text long">
 								<option value="30">12万以上</option>
 								<option value="5">3万以下</option>
 								<option value="6">3万-5万</option>
@@ -546,7 +545,7 @@
 							</select>
 							</div> 
 							<div style="width:200px;">手机号码：
-							<input name="data[mobile]" type="text" class="input">
+							<input name="phone" type="text" class="input">
 							</div>
 							<input type="submit" value="立即申请" class="btn">
 						</form>
@@ -567,7 +566,7 @@
 						<li><a href="#">水管</a></li>
 					</dt>
 					<dd class="jianc" style="text-align: center;">
-						<form action="" method="post">
+						<form action="<?php echo U('/home/tender/index');?>" method="post">
 							<input type="submit" value="免费招标" class="btn" style="float: right;">
 						</form>
 					</dd>
@@ -587,7 +586,7 @@
 						<li><a href="#">家用</a></li>
 					</dt>
 					<dd class="jianc" style="text-align: center;">
-						<form action="" method="post">
+						<form action="<?php echo U('/home/tender/index');?>" method="post">
 							<input type="submit" value="免费招标" class="btn" style="float: right;">
 						</form>
 					</dd>
@@ -625,7 +624,6 @@
 					<b><a>等级</a></b>
      				<p> 
                 	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">黄金装修公司</a>
                     <a href="javascript:;" target="_blank">钻石装修公司</a>
                		</p>
                </li>
@@ -649,50 +647,17 @@
 			</ul>
 		</div>
 		<div class="zhuangxiu_right" style="height: 420px;">
+		
 			<div class="do_firm_l clearfix">
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
-				<a href="#" target="_blank" class="fd">
-					<figure style="overflow: hidden;"><img src="/Public/images/zxgs.jpg" width="228" height="145"></figure>
-					<div>
-						<p>生活家装饰</p>
-						<span>专属管家 贴身服务</span>
-					</div>
-				</a>
+				<?php if(is_array($company)): foreach($company as $key=>$v): ?><a href="#" target="_blank" class="fd">
+						<figure style="overflow: hidden;"><img src="/Uploads<?php echo ($v["banner"]); ?>" width="228" height="145"></figure>
+						<div>
+							<p><?php echo ($v["c_name"]); ?></p>
+							<span><?php echo ($v["introduce"]); ?></span>
+						</div>
+					</a><?php endforeach; endif; ?>
 			</div>
+		
 			<div class="do_firm_r opacity_img">
 				<a href="#" target="_blank">
 					<img src="/Public/images/zxgs1.jpg">
@@ -869,7 +834,7 @@
 		<div class="fang_new_mid lt">
 			<h3>
 				<span class="lt">最新装修招标</span>
-				<a href="#" target="_blank" class="rt">更多>></a>
+				<a href="<?php echo U('/home/tender/index');?>" target="_blank" class="rt">更多>></a>
 				<p class="cl"></p>
 			</h3>
 			<div id="box" style="overflow: hidden;">
@@ -1072,42 +1037,11 @@
 						<a href="#" class="btn_main_sm btn">我要参观</a>
 					</div>
 				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="lt"><img src="/Public/images/ban2.jpg"></a>
-					<div class="rt">
-						<p><a href="#">尚城新小区水电</a></p>
-						<p><span class="fontc12">越秀星汇尚城</span><span class="blackcl">0平米</span></p>
-						<a href="#" class="btn_main_sm btn">我要参观</a>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
 	</div>
-	<div class="zhuangxiu clearfix">
+<!-- 	<div class="zhuangxiu clearfix">
 		<div class="zhuangxiu_left" style="height: 416px;">
 			<div>
 				<span>
@@ -1194,8 +1128,8 @@
 				<p class="text">千思装饰</p>
 			</div>
 		</div>
-	</div>
-	<div class="zhuangxiu clearfix">
+	</div> -->
+	<!-- <div class="zhuangxiu clearfix">
 		<div class="zhuangxiu_left" style="height: 416px;">
 			<div>
 				<span>
@@ -1294,7 +1228,7 @@
 				<p class="text">千思装饰</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="mb20">
 		<h2 class="index_tit clearfix">
 			<font class="lt">设计师</font>

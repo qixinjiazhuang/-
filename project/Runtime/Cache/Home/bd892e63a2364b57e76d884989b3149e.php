@@ -112,7 +112,7 @@
                     </a>
                     <div class="menu_bd hide">
                         <a href="#">我的订单</a>
-                        <a href="#">我的资料</a>
+                        <a href="/home/member/index">我的资料</a>
                     </div>
                 </li>
                 <li class="myorder">
@@ -180,7 +180,7 @@
                 </li>
                 <li class="fst-li" id="nav_wyzx">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">我要装修</a>
+                        <a href="/home/tender/index" id="nav_home" class="fst-ln">我要装修</a>
                     </div>
                 </li>                   
                 <li class="with-sub-nav fst-li" id="nav_zzx">
@@ -190,13 +190,14 @@
                         <ul class="snd-ul">
                             <li><a href="/home/company/index">找装修公司</a></li>
                             <li><a href="/home/mechanic/index">找工人</a></li>
+                            <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
-                            <li><a href="#">优惠信息</a></li>
+                        <!--     <li><a href="#">优惠信息</a></li> -->
                         </ul>
                     </div>
                 </li>                   
-                <li class="with-sub-nav fst-li" id="nav_wawj">
+           <!--      <li class="with-sub-nav fst-li" id="nav_wawj">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">我爱我家</a>
                         <i></i>
@@ -207,7 +208,7 @@
                             <li><a href="#">团装小区</a></li>                   
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <li class="fst-li" id="zxsl">
                     <div class="ln-layer">
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
@@ -224,7 +225,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_yhhd">
+             <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
                         <i></i>
@@ -232,13 +233,13 @@
                             <li><a href="#">优惠券</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <li class="fst-li" id="nav_ztz">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">整体装</a>
+                        <a href="<?php echo U('/home/ztz/index');?>" id="nav_home" class="fst-ln">整体装</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_jjsc">
+             <!--    <li class="with-sub-nav fst-li" id="nav_jjsc">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">家居商城</a>
                         <i></i>
@@ -247,7 +248,7 @@
                             <li><a href="#">商城列表</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

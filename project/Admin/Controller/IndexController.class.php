@@ -7,6 +7,7 @@ class IndexController extends Controller {
     	if(!session('user')){
     		$this->error('请先登录','/admin/login/index',1);
     	}
+
     	$this->display();
     }
 }

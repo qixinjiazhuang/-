@@ -112,7 +112,7 @@
                     </a>
                     <div class="menu_bd hide">
                         <a href="#">我的订单</a>
-                        <a href="#">我的资料</a>
+                        <a href="/home/member/index">我的资料</a>
                     </div>
                 </li>
                 <li class="myorder">
@@ -180,7 +180,7 @@
                 </li>
                 <li class="fst-li" id="nav_wyzx">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">我要装修</a>
+                        <a href="/home/tender/index" id="nav_home" class="fst-ln">我要装修</a>
                     </div>
                 </li>                   
                 <li class="with-sub-nav fst-li" id="nav_zzx">
@@ -193,7 +193,7 @@
                             <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
-                            <li><a href="#">优惠信息</a></li>
+                        <!--     <li><a href="#">优惠信息</a></li> -->
                         </ul>
                     </div>
                 </li>                   
@@ -236,7 +236,7 @@
                 </li> -->
                 <li class="fst-li" id="nav_ztz">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">整体装</a>
+                        <a href="<?php echo U('/home/ztz/index');?>" id="nav_home" class="fst-ln">整体装</a>
                     </div>
                 </li>
              <!--    <li class="with-sub-nav fst-li" id="nav_jjsc">

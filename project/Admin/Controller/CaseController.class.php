@@ -20,19 +20,15 @@ class CaseController extends Controller {
             $_GET['p'] = 1;
         }
 
-        //限制搜索
-        if(!$_GET['keywords']){
-            $_GET['keywords'] = '';
-        }
-
         //获取搜索关键字
         $con = $_GET['keywords'];
 
-        // $data['id'] = array('like', "%$con%");
 
         //关联查询所有数据
-        $res = $stu->join('__COMPANY__ ON __B_CASE__.uid = __COMPANY__.id')->field('COMPANY.c_name,B_CASE.*')->where($data)->select();
+        $res = $stu->join('__COMPANY__ ON __B_CASE__.gid = __COMPANY__.id')->field('COMPANY.c_name,B_CASE.*')->select();
 
+        $count = count($res);
+        
         //实例化分页模型
         $fors = new \Think\Page($count,5);
 
@@ -77,6 +73,7 @@ class CaseController extends Controller {
 
 	public function insert(){
 
+        dump($_POST);
         //获取用户名
 		$name = I('post.member');
 
@@ -104,7 +101,9 @@ class CaseController extends Controller {
 
         $data['idea'] = I('post.idea');//设计思路
 
-        $data['gid'] = I('post.gid');//公司id
+        $data['gid'] = I('post.gid');//公司id\
+        
+        $data['fid'] = I('post.fid');//工长
 
         //实例化文件上传类
         $file = new \Think\Upload();
@@ -293,5 +292,19 @@ class CaseController extends Controller {
 		}
 
 	}
+
+    //myajax
+    public function myajax(){
+
+        //获取id
+        $gid = I('get.gid');
+
+        //实例化
+        $model = M('users');
+
+        $data = $model->join('__FOREMAN__ ON __USERS__.id = __FOREMAN__.uid')->field('truename,users.id')->where('gid='.$gid)->select();
+
+        $this->ajaxReturn($data);
+    }
 
 }

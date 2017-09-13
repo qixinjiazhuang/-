@@ -100,7 +100,7 @@ class RegisterController extends Controller {
         	$dd['tid'] = $type;
 
         	//执行添加
-        	$designer->add($dd):
+        	$designer->add($dd);
         }
 
         //如果type=4 用户类型为商家
