@@ -75,8 +75,9 @@
 						<div class="banner">    	
 				            <div class="top_slide_wrap" id="top_slide_wrap">
 				                <ul class="slide_box bxslider">
-				                    <li><a href="#"><img src="__ROOT__/Public/images/ban1.jpg" width="560" height="277"/></a></li>
-				                    <li><a href="#"><img src="__ROOT__/Public/images/ban1.jpg" width="560" height="277"/></a></li> 
+					                <foreach name="images1" item="i">
+					                    <li><a href="#"><img src="__ROOT__/Uploads{$i.logo}" title="{$i.title}" width="560" height="277"/></a></li>
+					                </foreach>
 				                </ul>	
 				                <div class="op_btns clearfix">
 				                    <a href="#" class="op_btn op_prev"><span></span></a>
@@ -368,27 +369,40 @@
 			</div>
 			<ul>
 				<li> 
-					<b><a>等级</a></b>
+					<b><a>规模</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">钻石装修公司</a>
+	                	<a href="javascript:;" target="_blank">10万元以下</a>
+	                    <a href="javascript:;" target="_blank">10-50万元</a>
+	                    <a href="javascript:;" target="_blank">50-100万元</a>
+	                    <a href="javascript:;" target="_blank">100-500万元</a>
                		</p>
                </li>
                <li> 
 					<b><a>服务</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">家装</a>
-                    <a href="javascript:;" target="_blank">公装</a>
-                    <a href="javascript:;" target="_blank">局部</a>
+	                	<a href="javascript:;" target="_blank">新房</a>
+	                    <a href="javascript:;" target="_blank">二手房</a>
+	                    <a href="javascript:;" target="_blank">大宅别墅</a>
+	                    <a href="javascript:;" target="_blank">局部软装</a>
+	                    <a href="javascript:;" target="_blank">工装</a>
                		</p>
                </li>
                <li> 
-					<b><a>规模</a></b>
+					<b><a>房型</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">10万元以下</a>
-                    <a href="javascript:;" target="_blank">10-50万元</a>
-                    <a href="javascript:;" target="_blank">50-100万元</a>
-                    <a href="javascript:;" target="_blank">100-500万元</a>
+	                	<a href="javascript:;" target="_blank">一房</a>
+	                    <a href="javascript:;" target="_blank">二房</a>
+	                    <a href="javascript:;" target="_blank">三房</a>
+	                    <a href="javascript:;" target="_blank"四房</a>
+	                    <a href="javascript:;" target="_blank">复式</a>
+	                    <a href="javascript:;" target="_blank">别墅</a>
+               		</p>
+               </li>
+             	<li> 
+					<b><a>等级</a></b>
+     				<p> 
+                	<a href="javascript:;" target="_blank">普通装修公司</a>
+                    <a href="javascript:;" target="_blank">钻石装修公司</a>
                		</p>
                </li>
 			</ul>
@@ -397,7 +411,7 @@
 		
 			<div class="do_firm_l clearfix">
 				<foreach name="company" item="v">
-					<a href="#" target="_blank" class="fd">
+					<a href="{:U('home/company/detail')}?id={$v.id}" target="_blank" class="fd">
 						<figure style="overflow: hidden;"><img src="__ROOT__/Uploads{$v.banner}" width="228" height="145"></figure>
 						<div>
 							<p>{$v.c_name}</p>
@@ -420,44 +434,44 @@
 		<ul class="opacityImg" style="position: relative;">
 			<li class="one">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case1.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.0.id}"><img src="__ROOT__/Uploads{$case.0.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">小小朋克与工业风的基情碰撞</p>
+					<p class="text">{$case.0.title}</p>
 				</div>
 			</li>
 			<li class="two">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case2.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.1.id}"><img src="__ROOT__/Uploads{$case.1.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">北欧清新美屋实景案例赏析</p>
+					<p class="text">{$case.1.title}</p>
 				</div>
 			</li>
 			<li class="three">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case3.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.2.id}"><img src="__ROOT__/Uploads{$case.2.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">晨光国际卢女士雅居</p>
+					<p class="text">{$case.2.title}</p>
 				</div>
 			</li>
 			<li class="four">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case4.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.3.id}"><img src="__ROOT__/Uploads{$case.3.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">东郡国际王先生雅居</p>
+					<p class="text">{$case.3.title}</p>
 				</div>
 			</li>
 			<li class="five">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case5.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.4.id}"><img src="__ROOT__/Uploads{$case.4.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">简约又不乏设计之美</p>
+					<p class="text">{$case.4.title}</p>
 				</div>
 			</li>
 			<li class="six">
 				<div class="opacity_img">
-					<a href="#"><img src="__ROOT__/Public/images/case6.jpg"></a>
+					<a href="{:U('home/case/detail')}?id={$case.5.id}"><img src="__ROOT__/Uploads{$case.5.logo}"></a>
 					<p class="bg"></p>
-					<p class="text">欧式风情演绎80后的尊贵与时尚</p>
+					<p class="text">{$case.5.title}</p>
 				</div>
 			</li>
 			<img src="__ROOT__/Public/images/caseImg1.jpg" class="img1">
@@ -517,11 +531,9 @@
 				<div class="banner">    	
 		            <div class="top_slide_wrap" id="top_slide_wrap2">
 		                <ul class="slide_box bxslider2">
-		                    <li><a href="#"><img src="__ROOT__/Public/images/zx_ban1.jpg" width="600" height="360"/></a></li>
-		                    <li><a href="#"><img src="__ROOT__/Public/images/zx_ban2.jpg" width="600" height="360"/></a></li>
-		                    <li>
-		                    	<a href="#"><img src="__ROOT__/Public/images/zx_ban3.jpg" width="600" height="360"/></a>
-		                    </li>     
+		                <foreach name="images2" item="m">
+		                    <li><a href="#"><img src="__ROOT__/Uploads{$m.logo}" title="{$m.title}" width="600" height="360"/></a></li>
+		                </foreach>
 		                </ul>	
 		                <div class="op_btns clearfix">
 		                    <a href="#" class="op_btn op_prev"><span></span></a>

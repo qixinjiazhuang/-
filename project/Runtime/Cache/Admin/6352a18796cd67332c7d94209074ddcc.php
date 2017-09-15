@@ -272,7 +272,7 @@
 						<a href='<?php echo U("admin/advert/index");?>'>
 						  	<i class='icon-font'>广告列表</i>
 				  		</a>
-				  		<a href='<?php echo U("admin/advert/index");?>'>
+				  		<a href='<?php echo U("admin/images/index");?>'>
 						  	<i class='icon-font'>轮播图</i>
 				  		</a>
 				  	</ul>

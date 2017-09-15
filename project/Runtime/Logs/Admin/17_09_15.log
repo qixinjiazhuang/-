@@ -1,0 +1,1698 @@
+[ 2017-09-15T09:24:14+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006303s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001077s ]
+
+[ 2017-09-15T09:24:16+08:00 ] 127.0.0.1 /admin/login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-09-15T09:24:16+08:00 ] 127.0.0.1 /admin/code/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2017-09-15T09:24:24+08:00 ] 127.0.0.1 /admin/code/index.html?0.28115605904380037
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2017-09-15T09:24:27+08:00 ] 127.0.0.1 /admin/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.1441s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `admin_user` WHERE `name` = 'user' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2017-09-15T09:24:28+08:00 ] 127.0.0.1 /admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2017-09-15T09:24:34+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2017-09-15T09:26:50+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2017-09-15T09:32:07+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2017-09-15T09:32:10+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2017-09-15T09:32:25+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2017-09-15T09:40:43+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2017-09-15T09:40:55+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001117s ]
+
+[ 2017-09-15T09:41:04+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2017-09-15T09:43:06+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2017-09-15T09:43:14+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2017-09-15T09:44:35+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `images` SET `title`='打开新世界大门',`type`='1',`status`='1' WHERE ( id=3 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-09-15T09:44:38+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-09-15T09:45:02+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `images` SET `title`='打开新世界大门',`type`='1',`status`='1' WHERE ( id=3 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-09-15T09:45:05+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005966s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2017-09-15T09:45:13+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `images` SET `title`='打开新世界大门',`type`='1',`status`='1' WHERE ( id=3 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000753s ]
+
+[ 2017-09-15T09:45:16+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2017-09-15T09:45:21+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `images` SET `title`='打开新世界大门哦',`type`='1',`status`='1' WHERE ( id=3 ) [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-09-15T09:45:22+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2017-09-15T09:47:09+08:00 ] 127.0.0.1 /admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000866s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-09-15T09:47:12+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2017-09-15T09:47:14+08:00 ] 127.0.0.1 /admin/images/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-09-15T09:47:18+08:00 ] 127.0.0.1 /admin/images/update?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SELECT * FROM `images` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] unlink(./Uploads//images/2017-09-14/150538178438566274.jpg): No such file or directory D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 120 行.
+SQL: UPDATE `images` SET `title`='打开新世界大门哦',`type`='1',`status`='1',`logo`='/images/2017-09-15/59bb3126ccf32.jpg' WHERE ( id=3 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2017-09-15T09:47:19+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2017-09-15T09:53:43+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-09-15T09:57:55+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2017-09-15T09:59:17+08:00 ] 127.0.0.1 /admin/images/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `images` (`title`,`type`,`status`,`logo`) VALUES ('金力紫御华府','2','1','/images/2017-09-15/150544075710533138.jpg') [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2017-09-15T09:59:18+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2017-09-15T09:59:20+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-09-15T09:59:28+08:00 ] 127.0.0.1 /admin/images/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `images` (`title`,`type`,`status`,`logo`) VALUES ('测试标题','2','1','/images/2017-09-15/150544076890802855.jpg') [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2017-09-15T09:59:30+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002324s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000822s ]
+
+[ 2017-09-15T09:59:31+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2017-09-15T09:59:38+08:00 ] 127.0.0.1 /admin/images/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `images` (`title`,`type`,`status`,`logo`) VALUES ('测试标题','2','1','/images/2017-09-15/150544077870918759.jpg') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2017-09-15T09:59:39+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002023s ]
+
+[ 2017-09-15T09:59:40+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2017-09-15T09:59:48+08:00 ] 127.0.0.1 /admin/images/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `images` (`title`,`type`,`status`,`logo`) VALUES ('测试 标题','2','1','/images/2017-09-15/150544078827441688.jpg') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2017-09-15T09:59:49+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2017-09-15T09:59:50+08:00 ] 127.0.0.1 /admin/images/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001737s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2017-09-15T10:00:00+08:00 ] 127.0.0.1 /admin/images/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `images` (`title`,`type`,`status`,`logo`) VALUES ('测试 标题','2','1','/images/2017-09-15/150544080066926787.jpg') [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2017-09-15T10:00:01+08:00 ] 127.0.0.1 /admin/images/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2017-09-15T10:01:34+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002467s ]
+
+[ 2017-09-15T10:02:20+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Admin\07f024c93b26a8095e8acb7e96749ef2.php 第 169 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-09-15T10:02:42+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.680630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.680739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2017-09-15T10:02:53+08:00 ] 127.0.0.1 /admin/images/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `images`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\tp\project\Admin\Controller\ImagesController.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2017-09-15T10:19:32+08:00 ] 127.0.0.1 /admin/case/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 24 行.
+SQL: SELECT COMPANY.c_name,B_CASE.* FROM `b_case` INNER JOIN company ON b_case.gid = company.id  ORDER BY audit asc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001335s ]
+
+[ 2017-09-15T10:21:40+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-09-15T10:21:40+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000482s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001357s ]
+
+[ 2017-09-15T10:21:41+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000376s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-09-15T10:21:42+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2017-09-15T10:21:44+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009407s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2017-09-15T10:21:45+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2017-09-15T10:26:02+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001254s ]
+
+[ 2017-09-15T10:26:06+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2017-09-15T10:27:48+08:00 ] 127.0.0.1 /admin/designer/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+NOTIC: [8] Use of undefined constant            - assumed '          ' D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 103 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'user112311' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `email` = '12323@qq.comm' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `name` = 'user112311' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `users` (`remember_token`,`name`,`password`,`email`,`truename`,`audit`,`city`,`regtime`,`type`,`phone`) VALUES ('IzYgrv8iVxiX2D4Y7gxzZnhs0tpR1uvunVGzTIwPWm6tlO3esy','user112311','e10adc3949ba59abbe56e057f20f883e','12323@qq.comm','陈岭','0','北京市,北京市,延庆县','1505442468','3','13169931105') [ RunTime:0.0004s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0011s ]
+SQL: INSERT INTO `designer` (`uid`,`tid`,`school`,`gid`,`concept`,`photo`) VALUES ('30','3','新华电脑学院','10','1','/designer/2017-09-15/150544246823913594.jpg') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001018s ]
+
+[ 2017-09-15T10:27:49+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001544s ]
+
+[ 2017-09-15T10:28:52+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2017-09-15T10:30:07+08:00 ] 127.0.0.1 /admin/designer/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+NOTIC: [8] Use of undefined constant            - assumed '          ' D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 103 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0015s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'add123456' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `users` WHERE `email` = '123123@qq.co' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `name` = 'add123456' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `users` (`remember_token`,`name`,`password`,`email`,`truename`,`audit`,`city`,`regtime`,`type`,`phone`) VALUES ('IOhgj3iT1SpnbIIWEyNiLRMFnBdLOfePVLpy4DQa4N8ohKmrys','add123456','e10adc3949ba59abbe56e057f20f883e','123123@qq.co','鲁涛','0','天津市,天津市,静海县','1505442607','3','13123421323') [ RunTime:0.0005s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0010s ]
+SQL: INSERT INTO `designer` (`uid`,`tid`,`school`,`gid`,`concept`,`photo`) VALUES ('31','3','四川传媒学院','12','1','/designer/2017-09-15/150544260775716284.jpg') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2017-09-15T10:30:08+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2017-09-15T10:30:11+08:00 ] 127.0.0.1 /admin/designer/edit?id=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`name`,`email`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`gid`,`concept`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE ( uid=31 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`c_name` FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2017-09-15T10:30:22+08:00 ] 127.0.0.1 /admin/designer/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001611s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: UPDATE `users` SET `name`='add123456',`email`='123123@qq.co',`truename`='鲁涛',`phone`='13123421323',`city`='请选择省,请选择市,请选择区' WHERE ( id=31 ) [ RunTime:0.0009s ]
+SQL: UPDATE `designer` SET `school`='四川传媒学院',`concept`='1',`gid`='12',`qq`='2147483611' WHERE ( uid=31 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2017-09-15T10:30:23+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001583s ]
+
+[ 2017-09-15T10:30:28+08:00 ] 127.0.0.1 /admin/designer/edit?id=30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001774s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`name`,`email`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`gid`,`concept`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE ( uid=30 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001247s ]
+
+[ 2017-09-15T10:30:33+08:00 ] 127.0.0.1 /admin/designer/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: UPDATE `users` SET `name`='user112311',`email`='12323@qq.comm',`truename`='陈岭',`phone`='13169931105',`city`='请选择省,请选择市,请选择区' WHERE ( id=30 ) [ RunTime:0.0004s ]
+SQL: UPDATE `designer` SET `school`='新华电脑学院',`concept`='1',`gid`='10',`qq`='1311133333' WHERE ( uid=30 ) [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2017-09-15T10:30:34+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\tp\project\Runtime\Cache\Admin\5d4af351f2ec71da9afb9e0e2c3d0572.php 第 187 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2017-09-15T10:31:18+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001440s ]
+
+[ 2017-09-15T10:31:27+08:00 ] 127.0.0.1 /admin/designer/edit?id=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`name`,`email`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`gid`,`concept`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE ( uid=31 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_name` FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2017-09-15T10:31:32+08:00 ] 127.0.0.1 /admin/designer/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0011s ]
+SQL: UPDATE `users` SET `name`='add123456',`email`='123123@qq.co',`truename`='鲁涛',`phone`='13123421323',`city`='湖北省,恩施州,鹤峰县' WHERE ( id=31 ) [ RunTime:0.0004s ]
+SQL: UPDATE `designer` SET `school`='四川传媒学院',`concept`='1',`gid`='12',`qq`='2147483611' WHERE ( uid=31 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2017-09-15T10:31:33+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000914s ]
+
+[ 2017-09-15T10:47:55+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+

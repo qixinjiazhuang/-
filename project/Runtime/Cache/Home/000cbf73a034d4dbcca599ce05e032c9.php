@@ -112,7 +112,7 @@
                     </a>
                     <div class="menu_bd hide">
                         <a href="#">我的订单</a>
-                        <a href="#">我的资料</a>
+                        <a href="/home/member/index">我的资料</a>
                     </div>
                 </li>
                 <li class="myorder">
@@ -149,20 +149,32 @@
             </div>
             <div class="main-r clearfix">
                 <div class="search-box fl clearfix">
-                    <form action="" class="search-form fl clearfix" method="get" name="form_search">
-                        <div class="search-item">
-                            <span>商品<em></em></span>
+                    <form action="<?php echo U('/home/index/serch');?>" class="search-form fl clearfix" method="get" name="form_search">
+                     <!--    <div class="search-item">
+                            <span>装修公司<em></em></span>
                             <ul>
-                                <li class="on"><a href="javascript:;">商品</a></li>
-                                <li><a href="javascript:;">店铺</a></li>
-                                <li><a href="javascript:;">图库</a></li>
-                                <li><a href="javascript:;">装修公司</a></li>
-                                <li><a href="javascript:;">论坛</a></li>                          
-                                <li><a href="javascript:;">资讯</a></li>
+
+                                <li class="on"><a href="javascript:;">装修公司</a></li>
+                                <li><a href="javascript:;">工人</a></li>
+                                <li><a href="javascript:;">工长</a></li>
+                                <li><a href="javascript:;">设计师</a></li>
+                                <li><a href="javascript:;">监理</a></li>                          
+                                <li><a href="javascript:;">案例</a></li>
                             </ul>
-                        </div>
+                        </div> -->
+                    <div class="search-item"><em></em>
+
+                        <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
+                            <option value="1">装修公司</option>
+                            <option value="2">工人</option>
+                            <option value="3">工长</option>
+                            <option value="4">设计师</option>
+                            <option value="5">监理</option>
+                            <option value="6">案例</option>
+                        </select><span><em></em></span>
+                    </div>
                         <label class="search-con">
-                            <input type="text" class="searchInput" autocomplete="off" name="keyword">
+                            <input type="text" class="searchInput" autocomplete="off" name="keywords">
                             <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
                             <ul class="Jia-search-refer">
                             </ul>
@@ -180,7 +192,7 @@
                 </li>
                 <li class="fst-li" id="nav_wyzx">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">我要装修</a>
+                        <a href="/home/tender/index" id="nav_home" class="fst-ln">我要装修</a>
                     </div>
                 </li>                   
                 <li class="with-sub-nav fst-li" id="nav_zzx">
@@ -193,7 +205,7 @@
                             <li><a href="/home/foreman/index">找工长</a></li>
                             <li><a href="/home/designer/index">找设计师</a></li>
                             <li><a href="#">找监理</a></li>
-                            <li><a href="#">优惠信息</a></li>
+                        <!--     <li><a href="#">优惠信息</a></li> -->
                         </ul>
                     </div>
                 </li>                   
@@ -236,7 +248,7 @@
                 </li> -->
                 <li class="fst-li" id="nav_ztz">
                     <div class="ln-layer">
-                        <a href="#" id="nav_home" class="fst-ln">整体装</a>
+                        <a href="<?php echo U('/home/ztz/index');?>" id="nav_home" class="fst-ln">整体装</a>
                     </div>
                 </li>
              <!--    <li class="with-sub-nav fst-li" id="nav_jjsc">

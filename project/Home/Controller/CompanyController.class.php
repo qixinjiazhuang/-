@@ -15,9 +15,9 @@ class CompanyController extends Controller {
             $_GET['p'] = 1;
         }
 
-		$res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__USERS__ ON __COMPANY__.uid = __USERS__.id')->field('company.id,audit,banner,c_name,introduce,m_value,praise')->order('m_value desc,praise desc')->select();
+		$res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__USERS__ ON __COMPANY__.uid = __USERS__.id')->field('company.id,audit,banner,c_name,introduce,m_value,praise,delete,audit')->where('users.delete=1 AND users.audit=2')->order('m_value desc,praise desc')->select();
 
-		$count = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__USERS__ ON __COMPANY__.uid = __USERS__.id')->field('company.id,audit,banner,c_name,introduce,m_value,praise')->count();
+		$count = count($res);
 
 		//实例化分页模型
         $fors = new \Think\Page($count,10);

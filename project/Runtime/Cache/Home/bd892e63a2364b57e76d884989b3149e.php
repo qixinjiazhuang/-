@@ -149,20 +149,32 @@
             </div>
             <div class="main-r clearfix">
                 <div class="search-box fl clearfix">
-                    <form action="" class="search-form fl clearfix" method="get" name="form_search">
-                        <div class="search-item">
-                            <span>商品<em></em></span>
+                    <form action="<?php echo U('/home/index/serch');?>" class="search-form fl clearfix" method="get" name="form_search">
+                     <!--    <div class="search-item">
+                            <span>装修公司<em></em></span>
                             <ul>
-                                <li class="on"><a href="javascript:;">商品</a></li>
-                                <li><a href="javascript:;">店铺</a></li>
-                                <li><a href="javascript:;">图库</a></li>
-                                <li><a href="javascript:;">装修公司</a></li>
-                                <li><a href="javascript:;">论坛</a></li>                          
-                                <li><a href="javascript:;">资讯</a></li>
+
+                                <li class="on"><a href="javascript:;">装修公司</a></li>
+                                <li><a href="javascript:;">工人</a></li>
+                                <li><a href="javascript:;">工长</a></li>
+                                <li><a href="javascript:;">设计师</a></li>
+                                <li><a href="javascript:;">监理</a></li>                          
+                                <li><a href="javascript:;">案例</a></li>
                             </ul>
-                        </div>
+                        </div> -->
+                    <div class="search-item"><em></em>
+
+                        <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
+                            <option value="1">装修公司</option>
+                            <option value="2">工人</option>
+                            <option value="3">工长</option>
+                            <option value="4">设计师</option>
+                            <option value="5">监理</option>
+                            <option value="6">案例</option>
+                        </select><span><em></em></span>
+                    </div>
                         <label class="search-con">
-                            <input type="text" class="searchInput" autocomplete="off" name="keyword">
+                            <input type="text" class="searchInput" autocomplete="off" name="keywords">
                             <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
                             <ul class="Jia-search-refer">
                             </ul>
@@ -331,7 +343,7 @@
 				<ul class="designer-list">
 					<?php if(is_array($res)): foreach($res as $key=>$v): ?><li class="designer-item">
 						<div class="ordinary clearfix">
-							<a href="/home/designer/detail" class="pany-logo fl"><img src="/Public/images/designer1.jpg" class="lazyload"></a>
+							<a href="/home/designer/detail" class="pany-logo fl"><img src="/Uploads<?php echo ($v["photo"]); ?>" class="lazyload"></a>
 							<div class="list-middle fl">
 								<h2>
 									<a href="/home/designer/detail?id=<?php echo ($v["id"]); ?>" target="_blank" id="shop_name"><?php echo ($v["truename"]); ?></a>
@@ -339,8 +351,8 @@
 								</h2>
 								<p>毕业院校：<span class="zw"><?php echo ($v["school"]); ?></span></p>
 								<p>案 例 数：<span class="zw"></span></p>
-								<p>擅长类型：<span class="sclx"></span></p>
-								<p>设计理念：<span class="cynx"></span></p>
+								<p>擅长类型：<span class="sclx"><?php echo ($concept[$v['concept']]); ?></span></p>
+							<!-- 	<p>设计理念：<span class="cynx"></span></p> -->
 							</div>
 							<div class="list-right fl">
 								<div class="kbval">
@@ -356,11 +368,7 @@
 			<div class="p_pageNav p_ListpageNav">
 				<div class="p_page_inline">
 					<div class="p_page">
-						<span class="none">< 上一页</span>
-						<span class="cur">1</span>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="changedown">下一页</a>
+						<?php echo ($show); ?>
 					</div>
 				</div>
 			</div>

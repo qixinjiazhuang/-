@@ -161,20 +161,20 @@
             </div>
             <div class="main-r clearfix">
                 <div class="search-box fl clearfix">
-                    <form action="" class="search-form fl clearfix" method="get" name="form_search">
+                    <form action="<?php echo U('/home/index/serch');?>" class="search-form fl clearfix" method="get" name="form_search">
                         <div class="search-item">
-                            <span>商品<em></em></span>
+                            <span>装修公司<em></em></span>
                             <ul>
-                                <li class="on"><a href="javascript:;">商品</a></li>
-                                <li><a href="javascript:;">店铺</a></li>
-                                <li><a href="javascript:;">图库</a></li>
-                                <li><a href="javascript:;">装修公司</a></li>
-                                <li><a href="javascript:;">论坛</a></li>                          
-                                <li><a href="javascript:;">资讯</a></li>
+                                <li class="on"><a href="javascript:;">装修公司</a></li>
+                                <li><a href="javascript:;">工人</a></li>
+                                <li><a href="javascript:;">工长</a></li>
+                                <li><a href="javascript:;">设计师</a></li>
+                                <li><a href="javascript:;">监理</a></li>                          
+                                <li><a href="javascript:;">案例</a></li>
                             </ul>
                         </div>
                         <label class="search-con">
-                            <input type="text" class="searchInput" autocomplete="off" name="keyword">
+                            <input type="text" class="searchInput" autocomplete="off" name="keywords">
                             <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
                             <ul class="Jia-search-refer">
                             </ul>

@@ -212,27 +212,64 @@ class CompanyController extends Controller {
         $info=$upload->upload($_FILES);
 
         foreach($info as $k=>$v){
-      
-            $filename[$k] = $v['savename'];
+
+            if($v['key'] == 'pic1'){
+                $pic1[$k] = $v['savename'];
+            }   
             
+            if($v['key'] == 'pic2'){
+                $pic2[$k] = $v['savename'];
+            }
+
+            if($v['key'] == 'pic3'){
+                $pic3[$k] = $v['savename'];
+            }
         }
 
         //实例化模型
         $company = M('company');
 
-        //查询该条数据信息
-        $oldname = $company->where('uid='.$id)->find();
+        $path = $info['pic1']['savepath'];
 
-        //获取banner clogo zlogo 三条数据
-        $banner = $oldname['banner'];
-        $clogo = $oldname['clogo'];
-        $zlogo = $oldname['zlogo'];
+        if($pic1!=null){
 
-        //删除原来图片
-        @unlink('./Uploads/'.$banner);
-        @unlink('./Uploads/'.$clogo);
-        @unlink('./Uploads/'.$zlogo);
-      	
+            //查询该条数据信息
+            $oldname = $company->where('uid='.$id)->find();
+
+            //获取banner clogo zlogo 三条数据
+            $banner = $oldname['banner'];
+
+            //删除原来图片
+            @unlink('./Uploads/'.$banner);
+
+            $data['banner'] = $path.$pic1['pic1'];//banner
+          
+        }
+
+        if($pic2 != null){
+
+            //查询该条数据信息
+            $oldname = $company->where('uid='.$id)->find();
+
+            $clogo = $oldname['clogo'];
+
+            @unlink('./Uploads/'.$clogo);
+
+            $data['clogo'] = $path.$pic2['pic2'];//长方形logo
+        }
+        
+         if($pic3 != null){
+
+            //查询该条数据信息
+            $oldname = $company->where('uid='.$id)->find();
+
+            $zlogo = $oldname['zlogo'];
+
+            @unlink('./Uploads/'.$zlogo);
+
+            $data['zlogo'] = $path.$pic3['pic3'];//正方形logo
+        }
+          
 		$date['name'] = I('post.name');//用户名
 
 		//准备城市数组
@@ -240,8 +277,7 @@ class CompanyController extends Controller {
         $city['province'] = I('post.province');//省
         $city['city'] = I('post.city');//市
         $city['county'] = I('post.county');//区
-        $date['city'] = implode(',',$city);//数组拼接字符串
-		$date['audit'] = I('post.audit');
+        $date['city'] = implode(',',$city);//数组拼接字符串]
 		$date['status'] = I('post.status');
 
 		//实例化
@@ -249,10 +285,7 @@ class CompanyController extends Controller {
 
 		//执行修改
 		$dd = $model->where('id='.$id)->save($date);
-		$path = $info['pic1']['savepath'];
-		$data['banner'] = $path.$filename['pic1'];//banner
-		$data['clogo'] = $path.$filename['pic2'];//长方形logo
-		$data['zlogo'] = $path.$filename['pic3'];//正方形logo
+		
 		$data['c_name'] = I('post.c_name');//公司企业名称
 		$data['introduce'] = I('post.introduce');//公司简介
 		$data['contacts'] = I('post.contacts');//联系人
@@ -263,7 +296,7 @@ class CompanyController extends Controller {
 		$ee = $res->where('uid='.$id)->save($data);
 
 		//判断
-		if($dd && $ee){
+		if($dd || $ee){
 			$this->success('修改成功','/admin/company/index');
 		}else{
 			$this->error('修改失败',$_SERVER['HTTP_REFERER']);

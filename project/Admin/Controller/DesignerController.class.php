@@ -139,7 +139,6 @@ class DesignerController extends Controller {
         $data['regtime'] = time();
         $data['type'] = 3;
         $data['phone'] = I('post.phone');
-        $data['audit'] = I('post.audit');
 
         //执行上传
         $num = $model->add($data);
@@ -149,7 +148,8 @@ class DesignerController extends Controller {
         $res['school'] = I('post.school');
         $res['gid'] = I('post.gid');
         $res['concept'] = I('post.concept');
-
+        $res['qq'] = I('post.qq');
+        
         //实例化文件上传类
         $file = new \Think\Upload();
 

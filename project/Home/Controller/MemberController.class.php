@@ -12,12 +12,18 @@ class  MemberController extends Controller {
 		}
 
 		//获取session数据
-		$user = session('home_user');
+		$id = session('home_user')['id'];
 
-		$arr = ['1'=>'业主','2'=>'公司','3'=>'设计师','4'=>'商家','5'=>'技工','6'=>'工长'];
+		//查询
+		$model = M('users');
+
+		//查询用户信息
+		$user = $model->where('id='.$id)->find();
 
 		//获取用户类型
 		$type = $user['type'];
+
+		$arr = ['1'=>'业主','2'=>'公司','3'=>'设计师','4'=>'商家','5'=>'技工','6'=>'工长'];
 
 		//判断用户类型  1为业主 
 		if($type == 1){
@@ -26,8 +32,8 @@ class  MemberController extends Controller {
 			$member = M('member');
 
 			//查询
-			$member = $member->where('uid='.$user['id'])->find();
-			
+			$member = $member->where('uid='.$id)->find();
+			dump($member);
 			//判断member是否存在
 			if($member){
 				session('home_type',$member);
@@ -42,7 +48,7 @@ class  MemberController extends Controller {
 			$company = M('company');
 
 			//查询
-			$company = $company->where('uid='.$user['id'])->find();
+			$company = $company->where('uid='.$id)->find();
 
 			//判断
 			if($company){
@@ -57,7 +63,7 @@ class  MemberController extends Controller {
 			$designer = M('designer');
 
 			//查询
-			$designer = $designer->where('uid='.$user['id'])->find();
+			$designer = $designer->where('uid='.$id)->find();
 
 			//判断
 			if($designer){
@@ -73,7 +79,7 @@ class  MemberController extends Controller {
 			$business = M('business');
 
 			//查询
-			$business = $business->where('uid='.$user['id'])->find();
+			$business = $business->where('uid='.$id)->find();
 
 			//判断
 			if($business){
@@ -88,7 +94,7 @@ class  MemberController extends Controller {
 			$mechanic = M('mechanic');
 
 			//查询
-			$mechanic = $mechanic->where('uid='.$user['id'])->find();
+			$mechanic = $mechanic->where('uid='.$id)->find();
 
 			//判断
 			if($mechanic){

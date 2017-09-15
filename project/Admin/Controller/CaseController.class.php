@@ -25,7 +25,7 @@ class CaseController extends Controller {
 
 
         //关联查询所有数据
-        $res = $stu->join('__COMPANY__ ON __B_CASE__.gid = __COMPANY__.id')->field('COMPANY.c_name,B_CASE.*')->select();
+        $res = $stu->join('__COMPANY__ ON __B_CASE__.gid = __COMPANY__.id')->field('COMPANY.c_name,B_CASE.*')->order('audit asc')->select();
 
         $count = count($res);
         
@@ -73,7 +73,6 @@ class CaseController extends Controller {
 
 	public function insert(){
 
-        dump($_POST);
         //获取用户名
 		$name = I('post.member');
 
@@ -155,7 +154,6 @@ class CaseController extends Controller {
 		//根据id查询该条数据
 		$model = M('b_case');
 
-		//实例化
 		//实例化company表
 		$dd = M('company');
 

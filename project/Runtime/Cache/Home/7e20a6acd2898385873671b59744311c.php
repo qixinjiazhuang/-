@@ -163,20 +163,32 @@
             </div>
             <div class="main-r clearfix">
                 <div class="search-box fl clearfix">
-                    <form action="" class="search-form fl clearfix" method="get" name="form_search">
-                        <div class="search-item">
-                            <span>商品<em></em></span>
+                    <form action="<?php echo U('/home/index/serch');?>" class="search-form fl clearfix" method="get" name="form_search">
+                     <!--    <div class="search-item">
+                            <span>装修公司<em></em></span>
                             <ul>
-                                <li class="on"><a href="javascript:;">商品</a></li>
-                                <li><a href="javascript:;">店铺</a></li>
-                                <li><a href="javascript:;">图库</a></li>
-                                <li><a href="javascript:;">装修公司</a></li>
-                                <li><a href="javascript:;">论坛</a></li>                          
-                                <li><a href="javascript:;">资讯</a></li>
+
+                                <li class="on"><a href="javascript:;">装修公司</a></li>
+                                <li><a href="javascript:;">工人</a></li>
+                                <li><a href="javascript:;">工长</a></li>
+                                <li><a href="javascript:;">设计师</a></li>
+                                <li><a href="javascript:;">监理</a></li>                          
+                                <li><a href="javascript:;">案例</a></li>
                             </ul>
-                        </div>
+                        </div> -->
+                    <div class="search-item"><em></em>
+
+                        <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
+                            <option value="1">装修公司</option>
+                            <option value="2">工人</option>
+                            <option value="3">工长</option>
+                            <option value="4">设计师</option>
+                            <option value="5">监理</option>
+                            <option value="6">案例</option>
+                        </select><span><em></em></span>
+                    </div>
                         <label class="search-con">
-                            <input type="text" class="searchInput" autocomplete="off" name="keyword">
+                            <input type="text" class="searchInput" autocomplete="off" name="keywords">
                             <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
                             <ul class="Jia-search-refer">
                             </ul>
@@ -328,8 +340,7 @@
 						<div class="banner">    	
 				            <div class="top_slide_wrap" id="top_slide_wrap">
 				                <ul class="slide_box bxslider">
-				                    <li><a href="#"><img src="/Public/images/ban1.jpg" width="560" height="277"/></a></li>
-				                    <li><a href="#"><img src="/Public/images/ban1.jpg" width="560" height="277"/></a></li> 
+					                <?php if(is_array($images1)): foreach($images1 as $key=>$i): ?><li><a href="#"><img src="/Uploads<?php echo ($i["logo"]); ?>" title="<?php echo ($i["title"]); ?>" width="560" height="277"/></a></li><?php endforeach; endif; ?>
 				                </ul>	
 				                <div class="op_btns clearfix">
 				                    <a href="#" class="op_btn op_prev"><span></span></a>
@@ -621,27 +632,40 @@
 			</div>
 			<ul>
 				<li> 
-					<b><a>等级</a></b>
+					<b><a>规模</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">钻石装修公司</a>
+	                	<a href="javascript:;" target="_blank">10万元以下</a>
+	                    <a href="javascript:;" target="_blank">10-50万元</a>
+	                    <a href="javascript:;" target="_blank">50-100万元</a>
+	                    <a href="javascript:;" target="_blank">100-500万元</a>
                		</p>
                </li>
                <li> 
 					<b><a>服务</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">家装</a>
-                    <a href="javascript:;" target="_blank">公装</a>
-                    <a href="javascript:;" target="_blank">局部</a>
+	                	<a href="javascript:;" target="_blank">新房</a>
+	                    <a href="javascript:;" target="_blank">二手房</a>
+	                    <a href="javascript:;" target="_blank">大宅别墅</a>
+	                    <a href="javascript:;" target="_blank">局部软装</a>
+	                    <a href="javascript:;" target="_blank">工装</a>
                		</p>
                </li>
                <li> 
-					<b><a>规模</a></b>
+					<b><a>房型</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">10万元以下</a>
-                    <a href="javascript:;" target="_blank">10-50万元</a>
-                    <a href="javascript:;" target="_blank">50-100万元</a>
-                    <a href="javascript:;" target="_blank">100-500万元</a>
+	                	<a href="javascript:;" target="_blank">一房</a>
+	                    <a href="javascript:;" target="_blank">二房</a>
+	                    <a href="javascript:;" target="_blank">三房</a>
+	                    <a href="javascript:;" target="_blank"四房</a>
+	                    <a href="javascript:;" target="_blank">复式</a>
+	                    <a href="javascript:;" target="_blank">别墅</a>
+               		</p>
+               </li>
+             	<li> 
+					<b><a>等级</a></b>
+     				<p> 
+                	<a href="javascript:;" target="_blank">普通装修公司</a>
+                    <a href="javascript:;" target="_blank">钻石装修公司</a>
                		</p>
                </li>
 			</ul>
@@ -649,7 +673,7 @@
 		<div class="zhuangxiu_right" style="height: 420px;">
 		
 			<div class="do_firm_l clearfix">
-				<?php if(is_array($company)): foreach($company as $key=>$v): ?><a href="#" target="_blank" class="fd">
+				<?php if(is_array($company)): foreach($company as $key=>$v): ?><a href="<?php echo U('home/company/detail');?>?id=<?php echo ($v["id"]); ?>" target="_blank" class="fd">
 						<figure style="overflow: hidden;"><img src="/Uploads<?php echo ($v["banner"]); ?>" width="228" height="145"></figure>
 						<div>
 							<p><?php echo ($v["c_name"]); ?></p>
@@ -671,44 +695,44 @@
 		<ul class="opacityImg" style="position: relative;">
 			<li class="one">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case1.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["0"]["id"]); ?>"><img src="/Uploads<?php echo ($case["0"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">小小朋克与工业风的基情碰撞</p>
+					<p class="text"><?php echo ($case["0"]["title"]); ?></p>
 				</div>
 			</li>
 			<li class="two">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case2.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["1"]["id"]); ?>"><img src="/Uploads<?php echo ($case["1"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">北欧清新美屋实景案例赏析</p>
+					<p class="text"><?php echo ($case["1"]["title"]); ?></p>
 				</div>
 			</li>
 			<li class="three">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case3.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["2"]["id"]); ?>"><img src="/Uploads<?php echo ($case["2"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">晨光国际卢女士雅居</p>
+					<p class="text"><?php echo ($case["2"]["title"]); ?></p>
 				</div>
 			</li>
 			<li class="four">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case4.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["3"]["id"]); ?>"><img src="/Uploads<?php echo ($case["3"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">东郡国际王先生雅居</p>
+					<p class="text"><?php echo ($case["3"]["title"]); ?></p>
 				</div>
 			</li>
 			<li class="five">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case5.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["4"]["id"]); ?>"><img src="/Uploads<?php echo ($case["4"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">简约又不乏设计之美</p>
+					<p class="text"><?php echo ($case["4"]["title"]); ?></p>
 				</div>
 			</li>
 			<li class="six">
 				<div class="opacity_img">
-					<a href="#"><img src="/Public/images/case6.jpg"></a>
+					<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["5"]["id"]); ?>"><img src="/Uploads<?php echo ($case["5"]["logo"]); ?>"></a>
 					<p class="bg"></p>
-					<p class="text">欧式风情演绎80后的尊贵与时尚</p>
+					<p class="text"><?php echo ($case["5"]["title"]); ?></p>
 				</div>
 			</li>
 			<img src="/Public/images/caseImg1.jpg" class="img1">
@@ -768,11 +792,7 @@
 				<div class="banner">    	
 		            <div class="top_slide_wrap" id="top_slide_wrap2">
 		                <ul class="slide_box bxslider2">
-		                    <li><a href="#"><img src="/Public/images/zx_ban1.jpg" width="600" height="360"/></a></li>
-		                    <li><a href="#"><img src="/Public/images/zx_ban2.jpg" width="600" height="360"/></a></li>
-		                    <li>
-		                    	<a href="#"><img src="/Public/images/zx_ban3.jpg" width="600" height="360"/></a>
-		                    </li>     
+		                <?php if(is_array($images2)): foreach($images2 as $key=>$m): ?><li><a href="#"><img src="/Uploads<?php echo ($m["logo"]); ?>" title="<?php echo ($m["title"]); ?>" width="600" height="360"/></a></li><?php endforeach; endif; ?>
 		                </ul>	
 		                <div class="op_btns clearfix">
 		                    <a href="#" class="op_btn op_prev"><span></span></a>

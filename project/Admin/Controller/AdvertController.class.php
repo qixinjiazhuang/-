@@ -10,4 +10,26 @@ class AdvertController extends controller {
 		//加载模板
 		$this->display();
 	}
+
+	public function add(){
+
+		$this->display();
+	}
+
+	public function insert(){
+
+	}
+
+	public function edit(){
+
+		$this->display();
+	}
+
+	public function update(){
+
+	}
+
+	public function delete(){
+
+	}
 }

@@ -13,7 +13,16 @@ class DesignerController extends Controller {
             $_GET['p'] = 1;
         }
 
-		$res = $model->join('__USERS__ ON __USERS__.id = __DESIGNER__.uid')->select();
+		$res = $model->join('__USERS__ ON __USERS__.id = __DESIGNER__.uid')->field('designer.id,audit,photo,school,truename,concept')->where('audit=2')->select();
+
+		// foreach($res as $key=>$v){
+
+		// 	//实例化
+		// 	$case = M('b_case');
+
+		// 	//查询案例数
+		// 	$res[$key]['count'] = $case->where('fid='.$v['id'])->count();
+		// }
 
 		$count = count($res);
 		//实例化分页模型
@@ -25,12 +34,15 @@ class DesignerController extends Controller {
 
         //分页展示
         $show = $fors->show();
-		// ->field('users.id,audit,photo,school,truename,concept')
+		// 
 		$concept = ['1'=>'中式','2'=>'欧式','3'=>'美式','4'=>'简约','5'=>'现代'];
 
 		$this->assign('concept',$concept);
 
 		$this->assign('res',$res);
+
+		$this->assign('show',$show);
+
 		//查询
 		$this->display();
 	}

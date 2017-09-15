@@ -186,3 +186,2283 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002140s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002367s ]
 
+[ 2017-09-13T10:08:34+08:00 ] 127.0.0.1 /admin/case/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.1998s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 24 行.
+SQL: SELECT COMPANY.c_name,B_CASE.* FROM `b_case` INNER JOIN company ON b_case.gid = company.id   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001385s ]
+
+[ 2017-09-13T14:21:12+08:00 ] 127.0.0.1 /admin/mechanic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`photo`,`types`,`audit` FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2017-09-13T14:21:13+08:00 ] 127.0.0.1 /admin/mechanic/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2017-09-13T14:21:15+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-09-13T14:21:15+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2017-09-13T14:21:16+08:00 ] 127.0.0.1 /admin/designer/appointment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 316 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 321 行.
+SQL: SELECT * FROM `users` INNER JOIN appointment ON users.id = appointment.uid  WHERE ( tid=3 ) AND `a_phone` LIKE '%%'  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2017-09-13T14:21:18+08:00 ] 127.0.0.1 /admin/member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 22 行.
+SQL: SELECT * FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2017-09-13T14:21:22+08:00 ] 127.0.0.1 /admin/member/recycle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 322 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 327 行.
+SQL: SELECT * FROM `users` WHERE `name` LIKE '%%' AND `delete` = 2 LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `name` LIKE '%%' AND `delete` = 2 LIMIT 0,5   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2017-09-13T14:21:24+08:00 ] 127.0.0.1 /admin/member/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.114721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001789s ]
+
+[ 2017-09-13T14:21:25+08:00 ] 127.0.0.1 /admin/member/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-09-13T14:21:26+08:00 ] 127.0.0.1 /admin/member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 22 行.
+SQL: SELECT * FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001118s ]
+
+[ 2017-09-13T14:21:28+08:00 ] 127.0.0.1 /admin/mechanic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`photo`,`types`,`audit` FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000414s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2017-09-13T14:21:29+08:00 ] 127.0.0.1 /admin/mechanic/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-09-13T14:21:30+08:00 ] 127.0.0.1 /admin/mechanic/appointment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 299 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 304 行.
+SQL: SELECT * FROM `users` INNER JOIN appointment ON users.id = appointment.uid  WHERE ( tid=5 ) AND `a_phone` LIKE '%%'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2017-09-13T14:21:31+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002218s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000988s ]
+
+[ 2017-09-13T14:21:32+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2017-09-13T14:21:32+08:00 ] 127.0.0.1 /admin/designer/appointment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 316 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 321 行.
+SQL: SELECT * FROM `users` INNER JOIN appointment ON users.id = appointment.uid  WHERE ( tid=3 ) AND `a_phone` LIKE '%%'  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2017-09-13T14:21:34+08:00 ] 127.0.0.1 /admin/foreman/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`age`,`photo`,`gid` FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT `c_name` FROM `company` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000821s ]
+
+[ 2017-09-13T14:21:34+08:00 ] 127.0.0.1 /admin/foreman/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-09-13T14:21:35+08:00 ] 127.0.0.1 /admin/foreman/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`age`,`photo`,`gid` FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0013s ]
+SQL: SELECT `c_name` FROM `company` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001339s ]
+
+[ 2017-09-13T14:21:40+08:00 ] 127.0.0.1 /admin/foreman/delete?id=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0015s ]
+SQL: UPDATE `users` SET `delete`='2' WHERE ( id=14 ) [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2017-09-13T14:21:40+08:00 ] 127.0.0.1 /admin/foreman/delete?id=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: UPDATE `users` SET `delete`='2' WHERE ( id=14 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000776s ]
+
+[ 2017-09-13T14:21:41+08:00 ] 127.0.0.1 /admin/foreman/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`age`,`photo`,`gid` FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN foreman ON users.id = foreman.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001084s ]
+
+[ 2017-09-13T14:21:42+08:00 ] 127.0.0.1 /admin/foreman/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002406s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-09-13T14:21:43+08:00 ] 127.0.0.1 /admin/foreman/appointment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 310 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\ForemanController.class.php 第 315 行.
+SQL: SELECT * FROM `users` INNER JOIN appointment ON users.id = appointment.uid  WHERE ( tid=6 ) AND `a_phone` LIKE '%%'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001664s ]
+
+[ 2017-09-13T14:21:44+08:00 ] 127.0.0.1 /admin/supervisor/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 12 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `supervisor` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `supervisor` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000911s ]
+
+[ 2017-09-13T14:21:45+08:00 ] 127.0.0.1 /admin/supervisor/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001654s ]
+
+[ 2017-09-13T14:21:46+08:00 ] 127.0.0.1 /admin/supervisor/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 12 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `supervisor` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `supervisor` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2017-09-13T14:21:48+08:00 ] 127.0.0.1 /admin/supervisor/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `supervisor` [ RunTime:0.0011s ]
+SQL: DELETE FROM `supervisor` WHERE ( id=1 ) [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-09-13T14:21:49+08:00 ] 127.0.0.1 /admin/supervisor/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 12 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\SupervisorController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `supervisor` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `supervisor` WHERE `phone` LIKE '%%'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-09-13T14:21:50+08:00 ] 127.0.0.1 /admin/company/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2017-09-13T14:21:52+08:00 ] 127.0.0.1 /admin/company/staindex.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 307 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 312 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 AND ( audit=1 )  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 AND ( audit=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2017-09-13T14:21:53+08:00 ] 127.0.0.1 /admin/business/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\BusinessController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\BusinessController.class.php 第 22 行.
+SQL: SELECT `uid`,`city`,`fax`,`b_type`,`email`,`title`,`b_name`,`qq`,`b_phone`,`level`,`b_phone`,`status`,`delete`,`audit`,`bushour` FROM `users` INNER JOIN business ON users.id = business.uid  WHERE `b_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN business ON users.id = business.uid  WHERE `b_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2017-09-13T14:21:54+08:00 ] 127.0.0.1 /admin/cate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001726s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0335s ]
+SQL: SELECT `id`,`name`,`pid`,`path`,concat(path,'-',id) as newpath FROM `type` ORDER BY newpath  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Admin\68e35ad4d1695266193a182c9a88ccf1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2017-09-13T14:21:59+08:00 ] 127.0.0.1 /admin/process/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002482s ]
+
+[ 2017-09-13T14:22:04+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0141s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2017-09-13T14:22:05+08:00 ] 127.0.0.1 /admin/tender/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001367s ]
+
+[ 2017-09-13T14:22:08+08:00 ] 127.0.0.1 /admin/tender/delete?id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0013s ]
+SQL: DELETE FROM `tender` WHERE ( id=15 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2017-09-13T14:22:09+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2017-09-13T14:22:10+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2017-09-13T14:22:13+08:00 ] 127.0.0.1 /admin/tender/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0011s ]
+SQL: DELETE FROM `tender` WHERE ( id=1 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+
+[ 2017-09-13T14:22:16+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001053s ]
+
+[ 2017-09-13T14:22:18+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001991s ]
+
+[ 2017-09-13T14:22:18+08:00 ] 127.0.0.1 /admin/process/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2017-09-13T14:22:19+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2017-09-13T14:22:20+08:00 ] 127.0.0.1 /admin/tender/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0014s ]
+SQL: DELETE FROM `tender` WHERE ( id=1 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-09-13T14:22:22+08:00 ] 127.0.0.1 /admin/process/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002266s ]
+
+[ 2017-09-13T14:22:23+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2017-09-13T14:22:24+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2017-09-13T14:22:24+08:00 ] 127.0.0.1 /admin/tender/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0013s ]
+SQL: DELETE FROM `tender` WHERE ( id=1 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000610s ]
+
+[ 2017-09-13T14:22:26+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001762s ]
+
+[ 2017-09-13T14:22:27+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2017-09-13T14:22:27+08:00 ] 127.0.0.1 /admin/tender/delete?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0007s ]
+SQL: DELETE FROM `tender` WHERE ( id=2 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-09-13T14:22:29+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2017-09-13T14:22:30+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-09-13T14:22:31+08:00 ] 127.0.0.1 /admin/tender/delete?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0011s ]
+SQL: DELETE FROM `tender` WHERE ( id=5 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+
+[ 2017-09-13T14:22:33+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-09-13T14:22:34+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-09-13T14:22:34+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2017-09-13T14:22:35+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2017-09-13T14:22:35+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2017-09-13T14:22:36+08:00 ] 127.0.0.1 /admin/tender/small/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2017-09-13T14:22:38+08:00 ] 127.0.0.1 /admin/tender/delete?id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0012s ]
+SQL: DELETE FROM `tender` WHERE ( id=9 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-09-13T14:22:40+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2017-09-13T14:22:41+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-09-13T14:22:41+08:00 ] 127.0.0.1 /admin/process/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005304s ]
+
+[ 2017-09-13T14:22:42+08:00 ] 127.0.0.1 /admin/process/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2017-09-13T14:22:45+08:00 ] 127.0.0.1 /admin/process/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0011s ]
+SQL: DELETE FROM `progress` WHERE ( id=1 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2017-09-13T14:22:46+08:00 ] 127.0.0.1 /admin/process/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\ProcessController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `progress` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `progress`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2017-09-13T14:22:47+08:00 ] 127.0.0.1 /admin/tender/small.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `small_tender` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 309 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 314 行.
+SQL: SELECT * FROM `small_tender` WHERE `phone` LIKE '%%' ORDER BY status desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2017-09-13T14:22:48+08:00 ] 127.0.0.1 /admin/tender/delete?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0007s ]
+SQL: DELETE FROM `tender` WHERE ( id=1 ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-09-13T14:22:51+08:00 ] 127.0.0.1 /admin/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `tender` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\TenderController.class.php 第 23 行.
+SQL: SELECT * FROM `tender` WHERE `phone` LIKE '%%'  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tender` WHERE `phone` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2017-09-13T14:25:57+08:00 ] 127.0.0.1 /admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2017-09-13T14:44:02+08:00 ] 127.0.0.1 /admin/member/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001671s ]
+
+[ 2017-09-13T14:44:42+08:00 ] 127.0.0.1 /admin/member/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+NOTIC: [8] Use of undefined constant            - assumed '          ' D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0011s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'a123456' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `users` WHERE `email` = '123123@qq.com' LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `users` (`name`,`email`,`password`,`type`,`phone`,`truename`,`status`,`birth`,`regtime`,`remember_token`) VALUES ('a123456','123123@qq.com','e10adc3949ba59abbe56e057f20f883e','1','13888888888','李硕','1','2017-1-1','1505285082','Jys7qU80GdvM7cTTN39jkwBwOP7tPF2DthbZlmVZw95CDm1lJd') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `member` [ RunTime:0.0011s ]
+SQL: INSERT INTO `member` (`uid`,`tid`) VALUES ('18','1') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2017-09-13T14:44:43+08:00 ] 127.0.0.1 /admin/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 22 行.
+SQL: SELECT * FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001817s ]
+
+[ 2017-09-13T14:50:01+08:00 ] 127.0.0.1 /admin/member/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001774s ]
+
+[ 2017-09-13T14:50:02+08:00 ] 127.0.0.1 /admin/member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 22 行.
+SQL: SELECT * FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2017-09-13T14:50:03+08:00 ] 127.0.0.1 /admin/member/recycle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 322 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 327 行.
+SQL: SELECT * FROM `users` WHERE `name` LIKE '%%' AND `delete` = 2 LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `name` LIKE '%%' AND `delete` = 2 LIMIT 0,5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2017-09-13T14:50:04+08:00 ] 127.0.0.1 /admin/member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 17 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MemberController.class.php 第 22 行.
+SQL: SELECT * FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2017-09-13T14:54:43+08:00 ] 127.0.0.1 /admin/mechanic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 24 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`level`,`photo`,`types`,`audit` FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN mechanic ON users.id = mechanic.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2017-09-13T14:54:43+08:00 ] 127.0.0.1 /admin/mechanic/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001913s ]
+
+[ 2017-09-13T14:54:45+08:00 ] 127.0.0.1 /admin/mechanic/appointment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 299 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\MechanicController.class.php 第 304 行.
+SQL: SELECT * FROM `users` INNER JOIN appointment ON users.id = appointment.uid  WHERE ( tid=5 ) AND `a_phone` LIKE '%%'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001117s ]
+
+[ 2017-09-13T14:54:45+08:00 ] 127.0.0.1 /admin/mechanic/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010104s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2017-09-13T14:54:47+08:00 ] 127.0.0.1 /admin/designer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001133s ]
+
+[ 2017-09-13T14:55:24+08:00 ] 127.0.0.1 /admin/company/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001089s ]
+
+[ 2017-09-13T14:55:27+08:00 ] 127.0.0.1 /admin/company/delete?id=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001163s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+SQL: UPDATE `users` SET `delete`='2' WHERE ( id=17 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+
+[ 2017-09-13T14:55:27+08:00 ] 127.0.0.1 /admin/company/delete?id=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0016s ]
+SQL: UPDATE `users` SET `delete`='2' WHERE ( id=17 ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001227s ]
+
+[ 2017-09-13T14:55:29+08:00 ] 127.0.0.1 /admin/company/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2017-09-13T14:55:30+08:00 ] 127.0.0.1 /admin/company/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-09-13T14:55:32+08:00 ] 127.0.0.1 /admin/company/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001061s ]
+
+[ 2017-09-13T15:01:50+08:00 ] 127.0.0.1 /admin/company/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+NOTIC: [8] Use of undefined constant           - assumed '         ' D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0012s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'admin1231231231111123' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: INSERT INTO `users` (`remember_token`,`name`,`password`,`city`,`regtime`,`type`) VALUES ('14HteXTLP4JNFmNk5iayWRsczwKuNfD80uel0e6R9WmThBA9KE','admin1231231231111123','e10adc3949ba59abbe56e057f20f883e','天津市,天津市,南开区','1505286110','2') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+ERR: 1406:Data too long for column 'introduce' at row 1
+ [ SQL语句 ] : INSERT INTO `company` (`banner`,`clogo`,`zlogo`,`contacts`,`introduce`,`qq`,`c_phone`,`tid`,`uid`,`c_name`) VALUES ('/company/2017-09-13/59b8d7de4ed1f.jpg','/company/2017-09-13/59b8d7de50ba4.jpg','/company/2017-09-13/59b8d7de5227c.jpg','李硕','北京紫名都装饰于1999年3月批准注册，总部北京。当前紫名都在中国家居产业内已形成规模化、专业化、品牌化、集团化、产业化领先优势的著名品牌之一','999122399','13888888888','2','19',' 紫名都装饰')
+ERR: 1406:Data too long for column 'introduce' at row 1
+ [ SQL语句 ] : INSERT INTO `company` (`banner`,`clogo`,`zlogo`,`contacts`,`introduce`,`qq`,`c_phone`,`tid`,`uid`,`c_name`) VALUES ('/company/2017-09-13/59b8d7de4ed1f.jpg','/company/2017-09-13/59b8d7de50ba4.jpg','/company/2017-09-13/59b8d7de5227c.jpg','李硕','北京紫名都装饰于1999年3月批准注册，总部北京。当前紫名都在中国家居产业内已形成规模化、专业化、品牌化、集团化、产业化领先优势的著名品牌之一','999122399','13888888888','2','19',' 紫名都装饰')
+
+[ 2017-09-13T15:02:11+08:00 ] 127.0.0.1 /admin/company/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+NOTIC: [8] Use of undefined constant           - assumed '         ' D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'admin1231231231111123' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000844s ]
+
+[ 2017-09-13T15:02:24+08:00 ] 127.0.0.1 /admin/company/insert
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+NOTIC: [8] Use of undefined constant           - assumed '         ' D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [2] call_user_func_array() expects parameter 1 to be a valid callback, function 'checkPwd' not found or invalid function name D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1279 行.
+SQL: SELECT * FROM `users` WHERE `name` = 'admin123123' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\tp\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: INSERT INTO `users` (`remember_token`,`name`,`password`,`city`,`regtime`,`type`) VALUES ('SRo4QKzly16qColM869nFQPHlRgIKRMSY3e9BaW2JqMtYx4WpJ','admin123123','e10adc3949ba59abbe56e057f20f883e','请选择省,请选择市,请选择区','1505286144','2') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: INSERT INTO `company` (`banner`,`clogo`,`zlogo`,`contacts`,`introduce`,`qq`,`c_phone`,`tid`,`uid`,`c_name`) VALUES ('/company/2017-09-13/59b8d80087d15.jpg','/company/2017-09-13/59b8d80089254.jpg','/company/2017-09-13/59b8d8008ad6e.jpg','李硕','北京紫名都装饰于1999年3月批准注册，总部北京。当前紫名都在中国家居产业内已形成规模化','999122399','13888888888','2','20','紫名都装饰') [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-09-13T15:02:25+08:00 ] 127.0.0.1 /admin/company/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2017-09-13T15:04:46+08:00 ] 127.0.0.1 /admin/company/vcompany?id=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `company` WHERE ( uid=20 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `vcompany` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `vcompany` WHERE ( gid=7 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001176s ]
+
+[ 2017-09-13T15:04:50+08:00 ] 127.0.0.1 /admin/company/docom
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `vcompany` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `vcompany` (`gid`,`d_type`,`h_type`,`server`) VALUES ('7','2','3','1') [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001097s ]
+
+[ 2017-09-13T15:04:51+08:00 ] 127.0.0.1 /admin/company/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 18 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CompanyController.class.php 第 23 行.
+SQL: SELECT `uid`,`city`,`qq`,`c_phone`,`level`,`c_name`,`status`,`delete`,`audit`,`contacts` FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN company ON users.id = company.uid  WHERE `c_phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001517s ]
+
