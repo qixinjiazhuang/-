@@ -177,6 +177,8 @@ a:active{text-decoration: blink; color: yellow;}
                      </script>
                     <td style="text-overflow:ellipsis;text-align:center;"><?=$audit[$v['audit']]?></td>
 	                  <td style="text-overflow:ellipsis;text-align:center;">
+                        <a href="/admin/case/v_case?id=<?php echo ($v["id"]); ?>">添加属性</a> |
+                        <a href="/admin/case/e_case?id=<?php echo ($v["id"]); ?>">编辑属性</a> |
 	                  	  <a href="/admin/case/edit?id=<?php echo ($v["id"]); ?>">编辑</a> | 
 	                      <a onClick="javascript:del()" href="/admin/case/delete?id=<?php echo ($v["id"]); ?>">删除</a> 
 	                  </td>

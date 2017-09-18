@@ -9,12 +9,12 @@
     <section class="content-header">
       <h1>
         案例管理
-        <small>添加案例</small>
+        <small>修改案例</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ url('/admin/index') }}"><i class="fa fa-dashboard"></i> 主页</a></li>
         <li><a href="#">案例管理</a></li>
-        <li class="active">添加案例</li>
+        <li class="active">修改案例</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -25,7 +25,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">添加</h3>
+              <h3 class="box-title">修改</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -53,12 +53,83 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword4">装修公司</label>
-                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="gid">
+                  <select style="width:50%;" class="form-control" required="required" id="sel" name="gid">
                     <foreach name="com" item="v">
                       <option value="{$v.id}" <?php if($res['gid'] == $v['id']){ ?> selected="selected" <?php } ?> >{$v.c_name}</option>
                     </foreach>
                   </select>
                 </div>
+                  <div class="form-group">
+                  <label for="exampleInputPassword4">选择工长</label>
+                  <select style="width:50%;" class="form-control" required="required" id="select" name="fid">  
+                      <option value="">请选择</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword4">选择设计师</label>
+                  <select style="width:50%;" class="form-control" required="required" id="select1" name="did">  
+                      <option value="">请选择</option>
+                  </select>
+                </div>
+                <script>
+                    $('#sel').on('change',function(){
+                    
+                    $('#select').find('option').remove();
+                    //获取id
+                    var id = $(this).val();
+                      //查询所有父分类
+                      $.ajax('/admin/case/myajax',{
+                          type:'GET',
+                              data:{gid:id},
+                              dataType:'json',
+                              success:function(data){
+                                  
+                                  //循环迭代数据
+                                   for(var i = 0; i < data.length; i++){
+                                      
+                                      //迭代创建option标签数据
+                                      option = $('<option value="'+ data[i]['id'] +'">'+ data[i]['truename'] +'</option>'); 
+
+                                      //修改到创建的select框中
+                                      $('#select').append(option);
+                                   
+                                  }        
+                              //返回错误信息
+                              },error:function(){
+                                  alert('数据异常');
+                              }
+                       });
+                   });
+
+                    $('#sel').on('change',function(){
+                    
+                    $('#select1').find('option').remove();
+                    //获取id
+                    var id = $(this).val();
+                      //查询所有父分类
+                      $.ajax('/admin/case/desajax',{
+                          type:'GET',
+                              data:{gid:id},
+                              dataType:'json',
+                              success:function(data){
+                                  
+                                  //循环迭代数据
+                                   for(var i = 0; i < data.length; i++){
+                                      
+                                      //迭代创建option标签数据
+                                      option = $('<option value="'+ data[i]['id'] +'">'+ data[i]['truename'] +'</option>'); 
+
+                                      //修改到创建的select框中
+                                      $('#select1').append(option);
+                                   
+                                  }        
+                              //返回错误信息
+                              },error:function(){
+                                  alert('数据异常');
+                              }
+                       });
+                   });
+                </script>
                 <div class="form-group">
                   <label for="exampleInputPassword4">选择户型</label>
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="type">
@@ -94,7 +165,7 @@
               
               <!-- /.box-body -->
               <div class="box-footer">
-                <button id="btn" type="submit" class="btn btn-primary">添加</button>
+                <button id="btn" type="submit" class="btn btn-primary">修改</button>
               </div>
             </form>
           </div>

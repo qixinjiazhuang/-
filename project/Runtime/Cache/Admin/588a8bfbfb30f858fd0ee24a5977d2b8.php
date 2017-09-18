@@ -114,6 +114,12 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="exampleInputPassword4">选择设计师</label>
+                  <select style="width:50%;" class="form-control" required="required" id="select1" name="did">  
+                      <option value="">请选择</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="exampleInputPassword4">选择户型</label>
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="type">
                       <option value="1">小户型</option>
@@ -195,6 +201,40 @@
 
                                       //添加到创建的select框中
                                       $('#select').append(option);
+                                   
+                                  }        
+                              //返回错误信息
+                              },error:function(){
+                                  alert('数据异常');
+                              }
+                       });
+                   });
+
+                </script>
+
+                <script>
+
+                      
+                  $('#sel').on('change',function(){
+                    
+                    $('#select1').find('option').remove();
+                    //获取id
+                    var id = $(this).val();
+                      //查询所有父分类
+                      $.ajax('/admin/case/desajax',{
+                          type:'GET',
+                              data:{gid:id},
+                              dataType:'json',
+                              success:function(data){
+                                  
+                                  //循环迭代数据
+                                   for(var i = 0; i < data.length; i++){
+                                      
+                                      //迭代创建option标签数据
+                                      option = $('<option value="'+ data[i]['id'] +'">'+ data[i]['truename'] +'</option>'); 
+
+                                      //添加到创建的select框中
+                                      $('#select1').append(option);
                                    
                                   }        
                               //返回错误信息

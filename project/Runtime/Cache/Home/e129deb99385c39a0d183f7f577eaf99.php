@@ -16,7 +16,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region">杭州</em>
+                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                </em>
                 [
                 <a href="/home/Area/index">更换</a>
                 ]
@@ -97,9 +98,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
+                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
                 <?=session('home_user')['name']?>
-                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <?php else: ?>
                 <a href="<?php echo U('/home/login/index');?>">登录</a>
                 <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
@@ -165,17 +166,17 @@
                     <div class="search-item"><em></em>
 
                         <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
-                            <option value="1">装修公司</option>
-                            <option value="2">工人</option>
-                            <option value="3">工长</option>
-                            <option value="4">设计师</option>
-                            <option value="5">监理</option>
-                            <option value="6">案例</option>
+                            <option value="1" <?php if(session('type') == 1){ echo 123 ?> selected="selected" <?php } ?> >装修公司</option>
+                            <option value="2" <?php if(session('type') == 2){ ?> selected="selected" <?php } ?> >工人</option>
+                            <option value="3" <?php if(session('type') == 3){ ?> selected="selected" <?php } ?> >工长</option>
+                            <option value="4" <?php if(session('type') == 4){ ?> selected="selected" <?php } ?> >设计师</option>
+                            <option value="5" <?php if(session('type') == 5){ ?> selected="selected" <?php } ?> >监理</option>
+                            <option value="6" <?php if(session('type') == 6){ ?> selected="selected" <?php } ?> >案例</option>
                         </select><span><em></em></span>
                     </div>
                         <label class="search-con">
                             <input type="text" class="searchInput" autocomplete="off" name="keywords">
-                            <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
+                            <input type="submit" value="提交"  class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})" required="required">
                             <ul class="Jia-search-refer">
                             </ul>
                         </label>
@@ -226,7 +227,7 @@
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_xzx">
+              <!--   <li class="with-sub-nav fst-li" id="nav_xzx">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">学装修</a>
                         <i></i>
@@ -236,7 +237,7 @@
                             <li><a href="#">装修课堂</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
              <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
@@ -295,25 +296,25 @@
 			<div class="txt-title">
 				<ul class="clearfix">
 					<li class="info clearfix">
-						<div class="pic"><img src="/Public/images/designer1.jpg"></div>
+						<div class="pic"><img src="/Uploads<?php echo ($data["photo"]); ?>"></div>
 						<div class="des">
-							<h3 id="designer_name">陈玲</h3>
+							<h3 id="designer_name"><?php echo ($data["truename"]); ?></h3>
 							<div class="item-des clearfix">
 								<span class="i-title">毕业院校：</span>
-								<div class="i-txt i-dTxt"></div>
+								<div class="i-txt i-dTxt"><?php echo ($data["school"]); ?></div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">案例数：</span>
-								<div class="i-txt i-dTxt"></div>
+								<div class="i-txt i-dTxt"><?php echo ($count); ?></div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">擅长类型：</span>
-								<div class="i-txt">欧式</div>
+								<div class="i-txt"><?php echo ($concept[$data['concept']]); ?></div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</span>
 								<div class="i-txt">
-									<span class="s-con">设计是千变万化的，但是每个人的选择是不一样的，所以以我的专业给你最合适的答复</span>
+									<span class="s-con"><?php echo ($data["introduce"]); ?></span>
 								</div>
 							</div>
 						</div>
@@ -321,19 +322,19 @@
 					<li class="apply">
 						<div class="t-apply">
 							<div class="list">
-								<p class="num">1</p>
-								<p class="name">已开工工地</p>
+								<p class="num"><?php echo ($data["num"]); ?></p>
+								<p class="name">浏览量</p>
 								<span class="s-1"></span>
 							</div>
 							<div class="list">
-								<p class="num">1</p>
+								<p class="num"><?php echo ($count); ?></p>
 								<p class="name">提供案例数</p>
 								<span class="s-1"></span>
 							</div>
-							<div class="list">
+							<!-- <div class="list">
 								<p class="num">0</p>
 								<p class="name">业主点评数</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="m-btn">
 							<a href="javascript:;" class="company-appBtn popup_order_button">预约设计师</a>
@@ -345,45 +346,39 @@
 		<div class="zxPany-contain">
 			<div class="zxPany-list zxPany-case">
 				<div class="title clearfix">
-					<h5>设计案例<span class="num">（1）</span></h5>
+					<h5>设计案例<span class="num">（<?php echo ($count); ?>）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="case-list">
 					<ul class="clearfix">
-						<li class="list">
-			                <a href="#" target="_blank">
-			                    <div class="pic"><img src="/Public/images/al.jpg" height="183" width="275" class="trans"></div>
-			                    <div class="txt">
-			                        <p class="m-t" title="凤城花苑146平">凤城花苑146平</p>
-			                        <p class="s-t">
-			                        	<span>四居室</span>
-			                        	<i>|</i>
-			                        	<span>140平米以上</span>
-			                        	<i>|</i>
-			                        	<span>面议</span>
-			                        	<i>|</i>
-			                        	<span>欧式</span>
-			                        </p>
-			                    </div>
-			                </a>
-			            </li>
+						<?php if(is_array($case)): foreach($case as $key=>$c): ?><li class="list">
+				                <a href="<?php echo U('home/case/detail');?>?id=<?php echo ($c["id"]); ?>" target="_blank">
+				                    <div class="pic"><img src="/Uploads<?php echo ($c["logo"]); ?>" height="183" width="275" class="trans"></div>
+				                    <div class="txt">
+				                        <p class="m-t" title="<?php echo ($c["title"]); ?>"><?php echo ($c["title"]); ?></p>
+				                        <p class="s-t">
+				                        	<?php echo ($c["idea"]); ?>
+				                        </p>
+				                    </div>
+				                </a>
+				            </li><?php endforeach; endif; ?>
 					</ul>
 				</div>
 			</div>
-			<div class="zxPany-list zxPany-place">
+			<!-- <div class="zxPany-list zxPany-place">
 				<div class="title clearfix">
 					<h5>装修工地<span class="num">（0）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="place-info"></div>
-			</div>
-			<div class="zxPany-list zxPany-infoBack">
+			</div> -->
+			<!-- <div class="zxPany-list zxPany-infoBack">
 				<div class="title clearfix">
 					<h5>业主点评<span class="num">（0）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="comment-con"></div>
-			</div>
+			</div> -->
 		</div>
     </div>
     <div class="footer">

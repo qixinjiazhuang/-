@@ -30,25 +30,25 @@
 			<div class="txt-title">
 				<ul class="clearfix">
 					<li class="info clearfix">
-						<div class="pic"><img src="__ROOT__/Public/images/designer1.jpg"></div>
+						<div class="pic"><img src="__ROOT__/Uploads{$data.photo}"></div>
 						<div class="des">
-							<h3 id="designer_name">陈玲</h3>
+							<h3 id="designer_name">{$data.truename}</h3>
 							<div class="item-des clearfix">
 								<span class="i-title">毕业院校：</span>
-								<div class="i-txt i-dTxt"></div>
+								<div class="i-txt i-dTxt">{$data.school}</div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">案例数：</span>
-								<div class="i-txt i-dTxt"></div>
+								<div class="i-txt i-dTxt">{$count}</div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">擅长类型：</span>
-								<div class="i-txt">欧式</div>
+								<div class="i-txt">{$concept[$data['concept']]}</div>
 							</div>
 							<div class="item-des clearfix">
 								<span class="i-title">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</span>
 								<div class="i-txt">
-									<span class="s-con">设计是千变万化的，但是每个人的选择是不一样的，所以以我的专业给你最合适的答复</span>
+									<span class="s-con">{$data.introduce}</span>
 								</div>
 							</div>
 						</div>
@@ -56,19 +56,19 @@
 					<li class="apply">
 						<div class="t-apply">
 							<div class="list">
-								<p class="num">1</p>
-								<p class="name">已开工工地</p>
+								<p class="num">{$data.num}</p>
+								<p class="name">浏览量</p>
 								<span class="s-1"></span>
 							</div>
 							<div class="list">
-								<p class="num">1</p>
+								<p class="num">{$count}</p>
 								<p class="name">提供案例数</p>
 								<span class="s-1"></span>
 							</div>
-							<div class="list">
+							<!-- <div class="list">
 								<p class="num">0</p>
 								<p class="name">业主点评数</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="m-btn">
 							<a href="javascript:;" class="company-appBtn popup_order_button">预约设计师</a>
@@ -80,45 +80,41 @@
 		<div class="zxPany-contain">
 			<div class="zxPany-list zxPany-case">
 				<div class="title clearfix">
-					<h5>设计案例<span class="num">（1）</span></h5>
+					<h5>设计案例<span class="num">（{$count}）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="case-list">
 					<ul class="clearfix">
-						<li class="list">
-			                <a href="#" target="_blank">
-			                    <div class="pic"><img src="__ROOT__/Public/images/al.jpg" height="183" width="275" class="trans"></div>
-			                    <div class="txt">
-			                        <p class="m-t" title="凤城花苑146平">凤城花苑146平</p>
-			                        <p class="s-t">
-			                        	<span>四居室</span>
-			                        	<i>|</i>
-			                        	<span>140平米以上</span>
-			                        	<i>|</i>
-			                        	<span>面议</span>
-			                        	<i>|</i>
-			                        	<span>欧式</span>
-			                        </p>
-			                    </div>
-			                </a>
-			            </li>
+						<foreach name="case" item="c">
+							<li class="list">
+				                <a href="{:U('home/case/detail')}?id={$c.id}" target="_blank">
+				                    <div class="pic"><img src="__ROOT__/Uploads{$c.logo}" height="183" width="275" class="trans"></div>
+				                    <div class="txt">
+				                        <p class="m-t" title="{$c.title}">{$c.title}</p>
+				                        <p class="s-t">
+				                        	{$c.idea}
+				                        </p>
+				                    </div>
+				                </a>
+				            </li>
+				         </foreach>
 					</ul>
 				</div>
 			</div>
-			<div class="zxPany-list zxPany-place">
+			<!-- <div class="zxPany-list zxPany-place">
 				<div class="title clearfix">
 					<h5>装修工地<span class="num">（0）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="place-info"></div>
-			</div>
-			<div class="zxPany-list zxPany-infoBack">
+			</div> -->
+			<!-- <div class="zxPany-list zxPany-infoBack">
 				<div class="title clearfix">
 					<h5>业主点评<span class="num">（0）</span></h5>
 					<a href="#" class="m-l">更多></a>
 				</div>
 				<div class="comment-con"></div>
-			</div>
+			</div> -->
 		</div>
     </div>
     <div class="footer">

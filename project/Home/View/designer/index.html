@@ -79,21 +79,21 @@
 					<foreach name="res" item="v">
 					<li class="designer-item">
 						<div class="ordinary clearfix">
-							<a href="/home/designer/detail" class="pany-logo fl"><img src="__ROOT__/Uploads{$v.photo}" class="lazyload"></a>
+							<a href="/home/designer/detail?id={$v.id}" id="did" class="pany-logo fl"><img src="__ROOT__/Uploads{$v.photo}" class="lazyload"></a>
 							<div class="list-middle fl">
 								<h2>
-									<a href="/home/designer/detail?id={$v.id}" target="_blank" id="shop_name">{$v.truename}</a>
+									<a href="/home/designer/detail?id={$v.id}" id="cid" target="_blank" id="shop_name">{$v.truename}</a>
 									<div><span class="sift"></span><span class="auth"></span><span class="bao"></span></div>
 								</h2>
 								<p>毕业院校：<span class="zw">{$v.school}</span></p>
-								<p>案 例 数：<span class="zw"></span></p>
+								<p>案 例 数：<span class="zw">{$v.count}</span></p>
 								<p>擅长类型：<span class="sclx">{$concept[$v['concept']]}</span></p>
-							<!-- 	<p>设计理念：<span class="cynx"></span></p> -->
+								<p>设计理念：<span class="cynx">{$v.server}</span></p>
 							</div>
 							<div class="list-right fl">
 								<div class="kbval">
-									<span>口碑值</span>
-									<b>622</b>
+									<span>浏览量</span>
+									<b>{$v.num}</b>
 								</div>
 								<a href="javascript:;" class="zx-btn order-btn popup_order_button">立即预约</a>
 							</div>
@@ -102,6 +102,7 @@
 					</foreach>
 				</ul>
 			</div>
+			
 			<div class="p_pageNav p_ListpageNav">
 				<div class="p_page_inline">
 					<div class="p_page">

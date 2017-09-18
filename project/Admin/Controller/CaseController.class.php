@@ -23,7 +23,6 @@ class CaseController extends Controller {
         //获取搜索关键字
         $con = $_GET['keywords'];
 
-
         //关联查询所有数据
         $res = $stu->join('__COMPANY__ ON __B_CASE__.gid = __COMPANY__.id')->field('COMPANY.c_name,B_CASE.*')->order('audit asc')->select();
 
@@ -103,6 +102,8 @@ class CaseController extends Controller {
         $data['gid'] = I('post.gid');//公司id\
         
         $data['fid'] = I('post.fid');//工长
+
+        $data['did'] = I('post.did');//设计师
 
         //实例化文件上传类
         $file = new \Think\Upload();
@@ -185,6 +186,10 @@ class CaseController extends Controller {
         $data['audit'] = I('post.audit');
 
         $data['idea'] = I('post.idea');
+
+        $data['did'] = I('post.did');
+
+        $data['fid'] = I('post.fid');
 
         $model = M('b_case');
         
@@ -304,5 +309,101 @@ class CaseController extends Controller {
 
         $this->ajaxReturn($data);
     }
+
+    public function desajax(){
+
+        //获取id
+        $id = I('get.gid');
+
+        //实例化
+        $model = M('users');
+
+        $data = $model->join('__DESIGNER__ ON __USERS__.id = __DESIGNER__.uid')->field('users.truename,users.id')->where('gid='.$id)->select();
+
+        $this->ajaxReturn($data);
+    }
+
+    public function v_case(){
+
+        //获取id
+        $id = I('get.id');
+
+        //发送数据到模板
+        $this->assign('id',$id);
+
+        //加载模板
+        $this->display();
+    }
+
+    public function addcase(){
+
+        //获取id
+        $cid = I('post.cid');
+
+        //实例化v_case
+        $model = M('v_case');
+
+        //查询
+        $over = $model->where('cid='.$cid)->find();
+
+        //判断
+        if($over){
+            $this->error('该案例已添加属性',$_SERVER['HTTP_REFERER']);
+        }
+
+        //数据打包
+        $data = $model->create();
+
+        //添加数据库
+        $res = $model->add($data);
+
+        //判断
+        if($res){
+            $this->success('属性添加成功','/admin/case/index');
+        }else{
+            $this->error('属性添加失败',$_SERVER['HTTP_REFERER']);
+        }
+    }   
+
+    public function e_case(){
+
+        //获取id
+        $id = I('get.id');
+
+        //实例化
+        $model = M('v_case');
+
+        //查询,
+        $data = $model->where('cid='.$id)->find();
+
+        //发送数据到模板
+        $this->assign('data',$data);
+
+        //加载模板
+        $this->display();
+    }
+
+    public function updatecase(){
+
+        //获取id
+        $id = I('get.id');
+
+        //实例化
+        $model = M('v_case');
+
+        //数据打包
+        $data = $model->create();
+
+        //执行修改
+        $res = $model->where('id='.$id)->save($data);
+
+        //判断
+        if($res){
+            $this->success('属性修改成功','/admin/case/index');
+        }else{
+            $this->error('属性修改失败',$_SERVER['HTTP_REFERER']);
+        }
+    }
+
 
 }

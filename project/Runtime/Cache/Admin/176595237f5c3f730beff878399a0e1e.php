@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-  <link rel="stylesheet" href="/Public/dist/css/AdminLTE.min.css">
+  <!-- <link rel="stylesheet" href="/Public/dist/css/AdminLTE.css"> -->
   <link rel="stylesheet" href="/Public/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <link href="/Public/bootstrap/css/main.css" rel="stylesheet">
   <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,7 +75,7 @@
             <!-- form start -->
             <div id="sid" style="display:none" class="alert alert-danger">
             </div>
-            <form role="form" action="/admin/aboutus/update" method="post" enctype="multipart/form-data">
+            <form role="form" action="/admin/aboutus/update?id=<?php echo ($res["id"]); ?>" method="post" enctype="multipart/form-data">
         
               <div class="box-body">
       

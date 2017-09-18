@@ -30,7 +30,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region">杭州</em>
+                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                </em>
                 [
                 <a href="/home/Area/index">更换</a>
                 ]
@@ -111,9 +112,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
+                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
                 <?=session('home_user')['name']?>
-                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <?php else: ?>
                 <a href="<?php echo U('/home/login/index');?>">登录</a>
                 <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
@@ -179,17 +180,17 @@
                     <div class="search-item"><em></em>
 
                         <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
-                            <option value="1">装修公司</option>
-                            <option value="2">工人</option>
-                            <option value="3">工长</option>
-                            <option value="4">设计师</option>
-                            <option value="5">监理</option>
-                            <option value="6">案例</option>
+                            <option value="1" <?php if(session('type') == 1){ echo 123 ?> selected="selected" <?php } ?> >装修公司</option>
+                            <option value="2" <?php if(session('type') == 2){ ?> selected="selected" <?php } ?> >工人</option>
+                            <option value="3" <?php if(session('type') == 3){ ?> selected="selected" <?php } ?> >工长</option>
+                            <option value="4" <?php if(session('type') == 4){ ?> selected="selected" <?php } ?> >设计师</option>
+                            <option value="5" <?php if(session('type') == 5){ ?> selected="selected" <?php } ?> >监理</option>
+                            <option value="6" <?php if(session('type') == 6){ ?> selected="selected" <?php } ?> >案例</option>
                         </select><span><em></em></span>
                     </div>
                         <label class="search-con">
                             <input type="text" class="searchInput" autocomplete="off" name="keywords">
-                            <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
+                            <input type="submit" value="提交"  class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})" required="required">
                             <ul class="Jia-search-refer">
                             </ul>
                         </label>
@@ -240,7 +241,7 @@
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_xzx">
+              <!--   <li class="with-sub-nav fst-li" id="nav_xzx">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">学装修</a>
                         <i></i>
@@ -250,7 +251,7 @@
                             <li><a href="#">装修课堂</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
              <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
@@ -437,12 +438,12 @@
 			<li class="icon04">
 				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
-			<li class="icon05">
+			<!-- <li class="icon05">
 				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
 			</li>
 			<li class="icon06">
 				<a href="<?php echo U('/home/tender/index');?>" title=""></a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 	<div class="fangAd">
@@ -496,7 +497,7 @@
 						<a href="javascript:;" target="_blank"><img src="/Public/images/zizhuImg1.jpg" alt="套装修案例"></a>
 					</dt>
 					<dd>
-						<form method="post" action="<?php echo U('/home/case/index');?>">
+						<form method="get" action="<?php echo U('/home/case/index');?>">
 							<div class="ipt">
 								<input type="text" placeholder="请输入案例名称" class="input" name="keywords">
 								<i></i>
@@ -634,38 +635,38 @@
 				<li> 
 					<b><a>规模</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">10万元以下</a>
-	                    <a href="javascript:;" target="_blank">10-50万元</a>
-	                    <a href="javascript:;" target="_blank">50-100万元</a>
-	                    <a href="javascript:;" target="_blank">100-500万元</a>
+	                	<a href="<?php echo U('home/index/exe');?>?type=page&value=1" target="_blank">10万元以下</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=page&value=2" target="_blank">10-50万元</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=page&value=3" target="_blank">50-100万元</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=page&value=4" target="_blank">100-500万元</a>
                		</p>
                </li>
                <li> 
 					<b><a>服务</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">新房</a>
-	                    <a href="javascript:;" target="_blank">二手房</a>
-	                    <a href="javascript:;" target="_blank">大宅别墅</a>
-	                    <a href="javascript:;" target="_blank">局部软装</a>
-	                    <a href="javascript:;" target="_blank">工装</a>
+	                	<a href="<?php echo U('home/index/exe');?>?type=d_type&value=1" target="_blank">新房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=d_type&value=2" target="_blank">二手房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=d_type&value=3" target="_blank">大宅别墅</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=d_type&value=4" target="_blank">局部软装</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=d_type&value=5" target="_blank">工装</a>
                		</p>
                </li>
                <li> 
 					<b><a>房型</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">一房</a>
-	                    <a href="javascript:;" target="_blank">二房</a>
-	                    <a href="javascript:;" target="_blank">三房</a>
-	                    <a href="javascript:;" target="_blank"四房</a>
-	                    <a href="javascript:;" target="_blank">复式</a>
-	                    <a href="javascript:;" target="_blank">别墅</a>
+	                	<a href="<?php echo U('home/index/exe');?>?type=h_type&value=1" target="_blank">一房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=h_type&value=2" target="_blank">二房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=h_type&value=3" target="_blank">三房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=h_type&value=4" target="_blank"四房</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=h_type&value=5" target="_blank">复式</a>
+	                    <a href="<?php echo U('home/index/exe');?>?type=h_type&value=6" target="_blank">别墅</a>
                		</p>
                </li>
              	<li> 
 					<b><a>等级</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">钻石装修公司</a>
+                	<a href="<?php echo U('home/index/exe');?>?type=level&value=1" target="_blank">普通装修公司</a>
+                    <a href="<?php echo U('home/index/exe');?>?type=level&value=2" target="_blank">钻石装修公司</a>
                		</p>
                </li>
 			</ul>
@@ -814,16 +815,16 @@
 				<ul>
 					<li>
 						<div class="opacity_img">
-							<a href="#"><img src="/Public/images/zx1.jpg"></a>
+							<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["6"]["id"]); ?>"><img src="/Uploads<?php echo ($case["6"]["logo"]); ?>"></a>
 							<p class="bg"></p>
-							<p class="text">保亿风景晨园</p>
+							<p class="text"><?php echo ($case["6"]["title"]); ?></p>
 						</div>
 					</li>
 					<li>
 						<div class="opacity_img">
-							<a href="#"><img src="/Public/images/zx2.jpg"></a>
+							<a href="<?php echo U('home/case/detail');?>?id=<?php echo ($case["7"]["id"]); ?>"><img src="/Uploads<?php echo ($case["7"]["logo"]); ?>"></a>
 							<p class="bg"></p>
-							<p class="text">荷韵江南苑简欧式</p>
+							<p class="text"><?php echo ($case["7"]["title"]); ?></p>
 						</div>
 					</li>
 				</ul>
@@ -1256,48 +1257,13 @@
 		</h2>
 		<div class="dbz_index_content">
 			<ul class="dbz_index_designer">
-				<li>
+			<?php if(is_array($designer)): foreach($designer as $key=>$q): ?><li>
 					<div class="pic">
-						<a href="#"><img src="/Public/images/head1.jpg"></a>
+						<a href="<?php echo U('home/designer/detail');?>?id=<?php echo ($q["id"]); ?>"><img src="/Uploads<?php echo ($q["photo"]); ?>"></a>
 					</div>
-					<h3><a href="#">蔡燕燕</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="/Public/images/head2.jpg"></a>
-					</div>
-					<h3><a href="#">黄腾云</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="/Public/images/head3.jpg"></a>
-					</div>
-					<h3><a href="#">董淑雯</a></h3>
-					<div class="sc">设计理念：<span class="graycl">一切随心，用心去感悟空间。</span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="/Public/images/head4.jpg"></a>
-					</div>
-					<h3><a href="#">何婷婷</a></h3>
-					<div class="sc">设计理念：<span class="graycl">用感悟生活的心态去感悟设计，用设计的目光去理解生活。</span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="/Public/images/head5.jpg"></a>
-					</div>
-					<h3><a href="#">周仕柱</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="/Public/images/head6.jpg"></a>
-					</div>
-					<h3><a href="#">袁文</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
+					<h3><a href="<?php echo U('home/designer/detail');?>?id=<?php echo ($q["id"]); ?>"><?php echo ($q["name"]); ?></a></h3>
+					<div class="sc">设计理念：<span class="graycl"><?php echo ($q["server"]); ?></span></div>
+				</li><?php endforeach; endif; ?>
 			</ul>
 		</div>
 	</div>

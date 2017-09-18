@@ -98,6 +98,15 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="exampleInputPassword4">规模</label>
+                  <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="h_type">
+                      <option value="1">10万元以下</option>
+                      <option value="2">10-50万</option>
+                      <option value="3">50-100万</option>
+                      <option value="4">100-500万</option>
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="exampleInputPassword4">服务保障</label>
                   <select style="width:50%;" class="form-control" required="required" id="exampleInputPassword4" name="server">
                       <option value="1">环保装修</option>

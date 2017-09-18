@@ -149,7 +149,9 @@ class DesignerController extends Controller {
         $res['gid'] = I('post.gid');
         $res['concept'] = I('post.concept');
         $res['qq'] = I('post.qq');
-        
+        $res['introduce'] = I('post.introduce');
+        $res['server'] = I('post.server');
+
         //实例化文件上传类
         $file = new \Think\Upload();
 
@@ -196,7 +198,7 @@ class DesignerController extends Controller {
 
 		$stu = M('users');
 
-		$res = $stu->join('__DESIGNER__ ON __USERS__.id = __DESIGNER__.uid')->field('uid,name,email,truename,qq,phone,status,delete,photo,school,gid,concept,audit,status')->where('uid='.$id)->find();
+		$res = $stu->join('__DESIGNER__ ON __USERS__.id = __DESIGNER__.uid')->field('uid,name,email,truename,qq,phone,status,delete,photo,school,gid,concept,audit,status,server,introduce')->where('uid='.$id)->find();
     	
         //实例化
         $company = M('company');
@@ -268,7 +270,8 @@ class DesignerController extends Controller {
             $num['concept'] = I('post.concept');
             $num['gid'] = I('post.gid');
             $num['qq'] = I('post.qq');
-
+            $num['introduce'] = I('post.introduce');
+            $num['server'] = I('post.server');
             $result = $designer->where('uid='.$id)->save($num);
 
             if($res || $result){

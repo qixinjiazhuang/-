@@ -174,12 +174,12 @@
 			<li class="icon04">
 				<a href="{:U('/home/tender/index')}" title=""></a>
 			</li>
-			<li class="icon05">
+			<!-- <li class="icon05">
 				<a href="{:U('/home/tender/index')}" title=""></a>
 			</li>
 			<li class="icon06">
 				<a href="{:U('/home/tender/index')}" title=""></a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 	<div class="fangAd">
@@ -233,7 +233,7 @@
 						<a href="javascript:;" target="_blank"><img src="__ROOT__/Public/images/zizhuImg1.jpg" alt="套装修案例"></a>
 					</dt>
 					<dd>
-						<form method="post" action="{:U('/home/case/index')}">
+						<form method="get" action="{:U('/home/case/index')}">
 							<div class="ipt">
 								<input type="text" placeholder="请输入案例名称" class="input" name="keywords">
 								<i></i>
@@ -371,38 +371,38 @@
 				<li> 
 					<b><a>规模</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">10万元以下</a>
-	                    <a href="javascript:;" target="_blank">10-50万元</a>
-	                    <a href="javascript:;" target="_blank">50-100万元</a>
-	                    <a href="javascript:;" target="_blank">100-500万元</a>
+	                	<a href="{:U('home/index/exe')}?type=page&value=1" target="_blank">10万元以下</a>
+	                    <a href="{:U('home/index/exe')}?type=page&value=2" target="_blank">10-50万元</a>
+	                    <a href="{:U('home/index/exe')}?type=page&value=3" target="_blank">50-100万元</a>
+	                    <a href="{:U('home/index/exe')}?type=page&value=4" target="_blank">100-500万元</a>
                		</p>
                </li>
                <li> 
 					<b><a>服务</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">新房</a>
-	                    <a href="javascript:;" target="_blank">二手房</a>
-	                    <a href="javascript:;" target="_blank">大宅别墅</a>
-	                    <a href="javascript:;" target="_blank">局部软装</a>
-	                    <a href="javascript:;" target="_blank">工装</a>
+	                	<a href="{:U('home/index/exe')}?type=d_type&value=1" target="_blank">新房</a>
+	                    <a href="{:U('home/index/exe')}?type=d_type&value=2" target="_blank">二手房</a>
+	                    <a href="{:U('home/index/exe')}?type=d_type&value=3" target="_blank">大宅别墅</a>
+	                    <a href="{:U('home/index/exe')}?type=d_type&value=4" target="_blank">局部软装</a>
+	                    <a href="{:U('home/index/exe')}?type=d_type&value=5" target="_blank">工装</a>
                		</p>
                </li>
                <li> 
 					<b><a>房型</a></b>
      				<p> 
-	                	<a href="javascript:;" target="_blank">一房</a>
-	                    <a href="javascript:;" target="_blank">二房</a>
-	                    <a href="javascript:;" target="_blank">三房</a>
-	                    <a href="javascript:;" target="_blank"四房</a>
-	                    <a href="javascript:;" target="_blank">复式</a>
-	                    <a href="javascript:;" target="_blank">别墅</a>
+	                	<a href="{:U('home/index/exe')}?type=h_type&value=1" target="_blank">一房</a>
+	                    <a href="{:U('home/index/exe')}?type=h_type&value=2" target="_blank">二房</a>
+	                    <a href="{:U('home/index/exe')}?type=h_type&value=3" target="_blank">三房</a>
+	                    <a href="{:U('home/index/exe')}?type=h_type&value=4" target="_blank"四房</a>
+	                    <a href="{:U('home/index/exe')}?type=h_type&value=5" target="_blank">复式</a>
+	                    <a href="{:U('home/index/exe')}?type=h_type&value=6" target="_blank">别墅</a>
                		</p>
                </li>
              	<li> 
 					<b><a>等级</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">普通装修公司</a>
-                    <a href="javascript:;" target="_blank">钻石装修公司</a>
+                	<a href="{:U('home/index/exe')}?type=level&value=1" target="_blank">普通装修公司</a>
+                    <a href="{:U('home/index/exe')}?type=level&value=2" target="_blank">钻石装修公司</a>
                		</p>
                </li>
 			</ul>
@@ -555,16 +555,16 @@
 				<ul>
 					<li>
 						<div class="opacity_img">
-							<a href="#"><img src="__ROOT__/Public/images/zx1.jpg"></a>
+							<a href="{:U('home/case/detail')}?id={$case.6.id}"><img src="__ROOT__/Uploads{$case.6.logo}"></a>
 							<p class="bg"></p>
-							<p class="text">保亿风景晨园</p>
+							<p class="text">{$case.6.title}</p>
 						</div>
 					</li>
 					<li>
 						<div class="opacity_img">
-							<a href="#"><img src="__ROOT__/Public/images/zx2.jpg"></a>
+							<a href="{:U('home/case/detail')}?id={$case.7.id}"><img src="__ROOT__/Uploads{$case.7.logo}"></a>
 							<p class="bg"></p>
-							<p class="text">荷韵江南苑简欧式</p>
+							<p class="text">{$case.7.title}</p>
 						</div>
 					</li>
 				</ul>
@@ -997,48 +997,15 @@
 		</h2>
 		<div class="dbz_index_content">
 			<ul class="dbz_index_designer">
+			<foreach name="designer" item="q">
 				<li>
 					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head1.jpg"></a>
+						<a href="{:U('home/designer/detail')}?id={$q.id}"><img src="__ROOT__/Uploads{$q.photo}"></a>
 					</div>
-					<h3><a href="#">蔡燕燕</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
+					<h3><a href="{:U('home/designer/detail')}?id={$q.id}">{$q.name}</a></h3>
+					<div class="sc">设计理念：<span class="graycl">{$q.server}</span></div>
 				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head2.jpg"></a>
-					</div>
-					<h3><a href="#">黄腾云</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head3.jpg"></a>
-					</div>
-					<h3><a href="#">董淑雯</a></h3>
-					<div class="sc">设计理念：<span class="graycl">一切随心，用心去感悟空间。</span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head4.jpg"></a>
-					</div>
-					<h3><a href="#">何婷婷</a></h3>
-					<div class="sc">设计理念：<span class="graycl">用感悟生活的心态去感悟设计，用设计的目光去理解生活。</span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head5.jpg"></a>
-					</div>
-					<h3><a href="#">周仕柱</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
-				<li>
-					<div class="pic">
-						<a href="#"><img src="__ROOT__/Public/images/head6.jpg"></a>
-					</div>
-					<h3><a href="#">袁文</a></h3>
-					<div class="sc">设计理念：<span class="graycl"></span></div>
-				</li>
+			</foreach>
 			</ul>
 		</div>
 	</div>

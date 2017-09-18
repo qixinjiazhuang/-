@@ -134,6 +134,8 @@ a:active{text-decoration: blink; color: yellow;}
                      </script>
                     <td style="text-overflow:ellipsis;text-align:center;"><?=$audit[$v['audit']]?></td>
 	                  <td style="text-overflow:ellipsis;text-align:center;">
+                        <a href="__CONTROLLER__/v_case?id={$v.id}">添加属性</a> |
+                        <a href="__CONTROLLER__/e_case?id={$v.id}">编辑属性</a> |
 	                  	  <a href="__CONTROLLER__/edit?id={$v.id}">编辑</a> | 
 	                      <a onClick="javascript:del()" href="/admin/case/delete?id={$v.id}">删除</a> 
 	                  </td>

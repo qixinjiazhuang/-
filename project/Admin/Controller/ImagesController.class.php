@@ -19,7 +19,7 @@ class ImagesController extends Controller {
         $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
 
         $res = array_slice($res, $fors->firstRow,$fors->listRows);
-
+        
         //分页展示
         $show = $fors->show();
 

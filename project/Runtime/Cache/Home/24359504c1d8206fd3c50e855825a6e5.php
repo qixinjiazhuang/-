@@ -16,7 +16,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region">杭州</em>
+                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                </em>
                 [
                 <a href="/home/Area/index">更换</a>
                 ]
@@ -97,9 +98,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
+                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
                 <?=session('home_user')['name']?>
-                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <?php else: ?>
                 <a href="<?php echo U('/home/login/index');?>">登录</a>
                 <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
@@ -165,17 +166,17 @@
                     <div class="search-item"><em></em>
 
                         <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
-                            <option value="1">装修公司</option>
-                            <option value="2">工人</option>
-                            <option value="3">工长</option>
-                            <option value="4">设计师</option>
-                            <option value="5">监理</option>
-                            <option value="6">案例</option>
+                            <option value="1" <?php if(session('type') == 1){ echo 123 ?> selected="selected" <?php } ?> >装修公司</option>
+                            <option value="2" <?php if(session('type') == 2){ ?> selected="selected" <?php } ?> >工人</option>
+                            <option value="3" <?php if(session('type') == 3){ ?> selected="selected" <?php } ?> >工长</option>
+                            <option value="4" <?php if(session('type') == 4){ ?> selected="selected" <?php } ?> >设计师</option>
+                            <option value="5" <?php if(session('type') == 5){ ?> selected="selected" <?php } ?> >监理</option>
+                            <option value="6" <?php if(session('type') == 6){ ?> selected="selected" <?php } ?> >案例</option>
                         </select><span><em></em></span>
                     </div>
                         <label class="search-con">
                             <input type="text" class="searchInput" autocomplete="off" name="keywords">
-                            <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
+                            <input type="submit" value="提交"  class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})" required="required">
                             <ul class="Jia-search-refer">
                             </ul>
                         </label>
@@ -226,7 +227,7 @@
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_xzx">
+              <!--   <li class="with-sub-nav fst-li" id="nav_xzx">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">学装修</a>
                         <i></i>
@@ -236,7 +237,7 @@
                             <li><a href="#">装修课堂</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
              <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
@@ -280,86 +281,144 @@
 		<div class="mbt tenders_zb">
 			<ul class="tenders_zb_list clearfix">
 				<li rel="TZB" class="current">免费招标</li>
-				<li rel="TJC">建材招标</li>
+				<!-- <li rel="TJC">建材招标</li> -->
 				<li rel="TSJ">免费设计</li>
 				<li rel="TBJ">免费报价</li>
 				<li rel="TLF">免费量房</li>
-				<li><a href="/Public/javascript:;">装修保</a></li>
+				<!-- <li><a href="/Public/javascript:;">装修保</a></li> -->
 			</ul>
 			<div class="tenders_zb_box">
 				<div class="tenders_zb_box_con clearfix" style="display: block;">
 					<img src="/Public/images/tenders_pic1.jpg" class="lt">
 					<div class="tenders_zb_form pding rt">
 						<h3>我要招标</h3>
-						<form class="" method="">
+						<form class="" action="<?php echo U('/home/tender/add');?>" method="post" enctype="multipart/form-data">
 							<table>
 								<tbody>
 									<tr>
 										<td class="title"><font class="pointcl">*</font>您的姓名</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的姓名"></td>
+										<td><input type="text" name="name" class="text long" placeholder="请输入您的姓名"></td>
 										<td class="title"><font class="pointcl">*</font>联系电话</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的联系方式"></td>
+										<td><input type="text" name="phone" class="text long" placeholder="请输入您的联系方式"></td>
 									</tr>
 									<tr>
 										<td class="title">招标类型</td>
 										<td>
-											<select class="text long">
+											<select name="type" class="text long">
 												<option value="1">家装</option>
 												<option value="2">公装</option>
 											</select>
 										</td>
 										<td class="title">装修预算</td>
 										<td>
-											<select class="text long">
-												<option value="30">12万以上</option>
-												<option value="5">3万以下</option>
-												<option value="6">3万-5万</option>
-												<option value="7">5-8万</option>
-												<option value="8">8万-12万</option>
+											<select name="budget" class="text long">
+												<option value="1">3万以下</option>
+												<option value="2">3万-5万</option>
+												<option value="3">5-8万</option>
+												<option value="4">8万-12万</option>
+												<option value="5">12万以上</option>
 											</select>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">装修面积</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入装修面积，单位为平米"></td>
+										<td><input type="text" name="acreage" class="text long" placeholder="请输入装修面积，单位为平米"></td>
 										<td class="title">小区名称</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入小区名称"></td>
+										<td><input type="text" name="cellname" class="text long" placeholder="请输入小区名称"></td>
 									</tr>
 									<tr>
 										<td class="title">所在地区</td>
 										<td colspan="3">
 											<region>
-												<select class="text short" province="1" name="">
-													<option value="0">-请选择省份-</option>
+												<select id="sel" class="form-control text short"  name="province">
+												<option value="">--请选择省--</option>
+													<?php if(is_array($province)): foreach($province as $key=>$p): ?><option value="<?php echo ($p["code"]); ?>"><?php echo ($p["name"]); ?></option><?php endforeach; endif; ?>
 												</select>
-												<select class="text short" city="8" name="">
-													<option value="0">-请选择城市-</option>
+												<select id="sel1" class="form-control text short"  name="city">
+													<option value="">--请选择市--</option>
 												</select>
-												<select class="text short" area="0" name="">
-													<option value="0">-请选择区-</option>
+												<select id="sel2" class="form-control text short"  name="area">
+													<option value="">--请选择区--</option>
 												</select>
 											</region>
+											<script>
+												$('#sel').on('change',function(){
+
+													$('#sel1').find('option').remove();
+													$('#sel2').find('option').remove();
+
+													option1 = $('<option value="">--请选择市--</option>'); 
+									                
+								                    $('#sel1').append(option1);   
+								                    option2 = $('<option value="">--请选择区--</option>'); 
+								                    $('#sel2').append(option2);   
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/city',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel1').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+												
+												$('#sel1').on('change',function(){
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/area',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel2').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+
+											</script>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">详细地址</td>
-										<td colspan="3"><input type="text" name="" class="text all"></td>
+										<td colspan="3"><input type="text" name="address" class="text all"></td>
 									</tr>
 									<tr>
 										<td class="title">备注要求</td>
-										<td colspan="3"><textarea class="text"></textarea></td>
+										<td colspan="3"><textarea name="server" class="text"></textarea></td>
 									</tr>
 									<tr>
 										<td class="title"></td>
 										<td colspan="3">
-											<input type="file" name="huxing">
+											<input type="file" name="pic">
 											<p class="pro">上传户型图，报价更精准！并可提前一天获得报价方案！</p>
 										</td>
 									</tr>
 									<tr>
 										<td class="title"></td>
 										<td colspan="3">
-											<input type="submit" name="" class="btn_sub_tuan btn" value="免费发布招标">
+											<input type="submit" class="btn_sub_tuan btn" value="免费发布招标">
 											<span class="tel">或拨打<b class="fontcl2">400-800-2600</b></span>
 										</td>
 									</tr>
@@ -368,7 +427,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="tenders_zb_box_con clearfix" style="display: none;">
+			<!-- 	<div class="tenders_zb_box_con clearfix" style="display: none;">
 					<img src="/Public/images/tenders_pic2.jpg" class="lt">
 					<div class="tenders_zb_form pding rt">
 						<h3>建材招标</h3>
@@ -377,9 +436,9 @@
 								<tbody>
 									<tr>
 										<td class="title"><font class="pointcl">*</font>您的姓名</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的姓名"></td>
+										<td><input type="text" name="name" class="text long" placeholder="请输入您的姓名"></td>
 										<td class="title"><font class="pointcl">*</font>联系电话</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的联系方式"></td>
+										<td><input type="text" name="phone" class="text long" placeholder="请输入您的联系方式"></td>
 									</tr>
 									<tr>
 										<td class="title">地墙面：</td>
@@ -454,74 +513,131 @@
 							</table>
 						</form>
 					</div>
-				</div>
+				</div> -->
 				<div class="tenders_zb_box_con clearfix" style="display: none;">
 					<img src="/Public/images/tenders_pic3.jpg" class="lt">
 					<div class="tenders_zb_form pding rt">
 						<h3>免费设计</h3>
-						<form class="" method="">
+						<form action="/home/tender/add" class="" method="post" enctype="multipart/form-data">
 							<table>
 								<tbody>
 									<tr>
 										<td class="title"><font class="pointcl">*</font>您的姓名</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的姓名"></td>
+										<td><input type="text" name="name" class="text long" placeholder="请输入您的姓名"></td>
 										<td class="title"><font class="pointcl">*</font>联系电话</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的联系方式"></td>
+										<td><input type="text" name="phone" class="text long" placeholder="请输入您的联系方式"></td>
 									</tr>
 									<tr>
 										<td class="title">招标类型</td>
 										<td>
-											<select class="text long">
-												<option value="20">全包</option>
-												<option value="19">半包</option>
-												<option value="18">清包</option>
+											<select name="type" class="text long">
+												<option value="1">家装</option>
+												<option value="2">公装</option>
 											</select>
 										</td>
 										<td class="title">装修预算</td>
 										<td>
-											<select class="text long">
-												<option value="30">12万以上</option>
-												<option value="5">3万以下</option>
-												<option value="6">3万-5万</option>
-												<option value="7">5-8万</option>
-												<option value="8">8万-12万</option>
+											<select name="budget" class="text long">
+												<option value="1">3万以下</option>
+												<option value="2">3万-5万</option>
+												<option value="3">5-8万</option>
+												<option value="4">8万-12万</option>
+												<option value="5">12万以上</option>
 											</select>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">装修面积</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入装修面积，单位为平米"></td>
+										<td><input type="text" name="acreage" class="text long" placeholder="请输入装修面积，单位为平米"></td>
 										<td class="title">小区名称</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入小区名称"></td>
+										<td><input type="text" name="cellname" class="text long" placeholder="请输入小区名称"></td>
 									</tr>
 									<tr>
 										<td class="title">所在地区</td>
 										<td colspan="3">
 											<region>
-												<select class="text short" province="1" name="">
-													<option value="0">-请选择省份-</option>
+												<select id="sel3" class="form-control text short"  name="province">
+												<option value="">--请选择省--</option>
+													<?php if(is_array($province)): foreach($province as $key=>$p): ?><option value="<?php echo ($p["code"]); ?>"><?php echo ($p["name"]); ?></option><?php endforeach; endif; ?>
 												</select>
-												<select class="text short" city="8" name="">
-													<option value="0">-请选择城市-</option>
+												<select id="sel4" class="form-control text short"  name="city">
+													<option value="">--请选择市--</option>
 												</select>
-												<select class="text short" area="0" name="">
-													<option value="0">-请选择区-</option>
+												<select id="sel5" class="form-control text short"  name="area">
+													<option value="">--请选择区--</option>
 												</select>
 											</region>
+											<script>
+												$('#sel3').on('change',function(){
+
+													$('#sel4').find('option').remove();
+													$('#sel5').find('option').remove();
+
+													option1 = $('<option value="">--请选择市--</option>'); 
+									                
+								                    $('#sel4').append(option1);   
+								                    option2 = $('<option value="">--请选择区--</option>'); 
+								                    $('#sel5').append(option2);   
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/city',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel4').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+												
+												$('#sel4').on('change',function(){
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/area',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel5').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+
+											</script>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">详细地址</td>
-										<td colspan="3"><input type="text" name="" class="text all"></td>
+										<td colspan="3"><input type="text" name="address" class="text all"></td>
 									</tr>
 									<tr>
 										<td class="title">备注要求</td>
-										<td colspan="3"><textarea class="text"></textarea></td>
+										<td colspan="3"><textarea name="server" class="text"></textarea></td>
 									</tr>
 									<tr>
 										<td class="title"></td>
 										<td colspan="3">
-											<input type="file" name="huxing">
+											<input type="file" name="pic">
 											<p class="pro">上传户型图，报价更精准！并可提前一天获得报价方案！</p>
 										</td>
 									</tr>
@@ -541,69 +657,127 @@
 					<img src="/Public/images/tenders_pic4.jpg" class="lt">
 					<div class="tenders_zb_form pding rt">
 						<h3>免费报价</h3>
-						<form class="" method="">
+						<form action="/home/tender/add" class="" method="post" enctype="multipart/form-data">
 							<table>
 								<tbody>
 									<tr>
 										<td class="title"><font class="pointcl">*</font>您的姓名</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的姓名"></td>
+										<td><input type="text" name="name" class="text long" placeholder="请输入您的姓名"></td>
 										<td class="title"><font class="pointcl">*</font>联系电话</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的联系方式"></td>
+										<td><input type="text" name="phone" class="text long" placeholder="请输入您的联系方式"></td>
 									</tr>
 									<tr>
 										<td class="title">招标类型</td>
 										<td>
-											<select class="text long">
-												<option value="20">全包</option>
-												<option value="19">半包</option>
-												<option value="18">清包</option>
+											<select name="type" class="text long">
+												<option value="1">家装</option>
+												<option value="2">公装</option>
 											</select>
 										</td>
 										<td class="title">装修预算</td>
 										<td>
-											<select class="text long">
-												<option value="30">12万以上</option>
-												<option value="5">3万以下</option>
-												<option value="6">3万-5万</option>
-												<option value="7">5-8万</option>
-												<option value="8">8万-12万</option>
+											<select name="budget" class="text long">
+												<option value="1">3万以下</option>
+												<option value="2">3万-5万</option>
+												<option value="3">5-8万</option>
+												<option value="4">8万-12万</option>
+												<option value="5">12万以上</option>
 											</select>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">装修面积</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入装修面积，单位为平米"></td>
+										<td><input type="text" name="acreage" class="text long" placeholder="请输入装修面积，单位为平米"></td>
 										<td class="title">小区名称</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入小区名称"></td>
+										<td><input type="text" name="cellname" class="text long" placeholder="请输入小区名称"></td>
 									</tr>
 									<tr>
 										<td class="title">所在地区</td>
 										<td colspan="3">
 											<region>
-												<select class="text short" province="1" name="">
-													<option value="0">-请选择省份-</option>
+												<select id="sel7" class="form-control text short"  name="province">
+												<option value="">--请选择省--</option>
+													<?php if(is_array($province)): foreach($province as $key=>$p): ?><option value="<?php echo ($p["code"]); ?>"><?php echo ($p["name"]); ?></option><?php endforeach; endif; ?>
 												</select>
-												<select class="text short" city="8" name="">
-													<option value="0">-请选择城市-</option>
+												<select id="sel8" class="form-control text short"  name="city">
+													<option value="">--请选择市--</option>
 												</select>
-												<select class="text short" area="0" name="">
-													<option value="0">-请选择区-</option>
+												<select id="sel9" class="form-control text short"  name="area">
+													<option value="">--请选择区--</option>
 												</select>
 											</region>
+											<script>
+												$('#sel7').on('change',function(){
+
+													$('#sel8').find('option').remove();
+													$('#sel9').find('option').remove();
+
+													option1 = $('<option value="">--请选择市--</option>'); 
+									         
+								                    $('#sel8').append(option1);  
+
+								                    option2 = $('<option value="">--请选择区--</option>'); 
+								                    $('#sel9').append(option2);   
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/city',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        console.log(data[i]['name']);
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel8').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+												
+												$('#sel8').on('change',function(){
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/area',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel9').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+
+											</script>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">详细地址</td>
-										<td colspan="3"><input type="text" name="" class="text all"></td>
+										<td colspan="3"><input type="text" name="address" class="text all"></td>
 									</tr>
 									<tr>
 										<td class="title">备注要求</td>
-										<td colspan="3"><textarea class="text"></textarea></td>
+										<td colspan="3"><textarea name="server" class="text"></textarea></td>
 									</tr>
 									<tr>
 										<td class="title"></td>
 										<td colspan="3">
-											<input type="file" name="huxing">
+											<input type="file" name="pic">
 											<p class="pro">上传户型图，报价更精准！并可提前一天获得报价方案！</p>
 										</td>
 									</tr>
@@ -623,69 +797,127 @@
 					<img src="/Public/images/tenders_pic5.jpg" class="lt">
 					<div class="tenders_zb_form pding rt">
 						<h3>免费量房</h3>
-						<form class="" method="">
+						<form class="" action="/home/tender/add" method="post" enctype="multipart/form-data">
 							<table>
 								<tbody>
 									<tr>
 										<td class="title"><font class="pointcl">*</font>您的姓名</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的姓名"></td>
+										<td><input type="text" name="name" class="text long" placeholder="请输入您的姓名"></td>
 										<td class="title"><font class="pointcl">*</font>联系电话</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入您的联系方式"></td>
+										<td><input type="text" name="phone" class="text long" placeholder="请输入您的联系方式"></td>
 									</tr>
 									<tr>
 										<td class="title">招标类型</td>
 										<td>
-											<select class="text long">
-												<option value="20">全包</option>
-												<option value="19">半包</option>
-												<option value="18">清包</option>
+											<select name="type" class="text long">
+												<option value="1">家装</option>
+												<option value="2">公装</option>
 											</select>
 										</td>
 										<td class="title">装修预算</td>
 										<td>
-											<select class="text long">
-												<option value="30">12万以上</option>
-												<option value="5">3万以下</option>
-												<option value="6">3万-5万</option>
-												<option value="7">5-8万</option>
-												<option value="8">8万-12万</option>
+											<select name="budget" class="text long">
+												<option value="1">3万以下</option>
+												<option value="2">3万-5万</option>
+												<option value="3">5-8万</option>
+												<option value="4">8万-12万</option>
+												<option value="5">12万以上</option>
 											</select>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">装修面积</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入装修面积，单位为平米"></td>
+										<td><input type="text" name="acreage" class="text long" placeholder="请输入装修面积，单位为平米"></td>
 										<td class="title">小区名称</td>
-										<td><input type="text" name="" class="text long" placeholder="请输入小区名称"></td>
+										<td><input type="text" name="cellname" class="text long" placeholder="请输入小区名称"></td>
 									</tr>
 									<tr>
 										<td class="title">所在地区</td>
 										<td colspan="3">
 											<region>
-												<select class="text short" province="1" name="">
-													<option value="0">-请选择省份-</option>
+												<select id="sel11" class="form-control text short"  name="province">
+												<option value="">--请选择省--</option>
+													<?php if(is_array($province)): foreach($province as $key=>$p): ?><option value="<?php echo ($p["code"]); ?>"><?php echo ($p["name"]); ?></option><?php endforeach; endif; ?>
 												</select>
-												<select class="text short" city="8" name="">
-													<option value="0">-请选择城市-</option>
+												<select id="sel12" class="form-control text short"  name="city">
+													<option value="">--请选择市--</option>
 												</select>
-												<select class="text short" area="0" name="">
-													<option value="0">-请选择区-</option>
+												<select id="sel13" class="form-control text short"  name="area">
+													<option value="">--请选择区--</option>
 												</select>
 											</region>
+											<script>
+												$('#sel11').on('change',function(){
+
+													$('#sel12').find('option').remove();
+													$('#sel13').find('option').remove();
+
+													option1 = $('<option value="">--请选择市--</option>'); 
+									         
+								                    $('#sel12').append(option1);  
+
+								                    option2 = $('<option value="">--请选择区--</option>'); 
+								                    $('#sel13').append(option2);   
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/city',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        console.log(data[i]['name']);
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel12').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+												
+												$('#sel12').on('change',function(){
+
+													//获取value值
+													var val = $(this).val();
+
+													//发送ajax
+													$.get('/home/tender/area',{code:val},function(data){
+
+														//循环迭代数据
+									                    for(var i = 0; i < data.length; i++){
+									                        
+									                        //迭代创建option标签数据
+									                        option = $('<option value="'+ data[i]['code'] +'">'+ data[i]['name'] +'</option>'); 
+
+									                        //添加到创建的select框中
+									                        $('#sel13').append(option);
+									                    }     
+
+
+									                  
+													});
+												});
+
+											</script>
 										</td>
 									</tr>
 									<tr>
 										<td class="title">详细地址</td>
-										<td colspan="3"><input type="text" name="" class="text all"></td>
+										<td colspan="3"><input type="text" name="address" class="text all"></td>
 									</tr>
 									<tr>
 										<td class="title">备注要求</td>
-										<td colspan="3"><textarea class="text"></textarea></td>
+										<td colspan="3"><textarea name="server" class="text"></textarea></td>
 									</tr>
 									<tr>
 										<td class="title"></td>
 										<td colspan="3">
-											<input type="file" name="huxing">
+											<input type="file" name="pic">
 											<p class="pro">上传户型图，报价更精准！并可提前一天获得报价方案！</p>
 										</td>
 									</tr>
@@ -991,6 +1223,8 @@
 			<p>中国互联网协会信用评价中心网信认证 网信编码:1664391091 举报电话：021-69108618</p>
 		</div>
 	</div>
+	<script class="resources library" src="/Public/area.js" type="text/javascript"></script>
+	<script type="text/javascript">_init_area();</script>
     <script>
 		/*
 		 * 时间 2016/3/31

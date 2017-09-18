@@ -16,7 +16,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region">杭州</em>
+                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                </em>
                 [
                 <a href="/home/Area/index">更换</a>
                 ]
@@ -97,9 +98,9 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
+                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
                 <?=session('home_user')['name']?>
-                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
+                </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
                 <?php else: ?>
                 <a href="<?php echo U('/home/login/index');?>">登录</a>
                 <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
@@ -165,17 +166,17 @@
                     <div class="search-item"><em></em>
 
                         <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
-                            <option value="1">装修公司</option>
-                            <option value="2">工人</option>
-                            <option value="3">工长</option>
-                            <option value="4">设计师</option>
-                            <option value="5">监理</option>
-                            <option value="6">案例</option>
+                            <option value="1" <?php if(session('type') == 1){ echo 123 ?> selected="selected" <?php } ?> >装修公司</option>
+                            <option value="2" <?php if(session('type') == 2){ ?> selected="selected" <?php } ?> >工人</option>
+                            <option value="3" <?php if(session('type') == 3){ ?> selected="selected" <?php } ?> >工长</option>
+                            <option value="4" <?php if(session('type') == 4){ ?> selected="selected" <?php } ?> >设计师</option>
+                            <option value="5" <?php if(session('type') == 5){ ?> selected="selected" <?php } ?> >监理</option>
+                            <option value="6" <?php if(session('type') == 6){ ?> selected="selected" <?php } ?> >案例</option>
                         </select><span><em></em></span>
                     </div>
                         <label class="search-con">
                             <input type="text" class="searchInput" autocomplete="off" name="keywords">
-                            <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
+                            <input type="submit" value="提交"  class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})" required="required">
                             <ul class="Jia-search-refer">
                             </ul>
                         </label>
@@ -343,21 +344,21 @@
 				<ul class="designer-list">
 					<?php if(is_array($res)): foreach($res as $key=>$v): ?><li class="designer-item">
 						<div class="ordinary clearfix">
-							<a href="/home/designer/detail" class="pany-logo fl"><img src="/Uploads<?php echo ($v["photo"]); ?>" class="lazyload"></a>
+							<a href="/home/designer/detail?id=<?php echo ($v["id"]); ?>" id="did" class="pany-logo fl"><img src="/Uploads<?php echo ($v["photo"]); ?>" class="lazyload"></a>
 							<div class="list-middle fl">
 								<h2>
-									<a href="/home/designer/detail?id=<?php echo ($v["id"]); ?>" target="_blank" id="shop_name"><?php echo ($v["truename"]); ?></a>
+									<a href="/home/designer/detail?id=<?php echo ($v["id"]); ?>" id="cid" target="_blank" id="shop_name"><?php echo ($v["truename"]); ?></a>
 									<div><span class="sift"></span><span class="auth"></span><span class="bao"></span></div>
 								</h2>
 								<p>毕业院校：<span class="zw"><?php echo ($v["school"]); ?></span></p>
-								<p>案 例 数：<span class="zw"></span></p>
+								<p>案 例 数：<span class="zw"><?php echo ($v["count"]); ?></span></p>
 								<p>擅长类型：<span class="sclx"><?php echo ($concept[$v['concept']]); ?></span></p>
-							<!-- 	<p>设计理念：<span class="cynx"></span></p> -->
+								<p>设计理念：<span class="cynx"><?php echo ($v["server"]); ?></span></p>
 							</div>
 							<div class="list-right fl">
 								<div class="kbval">
-									<span>口碑值</span>
-									<b>622</b>
+									<span>浏览量</span>
+									<b><?php echo ($v["num"]); ?></b>
 								</div>
 								<a href="javascript:;" class="zx-btn order-btn popup_order_button">立即预约</a>
 							</div>
@@ -365,6 +366,7 @@
 					</li><?php endforeach; endif; ?>
 				</ul>
 			</div>
+			
 			<div class="p_pageNav p_ListpageNav">
 				<div class="p_page_inline">
 					<div class="p_page">

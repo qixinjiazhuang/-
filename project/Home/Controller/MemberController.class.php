@@ -33,7 +33,7 @@ class  MemberController extends Controller {
 
 			//查询
 			$member = $member->where('uid='.$id)->find();
-			dump($member);
+
 			//判断member是否存在
 			if($member){
 				session('home_type',$member);
