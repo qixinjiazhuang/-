@@ -30,7 +30,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                <em id="J_region"><if condition="session('city')">         
+                    <?php echo session('city');?>
                 </em>
                 [
                 <a href="/home/Area/index">更换</a>
@@ -112,12 +113,13 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
-                <?=session('home_user')['name']?>
+                <?php if(session('home_user')){ ?>
+                <a href="/home/member/index">欢迎您,<?php echo session('home_user')['name'];?>
                 </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
-                <?php else: ?>
-                <a href="<?php echo U('/home/login/index');?>">登录</a>
-                <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
+                <?php }else{?>
+                <a href="/home/login/index">登录</a>
+                <a href="/home/register/index">注册</a>
+                <?php } ?>
             </div>
             <ul>
                 <li class="myorder">
@@ -752,38 +754,38 @@
 				<li> 
 					<b><a>户型</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">小户型</a>
-                    <a href="javascript:;" target="_blank">二居</a>
-                    <a href="javascript:;" target="_blank">三居</a>
-                    <a href="javascript:;" target="_blank">四居</a>
-                    <a href="javascript:;" target="_blank">复式</a>
-                    <a href="javascript:;" target="_blank">别墅</a>
+                	<a href="<?php echo U('/home/index/vcase');?>?type=type&value=1" target="_blank">小户型</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=type&value=2" target="_blank">二居</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=type&value=3" target="_blank">三居</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=type&value=4" target="_blank">四居</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=type&value=5" target="_blank">复式</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=type&value=6" target="_blank">别墅</a>
                		</p>
                </li>
                <li> 
 					<b><a>风格</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">简约</a>
-                    <a href="javascript:;" target="_blank">现代</a>
-                    <a href="javascript:;" target="_blank">中式</a>
-                    <a href="javascript:;" target="_blank">欧式</a>
-                    <a href="javascript:;" target="_blank">美式</a>
-                    <a href="javascript:;" target="_blank">田园</a>
-                    <a href="javascript:;" target="_blank">地中海</a>
-                    <a href="javascript:;" target="_blank">东南亚</a>
-                    <a href="javascript:;" target="_blank">新古典主义</a>
+                	<a href="<?php echo U('/home/index/vcase');?>?type=style&value=1" target="_blank">简约</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=2" target="_blank">现代</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=3" target="_blank">中式</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=4" target="_blank">欧式</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=5" target="_blank">美式</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=6" target="_blank">田园</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=7" target="_blank">地中海</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=8" target="_blank">东南亚</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=style&value=9" target="_blank">新古典主义</a>
                		</p>
                </li>
                <li> 
 					<b><a>价格</a></b>
      				<p> 
-                	<a href="javascript:;" target="_blank">1-5万</a>
-                    <a href="javascript:;" target="_blank">5-10万</a>
-                    <a href="javascript:;" target="_blank">10-20万</a>
-                    <a href="javascript:;" target="_blank">20-50万</a>
-                    <a href="javascript:;" target="_blank">50-100万</a>
-                    <a href="javascript:;" target="_blank">100-200万</a>
-                    <a href="javascript:;" target="_blank">200万以上</a>
+                	<a href="<?php echo U('/home/index/vcase');?>?type=page&value=1" target="_blank">1-5万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=2" target="_blank">5-10万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=3" target="_blank">10-20万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=4" target="_blank">20-50万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=5" target="_blank">50-100万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=6" target="_blank">100-200万</a>
+                    <a href="<?php echo U('/home/index/vcase');?>?type=page&value=7" target="_blank">200万以上</a>
                		</p>
                </li>
 			</ul>

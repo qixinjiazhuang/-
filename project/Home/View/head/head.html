@@ -99,13 +99,13 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <if condition="session('home_user')"><a href="__MODULE__/member/index">欢迎您,<if condition="session('home_user').name">
-                <?=session('home_user')['name']?>
+                <?php if(session('home_user')){ ?>
+                <a href="__MODULE__/member/index">欢迎您,{:session('home_user')['name']}
                 </a>&nbsp;&nbsp;<a href="__MODULE__/login/logout" style="color:#d00;" id="logout">退出登录</a>
-                <else/>
-                <a href="{:U('/home/login/index')}">登录</a>
-                <a href="{:U('/home/register/index')}">注册</a>
-                </if>
+                <?php }else{?>
+                <a href="__MODULE__/login/index">登录</a>
+                <a href="__MODULE__/register/index">注册</a>
+                <?php } ?>
             </div>
             <ul>
                 <li class="myorder">

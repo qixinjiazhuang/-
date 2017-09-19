@@ -175,7 +175,7 @@ class IndexController extends Controller {
         //查询
         $model = M('company');
 
-        $res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->where($type.'='.$value)->select();
+        $res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name,audit')->where($type.'='.$value)->select();
 
         $count = count($res);
 
@@ -194,5 +194,35 @@ class IndexController extends Controller {
         $this->assign('res',$res);
 
         $this->display('company/index');
+    }
+
+    public function vcase(){
+
+        //获取type
+        $type = I('get.type');
+
+        //获取value
+        $value = I('get.value');
+
+        //实例化
+        $model = M('b_case');
+
+        $res = $model->join('__V_CASE__ on __B_CASE__.id = __V_CASE__.cid')->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name,audit,page,style')->where($type.'='.$value)->select();
+
+        $count = count($res);
+
+        //实例化分页模型
+        $fors = new \Think\Page($count,10);
+
+        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+
+        $res = array_slice($res, $fors->firstRow,$fors->listRows);
+
+        //分页展示
+        $show = $fors->show();
+
+        $this->assign('res',$res);
+
+        $this->display('/case/index');
     }
 }

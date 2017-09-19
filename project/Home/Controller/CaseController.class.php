@@ -23,9 +23,8 @@ class CaseController extends Controller {
         
         $data['title'] = array('like', "%$con%");
 
-        dump($data);
 		$res = $case->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name,audit')->where($data)->where(['audit'=>2])->select();
-		dump($res);
+
 		//计算数据条数
 		$count = count($res);
 

@@ -7832,3 +7832,2147 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001063s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001145s ]
 
+[ 2017-09-18T18:03:54+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001544s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0009s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0008s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000420s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001696s ]
+
+[ 2017-09-18T18:04:05+08:00 ] 127.0.0.1 /home/case/detail.html?id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001957s ]
+
+[ 2017-09-18T18:04:10+08:00 ] 127.0.0.1 /home/tender/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000388s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001159s ]
+
+[ 2017-09-18T18:04:12+08:00 ] 127.0.0.1 /home/tender/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+NOTIC: [8] Use of undefined constant            - assumed '          ' D:\wamp\www\tp\project\Home\Controller\TenderController.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+
+[ 2017-09-18T18:04:19+08:00 ] 127.0.0.1 /home/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000333s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000412s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001192s ]
+
+[ 2017-09-18T18:04:22+08:00 ] 127.0.0.1 /home/company/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002147s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CompanyController.class.php 第 14 行.
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001061s ]
+
+[ 2017-09-18T18:04:25+08:00 ] 127.0.0.1 /home/company/detail?id=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `company` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `vcompany` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `vcompany` WHERE ( gid=11 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `b_case` WHERE ( gid=11 )  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `b_case` WHERE ( gid=11 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0007s ]
+SQL: SELECT users.id,`truename`,`photo` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( gid=11 ) LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( gid=11 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `foreman` [ RunTime:0.0006s ]
+SQL: SELECT users.id,`photo`,`truename` FROM `foreman` INNER JOIN users ON users.id = foreman.uid  WHERE ( gid=11 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2017-09-18T18:04:28+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0007s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000475s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026983s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001072s ]
+
+[ 2017-09-18T18:04:38+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2017-09-18T18:05:08+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000819s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\wamp\www\tp\ThinkPHP\Common\functions.php:850) D:\wamp\www\tp\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2017-09-18T18:05:09+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000710s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-09-18T18:05:09+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2017-09-18T18:05:09+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-09-18T18:05:11+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0006s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000854s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000949s ]
+
+[ 2017-09-18T18:05:11+08:00 ] 127.0.0.1 /home/tender/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000295s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2017-09-18T18:05:14+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0005s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000354s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000782s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2017-09-18T18:49:38+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0004s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000377s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+
+[ 2017-09-18T18:49:39+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002949s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:50:22+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:50:22+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0015s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:50:23+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:50:23+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:50:28+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001999s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:51:09+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0012s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0009s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000453s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001631s ]
+
+[ 2017-09-18T18:51:10+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = v_case.cid  WHERE ( type=1 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_case.on b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:51:32+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+ERR: 1066:Not unique table/alias: 'b_case'
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_caseon b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1066:Not unique table/alias: 'b_case'
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_caseon b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:51:32+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+ERR: 1066:Not unique table/alias: 'b_case'
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_caseon b_case.id = v_case.cid  WHERE ( type=1 ) 
+ERR: 1066:Not unique table/alias: 'b_case'
+ [ SQL语句 ] : SELECT * FROM `b_case` INNER JOIN v_caseon b_case.id = v_case.cid  WHERE ( type=1 ) 
+
+[ 2017-09-18T18:51:45+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002716s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001694s ]
+
+[ 2017-09-18T18:52:50+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2017-09-18T18:52:51+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2017-09-18T18:52:53+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000289s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001535s ]
+
+[ 2017-09-18T18:53:02+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2017-09-18T18:53:02+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001175s ]
+
+[ 2017-09-18T18:53:02+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2017-09-18T18:53:26+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2017-09-18T18:53:26+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2017-09-18T18:53:27+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001078s ]
+
+[ 2017-09-18T18:54:07+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002160s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0005s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0005s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000438s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001087s ]
+
+[ 2017-09-18T18:54:10+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001351s ]
+
+[ 2017-09-18T18:54:42+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001206s ]
+
+[ 2017-09-18T18:54:48+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:54:53+08:00 ] 127.0.0.1 /home/index/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:55:29+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:55:42+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-09-18T18:55:43+08:00 ] 127.0.0.1 /home/case/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2017-09-18T18:55:46+08:00 ] 127.0.0.1 /home/case/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2017-09-18T18:55:53+08:00 ] 127.0.0.1 /home/index/vcase.html?type=style&value=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( style=3 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001117s ]
+
+[ 2017-09-18T18:55:56+08:00 ] 127.0.0.1 /home/index/vcase.html?type=style&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( style=1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001120s ]
+
+[ 2017-09-18T18:55:57+08:00 ] 127.0.0.1 /home/index/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:56:06+08:00 ] 127.0.0.1 /home/index/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:56:11+08:00 ] 127.0.0.1 /home/case/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2017-09-18T18:56:59+08:00 ] 127.0.0.1 /home/index/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:00+08:00 ] 127.0.0.1 /home/index/vcase.html?type=style&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( style=1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-09-18T18:57:01+08:00 ] 127.0.0.1 /home/index/detail?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:07+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2017-09-18T18:57:08+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:29+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0009s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2017-09-18T18:57:29+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:32+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0013s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2017-09-18T18:57:33+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:38+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0006s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000658s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000801s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2017-09-18T18:57:39+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0012s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002151s ]
+
+[ 2017-09-18T18:57:40+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:57:51+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2017-09-18T18:57:52+08:00 ] 127.0.0.1 /home/case/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001832s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2017-09-18T18:57:56+08:00 ] 127.0.0.1 /home/case/detail?id=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000392s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000718s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2017-09-18T18:58:05+08:00 ] 127.0.0.1 /home/case/detail?id=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=11 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2017-09-18T18:58:07+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0009s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=2 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2017-09-18T18:58:09+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2017-09-18T18:58:09+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:58:18+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+
+[ 2017-09-18T18:58:38+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0007s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000444s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2017-09-18T18:58:46+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001632s ]
+
+[ 2017-09-18T18:58:47+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:58:55+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2017-09-18T18:59:01+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001531s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2017-09-18T18:59:05+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T18:59:30+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0005s ]
+ERR: 模板不存在:./project/Home/View//home/case/index.html
+
+[ 2017-09-18T18:59:37+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0008s ]
+ERR: 模板不存在:./project/Home/View/home/case/index.html
+
+[ 2017-09-18T18:59:43+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2017-09-18T18:59:45+08:00 ] 127.0.0.1 /home/index/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+ERR: 非法操作:detail
+
+[ 2017-09-18T19:00:08+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0008s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000949s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2017-09-18T19:00:09+08:00 ] 127.0.0.1 /home/case/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000528s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-09-18T19:00:14+08:00 ] 127.0.0.1 /home/index/vcase.html?type=type&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( type=1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2017-09-18T19:00:14+08:00 ] 127.0.0.1 /home/case/detail?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `b_case` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2017-09-18T19:00:18+08:00 ] 127.0.0.1 /home/index/vcase.html?page=style&value=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=5 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =5 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=5 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =5 ) 
+
+[ 2017-09-18T19:01:19+08:00 ] 127.0.0.1 /home/index/vcase.html?page=style&value=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=5 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =5 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=5 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =5 ) 
+
+[ 2017-09-18T19:01:21+08:00 ] 127.0.0.1 /home/index/vcase.html?page=style&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0009s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =1 ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 )' at line 1
+ [ SQL语句 ] : SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( =1 ) 
+
+[ 2017-09-18T19:01:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0006s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000377s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000483s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2017-09-18T19:01:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0006s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000363s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001484s ]
+
+[ 2017-09-18T19:01:26+08:00 ] 127.0.0.1 /home/index/vcase.html?type=style&value=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001537s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( style=6 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010738s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2017-09-18T19:01:28+08:00 ] 127.0.0.1 /home/index/vcase.html?type=page&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( page=1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2017-09-18T19:01:30+08:00 ] 127.0.0.1 /home/index/vcase.html?type=page&value=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( page=7 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002434s ]
+
+[ 2017-09-18T19:01:32+08:00 ] 127.0.0.1 /home/index/vcase.html?type=page&value=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0015s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit`,`page`,`style` FROM `b_case` INNER JOIN v_case on b_case.id = v_case.cid INNER JOIN company ON company.id = b_case.gid  WHERE ( page=6 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: type D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 385 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Home\96f16702de6ca82c099525718323bb23.php 第 402 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2017-09-18T19:03:18+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001257s ]
+
+[ 2017-09-18T19:04:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0005s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0006s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000356s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2017-09-18T19:06:32+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001569s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2017-09-18T19:06:51+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001935s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2017-09-18T19:07:09+08:00 ] 127.0.0.1 /home/case/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 13 行.
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CaseController.class.php 第 18 行.
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `title` LIKE '%%' AND `audit` = 2  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2017-09-18T19:09:46+08:00 ] 127.0.0.1 /home/company/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Home\Controller\CompanyController.class.php 第 14 行.
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011429s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2017-09-18T19:09:54+08:00 ] 127.0.0.1 /home/foreman/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: SELECT users.id,`photo`,`truename`,`idea` FROM `users` INNER JOIN foreman ON users.id = foreman.uid   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `b_case` WHERE ( fid=24 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `b_case` WHERE ( fid=25 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `b_case` WHERE ( fid=27 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./project/Home/View/foot/foot.html): failed to open stream: No such file or directory D:\wamp\www\tp\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2017-09-18T19:09:57+08:00 ] 127.0.0.1 /home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT company.id,`audit`,`banner`,`c_name`,`introduce`,`m_value`,`praise`,`delete`,`audit` FROM `company` INNER JOIN vcompany ON company.id = vcompany.gid INNER JOIN users ON company.uid = users.id  WHERE ( users.delete=1 AND users.audit=2 ) ORDER BY m_value desc,praise desc LIMIT 6   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0006s ]
+SQL: SELECT b_case.id,`title`,`logo`,`type`,`c_name`,`audit` FROM `b_case` INNER JOIN company ON company.id = b_case.gid  WHERE `audit` = 2 ORDER BY id desc LIMIT 8   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `images` WHERE `status` = 1 AND `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0005s ]
+SQL: SELECT designer.id,`uid`,`audit`,`photo`,`school`,`truename`,`concept`,`server`,`num` FROM `designer` INNER JOIN users ON users.id = designer.uid  WHERE ( audit=2 ) ORDER BY num desc LIMIT 6   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000393s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+NOTIC: [8] Undefined index: name D:\wamp\www\tp\project\Runtime\Cache\Home\7e20a6acd2898385873671b59744311c.php 第 1264 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2017-09-18T19:10:27+08:00 ] 127.0.0.1 /home/tender/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2017-09-18T19:10:38+08:00 ] 127.0.0.1 /home/zxb/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+ERR: 无法加载控制器:Zxb
+

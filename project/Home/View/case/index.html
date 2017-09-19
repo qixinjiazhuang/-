@@ -15,22 +15,20 @@
 			<div class="scheme-store">
 				<label>装修案例</label>
 				<em>></em>
-				<a href="#">经济型 ×</a>
+				
 			</div>
 			<dl class="tag-list clearfix">
 				<dt>预算</dt>
 				<dd>
 					<div class="self-adaption">
 						<ul class="clearfix">
-							<li><a href="#">3万以下</a></li>
-							<li><a href="#">3-5万</a></li>
-							<li class="active"><a href="#">5-10万</a></li>
-							<li><a href="#">10-15万</a></li>
-							<li><a href="#">15-20万</a></li>
-							<li><a href="#">20万以上</a></li>
-							<li><a href="#">经济型</a></li>
-							<li><a href="#">富裕型</a></li>
-							<li><a href="#">豪华型</a></li>
+							<li><a href="#">1-5万</a></li>
+							<li><a href="#">5-10万</a></li>
+							<li class="active"><a href="#">10-20万</a></li>
+							<li><a href="#">20-50万</a></li>
+							<li><a href="#">50-100万</a></li>
+							<li><a href="#">100-200万</a></li>
+							<li><a href="#">200万以上</a></li>
 						</ul>
 					</div>
 				</dd>
@@ -47,14 +45,9 @@
 							<li><a href="#">美式</a></li>
 							<li><a href="#">田园</a></li>
 							<li><a href="#">地中海</a></li>
-							<li><a href="#">新古典</a></li>
 							<li><a href="#">混搭</a></li>
 							<li><a href="#">东南亚</a></li>
-							<li><a href="#">宜家</a></li>
-							<li><a href="#">简欧</a></li>
-							<li><a href="#">北欧</a></li>
-							<li><a href="#">日式</a></li>
-							<li><a href="#">韩式</a></li>
+							<li><a href="#">新古典主义</a></li>
 						</ul>
 					</div>
 				</dd>
@@ -75,7 +68,6 @@
 							<li><a href="#">公寓</a></li>
 							<li><a href="#">复式</a></li>
 							<li><a href="#">别墅</a></li>
-							<li><a href="#">跃层</a></li>
 						</ul>
 					</div>
 				</dd>
@@ -106,7 +98,7 @@
 				<foreach name="res" item="v">
 					<li class="masonry-brick">
 						<div class="beauty_show">
-							<a href="__CONTROLLER__/detail?id={$v.id}" target="_blank">
+							<a href="__MODULE__/case/detail?id={$v.id}" target="_blank">
 								<img src="__ROOT__/Uploads{$v.logo}">
 							</a>
 						</div>
@@ -114,7 +106,7 @@
 							<div class="cost">
 								
 							</div>
-							<h2><a href="__CONTROLLER__/detail?id={$v.id}" target="_blank">{$v.title}</a></h2>
+							<h2><a href="__MODULE__/case/detail?id={$v.id}" target="_blank">{$v.title}</a></h2>
 							<div class="again_tag clearfix">
 								<div class="again_label">
 									<span><?=$type[$v['type']]?></span>

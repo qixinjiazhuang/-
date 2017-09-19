@@ -28,7 +28,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                <em id="J_region"><if condition="session('city')">         
+                    <?php echo session('city');?>
                 </em>
                 [
                 <a href="/home/Area/index">更换</a>
@@ -110,12 +111,13 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
-                <?=session('home_user')['name']?>
+                <?php if(session('home_user')){ ?>
+                <a href="/home/member/index">欢迎您,<?php echo session('home_user')['name'];?>
                 </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
-                <?php else: ?>
-                <a href="<?php echo U('/home/login/index');?>">登录</a>
-                <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
+                <?php }else{?>
+                <a href="/home/login/index">登录</a>
+                <a href="/home/register/index">注册</a>
+                <?php } ?>
             </div>
             <ul>
                 <li class="myorder">
@@ -280,10 +282,10 @@
 		<div class="top_banner2">
 			<div class="nr">
 				<div class="price">
-					<div class="left">688</div>
+					<div class="left"><?php echo ($data["page"]); ?></div>
 					<div class="right">
 						<p>元/m<i>2</i></p>
-						欧式美家
+						<?php echo ($data["title"]); ?>
 					</div>
 				</div>
 				<p class="free">
@@ -315,9 +317,13 @@
 					<div class="left-part" style="width: 229.5px;">&nbsp;</div>
 					<div class="right-part" style="width: 229.5px;">&nbsp;</div>
 					<ul class="swiper-wrapper">
-						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Public/pic/ztz_d1.jpg"></li>
-						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Public/pic/ztz_d2.jpg"></li>
-						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Public/pic/ztz_d3.jpg"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["kitchen_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["bath_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["study_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["rest_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["bed_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["sleep_pic"]); ?>"></li>
+						<li class="swiper-slide" style="width: 890px;"><img width="890" height="470" src="/Uploads<?php echo ($data["living"]); ?>"></li>
 					</ul>
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
@@ -360,6 +366,27 @@
 							<i class="ico_3"></i>
 							<div class="eight-pro-hover">内门</div>
 						</li>
+						<li>
+							<i class="ico_3"></i>
+							<div class="eight-pro-hover">地板</div>
+						</li>
+						<li>
+							<i class="ico_3"></i>
+							<div class="eight-pro-hover">卫浴</div>
+						</li>
+						<li>
+							<i class="ico_3"></i>
+							<div class="eight-pro-hover">吊顶</div>
+						</li>
+						<li>
+							<i class="ico_3"></i>
+							<div class="eight-pro-hover">开关</div>
+						</li>
+						<li>
+							<i class="ico_3"></i>
+							<div class="eight-pro-hover">油漆</div>
+						</li>
+
 					</ul>
 				</div>
 				<div class="eight-pro-con">
@@ -370,7 +397,7 @@
 									<img src="/Public/pic/ztz_x1.jpg">
 									<div class="eight-pro-con-right">
 										<dl>
-											<dt>品牌：诺贝尔瓷砖</dt>
+											<dt>品牌：<?php echo ($data["ceramic"]); ?></dt>
 											<dd>
 												<p class="pro-advantage">品牌力量</p>
 												<p class="pro-advantage-con">
@@ -387,7 +414,109 @@
 									<img src="/Public/pic/ztz_x1.jpg">
 									<div class="eight-pro-con-right">
 										<dl>
-											<dt>品牌：欧泰卫浴</dt>
+											<dt>品牌：<?php echo ($data["cupboard"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["door"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["floor"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["bath"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["ceiling"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["switch"]); ?></dt>
+											<dd>
+												<p class="pro-advantage">品牌力量</p>
+												<p class="pro-advantage-con">
+												用心体会有理想，有内涵，爱家爱生活的你。我们以实用简约的产品设计理念倡导轻松舒适的"简"生活哲学，只为满足敢于追求，热爱生活本质的你。我们坚持"简"的设计风格，以简约现代，适用实用的产品让你的生活更加简单，轻松尽享和家人团聚的时光；</p>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="display: none">
+							<div class="eight-pro-tab-con">
+								<div class="eight-pro-tab">
+									<img src="/Public/pic/ztz_x1.jpg">
+									<div class="eight-pro-con-right">
+										<dl>
+											<dt>品牌：<?php echo ($data["paint"]); ?></dt>
 											<dd>
 												<p class="pro-advantage">品牌力量</p>
 												<p class="pro-advantage-con">
@@ -622,7 +751,7 @@
 		<div class="bottom_border">
 			<div class="realTiyan">
 				<div class="order-title">
-					<span>688</span>元/m<i>2</i>
+					<span><?php echo ($data["page"]); ?></span>元/m<i>2</i>
 				</div>
 				<ul class="order-text">
 					<li>包设计</li>
@@ -695,7 +824,19 @@
 								index = '卫生间';
 								break;
 						case 2 :
-								index = '卧室';
+								index = '书房';
+								break;
+						case 3 :
+								index = '餐厅';
+								break;
+						case 4 :
+								index = '主卧';
+								break;
+						case 5 :
+								index = '次卧';
+								break;
+						case 6 :
+								index = '客厅';
 								break;
 					}
 			      return '<span class="' + className + '">'+index+'</span>';

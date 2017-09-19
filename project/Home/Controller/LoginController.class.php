@@ -89,7 +89,15 @@ class LoginController extends Controller {
 
 	//退出
 	public function logout(){
-		session('home_user',null);
-		$this->success('退出成功','/home/index',1); 	
+
+		if(session('home_user')){
+
+			session('home_user',null);
+
+			
+		}
+		
+		$this->success('退出成功','/home/index/index',1); 	
+		
 	}
 }

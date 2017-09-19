@@ -16,7 +16,8 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region"><?php if(session('city')): echo session('city');?>
+                <em id="J_region"><if condition="session('city')">         
+                    <?php echo session('city');?>
                 </em>
                 [
                 <a href="/home/Area/index">更换</a>
@@ -98,12 +99,13 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <if condition="session('home_user')"><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
-                <?=session('home_user')['name']?>
+                <?php if(session('home_user')){ ?>
+                <a href="/home/member/index">欢迎您,<?php echo session('home_user')['name'];?>
                 </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
-                <?php else: ?>
-                <a href="<?php echo U('/home/login/index');?>">登录</a>
-                <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
+                <?php }else{?>
+                <a href="/home/login/index">登录</a>
+                <a href="/home/register/index">注册</a>
+                <?php } ?>
             </div>
             <ul>
                 <li class="myorder">

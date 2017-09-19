@@ -1,0 +1,529 @@
+[ 2017-09-19T09:10:01+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-09-19T09:10:02+08:00 ] 127.0.0.1 /admin/login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2017-09-19T09:10:03+08:00 ] 127.0.0.1 /admin/code/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001206s ]
+
+[ 2017-09-19T09:10:11+08:00 ] 127.0.0.1 /admin/login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.1041s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\tp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `admin_user` WHERE `name` = 'user' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000412s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018321s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001745s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002328s ]
+
+[ 2017-09-19T09:10:13+08:00 ] 127.0.0.1 /admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2017-09-19T09:10:17+08:00 ] 127.0.0.1 /admin/advert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: res D:\wamp\www\tp\project\Runtime\Cache\Admin\376c31cebf8d1652b9b213a1ae65f4a4.php 第 160 行.
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Admin\376c31cebf8d1652b9b213a1ae65f4a4.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2017-09-19T09:10:19+08:00 ] 127.0.0.1 /admin/case/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 19 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 24 行.
+SQL: SELECT COMPANY.c_name,B_CASE.* FROM `b_case` INNER JOIN company ON b_case.gid = company.id  ORDER BY audit asc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2017-09-19T09:30:27+08:00 ] 127.0.0.1 /admin/case/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 24 行.
+SQL: SELECT COMPANY.c_name,B_CASE.* FROM `b_case` INNER JOIN company ON b_case.gid = company.id  ORDER BY audit asc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2017-09-19T09:30:28+08:00 ] 127.0.0.1 /admin/case/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `b_case` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\CaseController.class.php 第 24 行.
+SQL: SELECT COMPANY.c_name,B_CASE.* FROM `b_case` INNER JOIN company ON b_case.gid = company.id  ORDER BY audit asc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001174s ]
+
+[ 2017-09-19T09:30:34+08:00 ] 127.0.0.1 /admin/designer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `company` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.136021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2017-09-19T09:34:54+08:00 ] 127.0.0.1 /admin/designer/edit?id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`name`,`email`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`gid`,`concept`,`audit`,`status`,`server`,`introduce` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE ( uid=37 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`c_name` FROM `company` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2017-09-19T09:35:23+08:00 ] 127.0.0.1 /admin/designer/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `designer` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0006s ]
+SQL: UPDATE `users` SET `name`='恋家网会员',`email`='123123@qq.copm',`truename`='李硕',`phone`='13125771234',`city`='湖南省,长沙市,长沙市' WHERE ( id=37 ) [ RunTime:0.0005s ]
+SQL: UPDATE `designer` SET `school`='新华电脑学院',`concept`='1',`gid`='13',`qq`='3123123',`introduce`='北京紫名都装饰于1999年3月批准注册，总部北京。当前紫名都在中国家居产业内已形成规模化',`server`='对于生活家来说感觉最重要，作为高级设计师，我只把美妙的感觉呈现于生活之中。' WHERE ( uid=37 ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2017-09-19T09:35:24+08:00 ] 127.0.0.1 /admin/designer/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 14 行.
+NOTIC: [8] Undefined index: keywords D:\wamp\www\tp\project\Admin\Controller\DesignerController.class.php 第 19 行.
+SQL: SELECT `uid`,`city`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`concept`,`gid`,`audit`,`status` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `company` WHERE ( id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `company` WHERE ( id=13 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE `phone` LIKE '%%' AND `delete` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2017-09-19T09:36:05+08:00 ] 127.0.0.1 /admin/designer/edit?id=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`name`,`email`,`truename`,`qq`,`phone`,`status`,`delete`,`photo`,`school`,`gid`,`concept`,`audit`,`status`,`server`,`introduce` FROM `users` INNER JOIN designer ON users.id = designer.uid  WHERE ( uid=31 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`c_name` FROM `company` WHERE ( id=12 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`c_name` FROM `company`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007371s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2017-09-19T10:10:43+08:00 ] 127.0.0.1 /admin/renovation/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `renovation` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`city`,`page`,`bpic`,`num`,`time` FROM `renovation`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Admin\2a2c58254e2c7a5c0a95bb59535a926a.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001420s ]
+
+[ 2017-09-19T10:10:45+08:00 ] 127.0.0.1 /admin/renovation/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `material` [ RunTime:0.0521s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=8 )  [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=11 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=12 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=13 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=14 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2017-09-19T10:16:58+08:00 ] 127.0.0.1 /admin/renovation/edit?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+SQL: SHOW COLUMNS FROM `material` [ RunTime:0.0011s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=8 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=11 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=12 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=13 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=14 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `renovation` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `renovation` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2017-09-19T10:17:10+08:00 ] 127.0.0.1 /admin/renovation/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2017-09-19T10:21:41+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001432s ]
+
+[ 2017-09-19T10:21:59+08:00 ] 127.0.0.1 /admin/renovation/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `renovation` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`city`,`page`,`bpic`,`num`,`time` FROM `renovation`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Admin\2a2c58254e2c7a5c0a95bb59535a926a.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2017-09-19T10:31:27+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2017-09-19T10:31:31+08:00 ] 127.0.0.1 /admin/renovation/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `renovation` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`city`,`page`,`bpic`,`num`,`time` FROM `renovation`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: show D:\wamp\www\tp\project\Runtime\Cache\Admin\2a2c58254e2c7a5c0a95bb59535a926a.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2017-09-19T10:31:32+08:00 ] 127.0.0.1 /admin/renovation/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `material` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=8 )  [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=2 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=7 )  [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=11 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=12 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=13 )  [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `material` WHERE ( pid=14 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
