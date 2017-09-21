@@ -16,7 +16,9 @@
         <div class="lt">
             <i></i>
             <span class="cities_list">
-                <em id="J_region">杭州</em>
+                <em id="J_region"><if condition="session('city')">         
+                    <?php echo session('city');?>
+                </em>
                 [
                 <a href="/home/Area/index">更换</a>
                 ]
@@ -97,12 +99,13 @@
         </div>
         <div class="rt">
             <div class="entry">
-                <?php if(session('home_user')): ?><a href="/home/member/index">欢迎您,<if condition="session('home_user').name">
-                <?=session('home_user')['name']?>
-                </a>&nbsp;&nbsp;<a href="/home/Login/logout" style="color:#d00;" id="logout">退出登录</a>
-                <?php else: ?>
-                <a href="<?php echo U('/home/login/index');?>">登录</a>
-                <a href="<?php echo U('/home/register/index');?>">注册</a><?php endif; ?>
+                <?php if(session('home_user')){ ?>
+                <a href="/home/member/index">欢迎您,<?php echo session('home_user')['name'];?>
+                </a>&nbsp;&nbsp;<a href="/home/login/logout" style="color:#d00;" id="logout">退出登录</a>
+                <?php }else{?>
+                <a href="/home/login/index">登录</a>
+                <a href="/home/register/index">注册</a>
+                <?php } ?>
             </div>
             <ul>
                 <li class="myorder">
@@ -165,17 +168,17 @@
                     <div class="search-item"><em></em>
 
                         <select style="border:0;appearance:none;-moz-appearance:none; -webkit-appearance:none;background: transparent;-ms-expand { display: none; }" name="sel" id="">
-                            <option value="1">装修公司</option>
-                            <option value="2">工人</option>
-                            <option value="3">工长</option>
-                            <option value="4">设计师</option>
-                            <option value="5">监理</option>
-                            <option value="6">案例</option>
+                            <option value="1" <?php if(session('type') == 1){ echo 123 ?> selected="selected" <?php } ?> >装修公司</option>
+                            <option value="2" <?php if(session('type') == 2){ ?> selected="selected" <?php } ?> >工人</option>
+                            <option value="3" <?php if(session('type') == 3){ ?> selected="selected" <?php } ?> >工长</option>
+                            <option value="4" <?php if(session('type') == 4){ ?> selected="selected" <?php } ?> >设计师</option>
+                            <option value="5" <?php if(session('type') == 5){ ?> selected="selected" <?php } ?> >监理</option>
+                            <option value="6" <?php if(session('type') == 6){ ?> selected="selected" <?php } ?> >案例</option>
                         </select><span><em></em></span>
                     </div>
                         <label class="search-con">
                             <input type="text" class="searchInput" autocomplete="off" name="keywords">
-                            <input type="submit" value="提交" class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})">
+                            <input type="submit" value="提交"  class="searchBtn" onclick="TJJ.track({track:'headsearch',id: '168',name:'顶部搜索'})" required="required">
                             <ul class="Jia-search-refer">
                             </ul>
                         </label>
@@ -226,7 +229,7 @@
                         <a href="/home/case/index" id="nav_home" class="fst-ln">装修案例</a>
                     </div>
                 </li>
-                <li class="with-sub-nav fst-li" id="nav_xzx">
+              <!--   <li class="with-sub-nav fst-li" id="nav_xzx">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">学装修</a>
                         <i></i>
@@ -236,7 +239,7 @@
                             <li><a href="#">装修课堂</a></li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
              <!--    <li class="with-sub-nav fst-li" id="nav_yhhd">
                     <div class="ln-layer">
                         <a href="#" class="fst-ln">优惠活动</a>
@@ -271,8 +274,19 @@
 			<h1 class="logo">管理中心</h1>
 			<div class="nav">
 				<ul class="lt">
-					<li><a href="javascript:;" class="on">个人中心</a></li>
-				</ul>
+					<li><a href="/home/member/index" class="on">个人中心</a></li>
+					<?php if(session('home_user')['type'] == 3){ ?>
+					<li><a href="/home/ucenter/designer-index">设计师管理</a></li>
+					 <?php } ?>
+					 <?php if(session('home_user')['type'] == 5){ ?>
+					<li><a href="/home/ucenter/mechanicInfo">技工管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 2){ ?>
+					<li><a href="/home/ucenter/company-index">公司管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 6){ ?>
+					<li><a href="/home/ucenter/foreman-index">工长管理</a></li>
+					<?php } ?>
 			</div>
 		</div>
 		<div class="content clearfix">

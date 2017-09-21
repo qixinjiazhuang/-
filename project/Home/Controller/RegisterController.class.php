@@ -197,17 +197,95 @@ class RegisterController extends Controller {
 
 	}
 
-	public function code(){
+        //获取验证码
+	public function code(){        
 
-		$accessKeyId = "LTAIippyPkZuz8b5"; //阿里云申请的 Access Key ID
-		$accessKeySecret = 'EEjwIqYbEALdptQIadNeE1LxgoRzL5'; //阿里云申请的 Access Key Secret
-		$alisms = new \Common\Model\Alisms($accessKeyId,$accessKeySecret);
-		$mobile = '13126991105'; //目标手机号，多个手机号可以逗号分隔
-		$code = 'SMS_36225243'; //短信模板的模板CODE
-		$paramString = '{"code":"344556"}'; //短信模板中的变量；,参数格式{"no": "123456"}
-		$re = $alisms->smsend($mobile,$code,$paramString);
-		print_r($re);
+                $phone = I('post.phone');
 
-	}
+
+                $code = mt_rand('000000','999999');
+
+                function do_get($app_key, $app_secret, $request_host, $request_uri, $request_method, $request_paras, &$info) {
+                    ksort($request_paras);
+                    $request_header_accept = "application/json;charset=utf-8";
+                    $content_type = "";
+                    $headers = array(
+                            'X-Ca-Key' => $app_key,
+                            'Accept' => $request_header_accept
+                            );
+                    ksort($headers);
+                    $header_str = "";
+                    $header_ignore_list = array('X-CA-SIGNATURE', 'X-CA-SIGNATURE-HEADERS', 'ACCEPT', 'CONTENT-MD5', 'CONTENT-TYPE', 'DATE');
+                    $sig_header = array();
+                    foreach($headers as $k => $v) {
+                        if(in_array(strtoupper($k), $header_ignore_list)) {
+                            continue;
+                        }
+                        $header_str .= $k . ':' . $v . "\n";
+                        array_push($sig_header, $k);
+                    }
+                    $url_str = $request_uri;
+                    $para_array = array();
+                    foreach($request_paras as $k => $v) {
+                        array_push($para_array, $k .'='. $v);
+                    }
+                    if(!empty($para_array)) {
+                        $url_str .= '?' . join('&', $para_array);
+                    }
+                    $content_md5 = "";
+                    $date = "";
+                    $sign_str = "";
+                    $sign_str .= $request_method ."\n";
+                    $sign_str .= $request_header_accept."\n";
+                    $sign_str .= $content_md5."\n";
+                    $sign_str .= "\n";
+                    $sign_str .= $date."\n";
+                    $sign_str .= $header_str;
+                    $sign_str .= $url_str;
+
+                    $sign = base64_encode(hash_hmac('sha256', $sign_str, $app_secret, true));
+                    $headers['X-Ca-Signature'] = $sign;
+                    $headers['X-Ca-Signature-Headers'] = join(',', $sig_header);
+                    $request_header = array();
+                    foreach($headers as $k => $v) {
+                        array_push($request_header, $k .': ' . $v);
+                    }
+
+                    $ch = curl_init();
+
+                    curl_setopt($ch, CURLOPT_URL, $request_host . $url_str);
+                    //curl_setopt($ch, CURLOPT_HEADER, true);
+                    curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+                    curl_setopt($ch, CURLOPT_VERBOSE, true);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, $request_header);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    $ret = curl_exec($ch);
+                    $info = curl_getinfo($ch);
+                    curl_close($ch);
+                    return $ret;
+
+
+                }
+
+                $app_key = "24627886";
+                $app_secret = "f4b044bc5f7d987584fa730dbec56ef3";
+                $request_paras = array(
+                        'ParamString' => "{'name':'".$code."'}",
+                        'RecNum' => $phone,
+                        'SignName' =>'恋家家装', 
+                        'TemplateCode' => 'SMS_97085020'
+                        );
+
+                $request_host = "http://sms.market.alicloudapi.com";
+                $request_uri = "/singleSendSms";
+                $request_method = "GET";
+                $info = "";
+                $content = do_get($app_key, $app_secret, $request_host, $request_uri, $request_method, $request_paras, $info);
+                
+                $this->ajaxReturn($code);
+                # print_r($info);  // 系统请求返回信息
+        }
 
 }

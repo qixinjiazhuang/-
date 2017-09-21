@@ -66,14 +66,17 @@
 											<region>
 												<select id="sel" class="form-control text short"  name="province">
 												<option value="">--请选择省--</option>
+													
 													<foreach name="province" item="p">
 														<option value="{$p.code}">{$p.name}</option>
 													</foreach>
 												</select>
 												<select id="sel1" class="form-control text short"  name="city">
+													
 													<option value="">--请选择市--</option>
 												</select>
 												<select id="sel2" class="form-control text short"  name="area">
+													
 													<option value="">--请选择区--</option>
 												</select>
 											</region>

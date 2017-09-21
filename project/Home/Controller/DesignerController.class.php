@@ -24,18 +24,18 @@ class DesignerController extends Controller {
 			$res[$key]['count'] = $case->where('did='.$v['uid'])->count();
 		}
 
-		$count = count($res);
+		// $count = count($res);
 		 
-		//实例化分页模型
-        $fors = new \Think\Page($count,10);
+		// //实例化分页模型
+  //       $fors = new \Think\Page($count,10);
 
-        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+  //       $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
 
-        $res = array_slice($res, $fors->firstRow,$fors->listRows);
+  //       $res = array_slice($res, $fors->firstRow,$fors->listRows);
 
-        //分页展示
-        $show = $fors->show();
-		// 
+  //       //分页展示
+  //       $show = $fors->show();
+		// // 
 		$concept = ['1'=>'中式','2'=>'欧式','3'=>'美式','4'=>'简约','5'=>'现代'];
 
 		$this->assign('concept',$concept);

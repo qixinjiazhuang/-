@@ -9,7 +9,19 @@
 			<h1 class="logo">管理中心</h1>
 			<div class="nav">
 				<ul class="lt">
-					<li><a href="javascript:;" class="on">个人中心</a></li>
+				<li><a href="__MODULE__/member/index" class="on">个人中心</a></li>
+					<?php if(session('home_user')['type'] == 3){ ?>
+					<li><a href="__MODULE__/member/designerIndex">设计师管理</a></li>
+					 <?php } ?>
+					 <?php if(session('home_user')['type'] == 5){ ?>
+					<li><a href="__MODULE__/member/mechanicInfo">技工管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 2){ ?>
+					<li><a href="__MODULE__/member/company-index">公司管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 6){ ?>
+					<li><a href="__MODULE__/member/foreman-index">工长管理</a></li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>
@@ -67,19 +79,6 @@
 									<tr>
 										<th>手机：</th>
 										<td><input type="text" name="phone" value="{$user.phone}" class="input"></td>
-									</tr>
-									<tr>
-										<th>类型：</th>
-										<td>
-											<select name="type" class="select w-150">
-												<option value="1" <?php if($user['type']==1){ ?> selected="selected" <?php } ?> >业主</option>
-												<option value="2" <?php if($user['type']==2){ ?> selected="selected" <?php } ?> >公司</option>
-												<option value="3" <?php if($user['type']==3){ ?> selected="selected" <?php } ?> >设计师</option>
-												<option value="4" <?php if($user['type']==4){ ?> selected="selected" <?php } ?> >商家</option>
-												<option value="5" <?php if($user['type']==5){ ?> selected="selected" <?php } ?> >技工</option>
-												<option value="6" <?php if($user['type']==6){ ?> selected="selected" <?php } ?> >工长</option>
-											</select>
-										</td>
 									</tr>
 									<tr>
 										<th>真实姓名：</th>

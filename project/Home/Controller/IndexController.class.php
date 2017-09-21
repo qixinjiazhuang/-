@@ -175,7 +175,7 @@ class IndexController extends Controller {
         //查询
         $model = M('company');
 
-        $res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__COMPANY__ ON __COMPANY__.id = __B_CASE__.gid')->field('b_case.id,title,logo,type,c_name,audit')->where($type.'='.$value)->select();
+        $res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__USERS__ ON __COMPANY__.uid = __USERS__.id')->field('company.id,audit,banner,c_name,introduce,m_value,praise,delete,audit')->where($type.'='.$value)->select();
 
         $count = count($res);
 

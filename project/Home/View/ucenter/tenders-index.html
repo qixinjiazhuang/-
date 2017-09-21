@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">设计师管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<include file="./project/Home/View/head/head-designer-zb.html"/>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li class="on"><a>预约招标</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<table width="100%" border="0" cellspacing="0" class="table">
+							<thead>
+								<tr>
+							        <th width="100">ID</th>
+							        <th width="400">标题</th>
+							        <th>地区</th>
+							        <th>预算</th>
+							        <th>售价</th>
+							        <th>状态</th>
+							        <th>操作</th>
+							    </tr>
+							</thead>
+							<tbody>
+							    <tr>
+									<td>1115</td>
+									<td>12万以上</td>
+									<td>延庆区</td>
+									<td>￥12万以上</td>
+									<td>0金币</td>
+									<td><b class="blue">招标中</b></td>
+									<td><a href="__MODULE__/ucenter/TenderDetail" class="pbtn">查看</a></td>
+							    </tr>
+							</tbody>
+						</table>
+						<div class="p_pageNav p_ListpageNav" style="display: none;">
+							<div class="p_page_inline">
+								<div class="p_page">
+									<span class="none">< 上一页</span>
+									<span class="cur">1</span>
+									<span class="none">下一页</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

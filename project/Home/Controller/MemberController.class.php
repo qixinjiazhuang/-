@@ -13,7 +13,7 @@ class  MemberController extends Controller {
 
 		//获取session数据
 		$id = session('home_user')['id'];
-
+		dump($id);
 		//查询
 		$model = M('users');
 
@@ -418,4 +418,211 @@ class  MemberController extends Controller {
         	$this->ajaxReturn(1);
         }
 	}
+
+	public function designerIndex(){
+
+		//获取用户id
+		$id = session('home_user')['id'];
+
+		//实例化
+		$model = M('users');
+
+		//查询
+		$data = $model->join('__DESIGNER__ on __DESIGNER__.uid = __USERS__.id')->where('users.id='.$id)->find();
+
+		//拆分城市
+		$city = explode(',', $data['city']);
+
+		//实例化
+		$video = M("province");
+
+		//查询
+		$province = $video->select();
+
+		$dd['name'] = $city['0'];
+
+		//查询该名字的code
+		$pro = $video->where($dd)->find();
+	
+		//实例化city
+		$c = M('city');
+
+		$cc['name'] = $city['1'];
+
+		$cit = $c->where($cc)->find();
+
+		//实例化area
+		$a = M('area');
+
+		$aa['name'] = $city['2'];
+
+		$are = $a->where($aa)->find();
+
+		$this->assign('pro',$pro);
+
+		$this->assign('cit',$cit);
+
+		$this->assign('are',$are);
+
+		//发送数据到模板
+		$this->assign('province',$province);
+
+		//发送数据到模板
+		$this->assign('data',$data);
+
+		//加载模板
+		$this->display();
+	}
+
+	public function saveinfo(){
+
+		$id = session('home_user')['id'];
+
+		//实例化designer
+		$des = M('designer');
+
+		//实例化
+		$pro = M('province');
+
+		$city['province'] = $pro->where('code='.I('post.province'))->find()['name'];
+
+		//实例化city
+		$cit = M('city');
+
+		$city['city'] = $cit->where('code='.I('post.city'))->find()['name'];
+
+		//实例化area
+		$are = M('area');
+
+		$city['area'] = $are->where('code='.I('post.area'))->find()['name'];
+		
+		$use['city'] = implode(',', $city);
+
+		$data['server'] = I('post.server');
+
+		$data['qq'] = I('post.qq');
+
+		$data['school'] = I('post.school');
+
+		$data['introduce'] = I('post.introduce');
+
+		//修改
+		$res = $des->where('uid='.$id)->save($data);
+
+		$use['truename'] = I('post.truename');
+
+		$use['phone'] = I('post.phone');
+
+		$user = M('users');
+
+		$users = $user->where('id='.$id)->save($use);
+
+		//判断
+		if($users || $res){
+			$this->success('操作成功','/home/member/designerIndex');
+		}else{
+			$this->error('操作失败','/home/member/designerIndex');
+		}
+	}
+
+	public function designerAttr(){
+
+		//获取id
+		$id = session('home_user')['id'];
+
+		//实例化
+		$des = M('designer');
+
+		//查询
+		$res = $des->join('__USERS__ on __DESIGNER__.uid = __USERS__.id')->where('users.id='.$id)->find();
+
+		//发送数据
+		$this->assign('res',$res);
+
+		//加载模板	
+		$this->display();
+	}
+
+	public function saveattr(){
+
+		//获取id
+		$id = session('home_user')['id'];
+
+		//实例化
+		$des = M('designer');
+
+		//数据打包
+		$data = $des->create();
+
+		//修改数据
+		$res = $des->where('uid='.$id)->save($data);
+
+		//判断
+		if($res){
+			$this->success('保存成功','/home/member/designerAttr');
+		}else{
+			$this->error('保存失败','/home/member/designerAttr');
+		}
+	}
+	public function designerCaseIndex(){
+
+		//获取id
+		$id = session('home_user')['id'];
+
+		//实例化案例表
+		$model = M('b_case');
+
+		//查询
+		$data = $model->where('did='.$id)->select();
+		
+		//遍历
+		foreach ($data as $key => $value) {
+			$data[$key]['piccount'] = count(explode(',', $value['pic']));
+		}
+
+		$count = count($data);
+
+		//实例化分页模型
+        $fors = new \Think\Page($count,10);
+
+        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+
+        $data = array_slice($data, $fors->firstRow,$fors->listRows);
+
+        //分页展示
+        $show = $fors->show();
+
+        $audit = ['1'=>'未通过','2'=>'已通过','3'=>'拒绝'];
+
+		//发送数据到模板
+		$this->assign('data',$data);
+
+		$this->assign('show',$show);
+
+		$this->assign('audit',$audit);
+
+		//加载模板
+		$this->display();
+	}
+
+	public function desEdit(){
+
+		//获取id
+		$id = I('get.id');
+		dump($id);
+
+		//根据id查询该条案例
+		$model = M('b_case');
+
+		$data = $model->join('__V_CASE__ on __B_CASE__.id = __V_CASE__.cid')->where('b_case.id='.$id)->find();
+
+		$this->assign('data',$data);
+		dump($data);
+		$this->display();
+	}
+
+	public function designerCaseCreate(){
+
+	}
+	
 }

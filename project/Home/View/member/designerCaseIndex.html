@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">设计师管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>资料设置</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/designerIndex">资料设置</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>装修案例</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">案例管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>文章管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/blogIndex">文章管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>预约管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/Yuyue">预约管理</a></li>
+							<li><a href="__MODULE__/member/TenderIndex">我要投标</a></li>
+							<li><a href="__MODULE__/member/TenderLook">我的竞标</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li class="on"><a>案例管理</a></li>
+						</ul>
+						<span class="r"><a href="__MODULE__/member/designerCaseCreate">添加案例</a></span>
+					</div>
+					<div class="ucenter_c">
+						<form>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+								<thead>
+									<tr>
+								        <th width="100">ID</th>
+								        <th width="200">标题</th>
+								        <th width="100">图片数</th>
+								        <th width="150">最后上传</th>
+								        <th width="100">审核</th>
+								        <th></th>
+								    </tr>
+								</thead>
+								<tbody>
+								<foreach name="data" item="v">
+								    <tr>
+										<td>{$v.id}</td>
+										<td>{$v.title}</td>
+										<td>{$v.piccount}</td>
+										<td>20秒前</td>
+										<if condition="$v.audit eq 1">
+										<td><b class="red"><?=$audit[$v['audit']]?></b></td>
+										</if>
+										<if condition="$v.audit eq 2">
+										<td><b class="green"><?=$audit[$v['audit']]?></b></td>
+										</if>
+										<if condition="$v.audit eq 3">
+										<td><b style="color:#f43606;"><?=$audit[$v['audit']]?></b></td>
+										</if>
+										<td>
+											<a href="javascript:;" class="sbtn" style="display:none;">图片管理</a>
+											<a href="__MODULE__/member/desEdit?id={$v.id}" class="sbtn">修改</a>
+											<a href="javascript:;" class="sbtn red del" onclick="{if(confirm('确定要删除吗？')){deleteCurrentRow(this);}else{}}">删除</a>
+										</td>
+								    </tr>
+								</foreach>
+								</tbody>
+							</table>
+							<div class="p_pageNav p_ListpageNav" style="">
+								<div class="p_page_inline">
+									<div class="p_page">
+										{$show}
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script type="text/javascript">
+		function deleteCurrentRow(obj){
+			var tr = obj.parentNode.parentNode;
+			var tbody = tr.parentNode;
+			tbody.removeChild(tr);
+			if(tbody.rows.length==0){
+				var para = document.createElement("td");
+				var node = document.createTextNode("暂无数据");
+				para.colSpan = "6";
+				para.appendChild(node);
+				var element = document.createElement("tr");
+				element.appendChild(para);
+				var tbody = document.getElementsByTagName("tbody")[0];
+				tbody.appendChild(element);
+			}
+		}
+	</script>
+</body>
+</html>

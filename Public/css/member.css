@@ -75,7 +75,7 @@ font.index_c_rt_icon2{height:20px; width:10px; background:url(../images/ico.png)
 input.green_btn{display: block;width: 120px;height: 36px;line-height:36px;color: #fff;cursor: pointer;border:none;font-weight: 400;letter-spacing: 3px;background-color: green;text-align: center;border-radius: 3px;}
 /**内容管理样式**/
 .table tr th{height:34px;line-height:34px;background:#F5F5F5;text-align:left;padding-left:5px;border-bottom:1px solid #DDDDDD;color:#666;}
-.table tr td{height:34px;line-height:34px;background:#FFF;text-align:left;padding-left:5px;border-bottom:1px solid #DDDDDD;color:#666;}
+.table tr td{height:48px;line-height:48px;background:#FFF;text-align:left;padding-left:5px;border-bottom:1px solid #DDDDDD;color:#666;}
 
 /**更换头像页面样式**/
 .change_rt{ padding:0px;width:947px; height:auto; min-height:692px;}
@@ -232,3 +232,23 @@ p.refresh span{ line-height:26px; color:red;}
 p.de_refresh a{ display:inline-block; width:200px;}
 p.de_refresh span{ margin-left:10px;}
 .template_list li img{ border:1px solid #e0e0e0;}
+
+/*技工管理*/
+.textarea{width: 480px;height: 180px;outline: none;padding:10px;}
+ul.group-list{width: 90%;max-width: 1000px;min-width: 400px;margin:auto 5px;}
+ul.group-list li{float: left;width: 100px;height: 25px;padding: 3px 5px;white-space: nowrap;}
+.tips{border:1px solid #EDD28B;background: #FFFDEE;margin:10px auto;padding:5px 10px;line-height:28px;font-size:14px;font-weight:500;clear:both;}
+.tips .lock{background: #FFF url(../images/locked.gif) no-repeat 6px 50%;font-size: 12px;zoom: 1;padding-left:30px;}
+.red{color: #ff0000;}
+table.info{border: 1px solid #dfdfdf;margin-top:10px;border-bottom: none;}
+table.info th{background:#F1F1F1; width:140px;padding:3px 8px;}
+table.info tr td,table.info tr th{border-bottom:1px solid #DFDFDF;}
+table.info tr th{height: 30px;line-height: 30px;text-align: right;color: #646464;width: 100px;}
+table.info tr td{height:35px;line-height:35px;color:#666;text-align:left;padding:3px 8px;}
+.ucenter_t .r{float: right;margin-right: 10px;}
+/*设计师管理*/
+.sbtn{vertical-align: middle;overflow: hidden;margin-right: 3px;padding: 0;height: 21px;line-height: 21px;border: 1px solid #999;text-align: center;background: #E5E5E5;cursor: pointer;border-radius:1px;box-shadow: 0 1px 0 #E5E5E5;letter-spacing:1px;padding:1px 10px;display: inline-block;color:#444;}
+a.sbtn:hover{text-decoration: none;}
+.sbtn.red{color: #ff0000;}
+.text a{cursor: pointer;}
+.wh-30{display: inline;width: 30px;height: 30px;vertical-align: middle;cursor: pointer;}

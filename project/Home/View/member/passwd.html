@@ -6,7 +6,19 @@
 			<h1 class="logo">管理中心</h1>
 			<div class="nav">
 				<ul class="lt">
-					<li><a href="javascript:;" class="on">个人中心</a></li>
+					<li><a href="__MODULE__/member/index" class="on">个人中心</a></li>
+					<?php if(session('home_user')['type'] == 3){ ?>
+					<li><a href="__MODULE__/member/designerIndex">设计师管理</a></li>
+					 <?php } ?>
+					 <?php if(session('home_user')['type'] == 5){ ?>
+					<li><a href="__MODULE__/member/mechanicInfo">技工管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 2){ ?>
+					<li><a href="__MODULE__/member/company-index">公司管理</a></li>
+					<?php } ?>
+					<?php if(session('home_user')['type'] == 6){ ?>
+					<li><a href="__MODULE__/member/foreman-index">工长管理</a></li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>

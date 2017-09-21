@@ -53,9 +53,9 @@
 			                <td><input type="password" name="qrmm" value="" id="qrmm" class="l_pwd" required placeholder="请确认密码"/></td>
 			              </tr>
 			              <tr height="50">
-			                <td align="right"> <font color="#ff4e00">*</font>&nbsp;验证码 &nbsp;</td>
+			                <td align="right" id="code"> <font color="#ff4e00">*</font>&nbsp;验证码 &nbsp;</td>
 			                <td>
-			                    <input type="text" value="" class="l_ipt" name="yzm" id="yzm" style="float:left;width:170px;" required placeholder="请输入手机验证码"/>
+			                    <input type="text" id="coder" value="" class="l_ipt" name="yzm" style="float:left;width:170px;" required placeholder="请输入手机验证码"/>
 			                    <input type="button" id="butt" class="iden-code" value="获取验证码" style="float:left;width: 120px;height: 42px;line-height: 32px;color: #5b9fe2;background: #f7f9ff;border: 1px solid #c2dbf4;margin-left: 12px;cursor: pointer;">
 			                </td>
 			              </tr>
@@ -126,6 +126,7 @@
   var status = false;
   var status2 = false;
   var check = false;
+  var co = false;
 
   //电话号码输入事件
   $('#phone').on('blur',function(){
@@ -231,9 +232,38 @@
 			time(this);
 			var num = $('#phone').val();
 			$.post('/home/register/code',{phone:num},function(data){
-				console.log(data);
+				codee = data;
+				
 			});
 		}	
+	});
+
+	$('#coder').on('input',function(){
+
+		if(codee){
+			//获取正在输入的验证码
+			var val = $(this).val();
+
+			if(val != codee){
+				$('#dir').text('验证码错误');
+
+				$('#dir').css('display','');
+			}else{
+				vo = true;
+				$('#dir').css('display','none').html('');
+			}
+			
+		}
+		
+	});
+
+	$('#btn').on('click',function(){
+
+  		if(phone && status && status2 && check && co){
+  			return true;
+  		}else{
+  			return false;
+  		}
 	});
 	
 

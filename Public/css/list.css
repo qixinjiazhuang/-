@@ -63,14 +63,6 @@
 .company-item .list-right .kbval span,.designer-item .list-right .kbval span{display:block;font-size: 12px;color: #666;}
 .company-item .list-right .kbval b,.designer-item .list-right .kbval b{font-size: 26px;font-family:arial;color: #f26122;}
 .company-item .list-right .order-btn,.designer-item .list-right .order-btn{display: block;width: 150px;height:40px;line-height:40px;font-size: 14px;text-align: center;margin-top:12px;}
-.p_pageNav{height: auto;padding:48px 0 0;position: relative;zoom:1;}
-.p_ListpageNav{font-size: 12px;text-align: center;width: auto;}
-.p_page_inline{display: inline-block;}
-.p_pageNav .p_page{text-align: center;float: left;}
-.p_page span,.p_pageNav .p_page a{display: inline-block;border:1px solid #eee;background:#fff;margin-right: 5px;padding:7px 10px;color: #666;text-align: center;}
-.p_pageNav .p_page a:hover{border-color: #d00;color: #d00;}.p_pageNav .p_page a.changedown:hover{background:#d00;border-color: #d00;color: #fff;}
-.p_pageNav .p_page .none{color: #dedede;display: none;}
-.p_pageNav .p_page .cur{background:#d00;border-color: #d00;color: #fff!important;}
 .content-right .right-benner2{height:260px;}
 .R-order-form{background: #e2d9c8;margin-top:20px;padding:22px 20px 25px;}
 .R-order-form h3{font-size: 24px;color: #514a43;text-align: center;}
@@ -150,3 +142,19 @@ ul.paihang li{border-bottom:1px dashed #ddd;overflow: hidden;line-height: 35px;m
 ul.paihang li .paihang_num{display: inline-block;width: 18px;height: 18px;text-align: center;line-height: 18px;border-radius:3px;margin-right:3px;color: #fff;background: #888;}
 ul.paihang li .ph_num_cl{background: #e7691e;}
 ul.paihang li a:hover{color: #f43606;text-decoration: underline;}
+.worker-content{border: 1px solid #e8e8e8;margin-top: 20px;}
+.worker-list{margin:19px 10px 0;}
+.worker-list li{width: 195px;float: left;margin-right:29px;margin-bottom: 19px;border:1px solid #e8e8e8;box-sizing: border-box;transition: all ease .2s;}
+.worker-list li:hover{box-shadow: 0 0 12px 4px #e8e8e8;}
+.worker-list li:nth-child(4n+4){margin-right: 0;}
+.worker-list p.tit{height: 30px;font-size: 14px;}
+.worker-list p.tit a{color: #555;}
+.worker-list p.tit a:hover{color: #e7691e;}
+.worker-list p{height: 30px;padding:0 10px;line-height:30px;}
+.worker-list span.fl{min-width: 65px;}
+.worker-list span.fl font{margin-left: 5px;margin-right: 5px;}
+.worker-list .btn{border-radius: 0;border: none;}
+.btn_sub_smler{ width:60px; line-height:20px; background:#e7691e; font-size:12px;}
+.btn{ display:inline-block;opacity:1;cursor:pointer; text-align:center; color:#fff;border-radius:3px; outline:none;-webkit-appearance: none;}
+.worker-list li a.pany-logo{width: 100%;display:flex;justify-content: center;}
+.lazyload.s1{width: 100%;height: 100%;}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">技工管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>资料设置</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">资料设置</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>预约管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/ucenter/Yuyue">预约管理</a></li>
+							<li><a href="__MODULE__/ucenter/TenderIndex">我要投标</a></li>
+							<li><a href="__MODULE__/ucenter/TenderLook">我的竞标</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li><a href="__MODULE__/ucenter/mechanicInfo">资料设置</a></li>
+							<li class="on"><a>属性设置</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<form>
+							<table cellspacing="0" cellpadding="0" class="form">
+								<tbody>
+									<tr>
+										<th>名称：</th>
+										<td>srr</td>
+									</tr>
+									<tr>
+										<th>工种：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="木工">
+														<input type="checkbox" name="gz">&nbsp;木工
+													</label>
+												</li>
+												<li>
+													<label title="泥瓦工">
+														<input type="checkbox" name="gz">&nbsp;泥瓦工
+													</label>
+												</li>
+												<li>
+													<label title="油漆工">
+														<input type="checkbox" name="gz">&nbsp;油漆工
+													</label>
+												</li>
+												<li>
+													<label title="水电工">
+														<input type="checkbox" name="gz">&nbsp;水电工
+													</label>
+												</li>
+												<li>
+													<label title="机电工">
+														<input type="checkbox" name="gz">&nbsp;机电工
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="submit" name="refer" class="green_btn" value="保存"></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

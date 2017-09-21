@@ -682,6 +682,14 @@ body .hide{
 .field_hot_tit span{
 	color: #333;
 }
+.field_hot_tit a{
+	color: #c7c7c7;
+	float: right;
+}
+.field_hot_tit a:hover{
+	text-decoration:underline;
+	color: #d00;
+}
 .field_hot_list li{
 	line-height: 22px;
 	padding-left: 15px;
@@ -2061,4 +2069,49 @@ ul.register_list li:nth-child(3n+3){
 }
 .none{
 	display: none;
+}
+.p_pageNav{
+	height: auto;
+	padding:48px 0 0;
+	position: relative;
+	zoom:1;
+}
+.p_ListpageNav{
+	font-size: 12px;
+	text-align: center;
+	width: auto;
+}
+.p_page_inline{
+	display: inline-block;
+}
+.p_pageNav .p_page{
+	text-align: center;
+	float: left;
+}
+.p_page span,.p_pageNav .p_page a{
+	display: inline-block;
+	border:1px solid #eee;
+	background:#fff;
+	margin-right: 5px;
+	padding:7px 10px;
+	color: #666;
+	text-align: center;
+}
+.p_pageNav .p_page a:hover{
+	border-color: #d00;
+	color: #d00;
+}
+.p_pageNav .p_page a.changedown:hover{
+	background:#d00;
+	border-color: #d00;
+	color: #fff;
+}
+.p_pageNav .p_page .none{
+	color: #dedede;
+	display: none;
+}
+.p_pageNav .p_page .cur{
+	background:#d00;
+	border-color: #d00;
+	color: #fff!important;
 }

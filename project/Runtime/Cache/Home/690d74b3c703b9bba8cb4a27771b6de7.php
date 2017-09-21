@@ -270,8 +270,9 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>装修公司列表页</title>
 <link rel="stylesheet" type="text/css" href="/Public/css/style.css">
-<link rel="stylesheet" type="text/css" href="/Public/css/list.css">
-<script type="text/javascript" src="/Public/js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/Public/css/list.css">
+	<link rel="stylesheet" type="text/css" href="/Public/css/ui.css">
+	<script type="text/javascript" src="/Public/js/jquery-3.2.1.min.js"></script>
 
     <div class="company-main clearfix">
 		<div class="content-left">
@@ -634,6 +635,48 @@
 			<p>中国互联网协会信用评价中心网信认证 网信编码:1664391091 举报电话：021-69108618</p>
 		</div>
 	</div>
+	<div id="MessageBox" class="load" style="left: 50%;top: 50%;opacity: 1;display: none;">
+		<em class="icon loading"></em>
+		<h4>数据努力加载中。。。</h4>
+    </div>
+    <div class="ui-widget-overlay"></div>
+    <div class="ui-dialog">
+		<div class="ui-dialog-header clearfix">
+			<span class="ui-dialog-title">免费预约</span>
+			<button class="ui-button ui-close">
+				<span class="ui-icon"></span>
+			</button>
+		</div>
+		<div class="ui-dialog-content">
+			<form action="" method="">
+				<h2>我想请<font class="red uname" style="font-size: 18px;">蓝冠装饰</font>帮我解决烦恼！</h2>
+				<div class="yuyBook">
+					<dl>
+						<dt class="name">您的称呼</dt>
+						<dd><input type="text" name="username" class="text" placeholder="请输入您的称呼"></dd>
+					</dl>
+					<dl>
+						<dt class="tel">手机号码</dt>
+						<dd><input type="text" name="phone" class="text" placeholder="请输入手机号码"></dd>
+					</dl>
+					<dl>
+						<dt class="yzm">验证码</dt>
+						<dd class="short">
+							<input type="text" name="verifycode" id="code_input" class="text" placeholder="请输入验证码">
+						</dd>
+						<div id="v_container" style="width: 144px;height: 37px;float: left;"></div>
+					</dl>
+					<div class="yuyue_bottom">
+						<input type="submit" value="立即报名" id="my_button" class="btn btn_sub_big">
+						<b class="yuyue_tel">
+							装修热线
+							<font class="fontcl2">400-880-2600</font>
+						</b>
+					</div>
+				</div>
+			</form>
+		</div>
+    </div>
     <script type="text/javascript" src="/Public/js/common.js"></script>
     <script type="text/javascript" src="/Public/js/list.js"></script>
     <script type="text/javascript">
@@ -672,6 +715,29 @@
 	        });
 	        $(".nwwest-roll").Scroll({line: 1, speed: 1000, timer: 2000});
 	    })(jQuery);
+    </script>
+    <script>
+    	$(".header-bottom .fst-ul .fst-li").removeClass("current-nav");
+    	$("#nav_zzx").addClass("current-nav");
+    </script>
+    <script>
+    	$(".order-btn").click(function(){
+    		$(".ui-dialog,.ui-widget-overlay").css({"display":"block"});
+    	});
+    	$(".ui-close").click(function(){
+    		$(".ui-dialog,.ui-widget-overlay").css({"display":"none"});
+    	});
+    </script>
+    <script>
+    	var verifyCode = new GVerify("v_container");
+		document.getElementById("my_button").onclick = function(){
+			var res = verifyCode.validate(document.getElementById("code_input").value);
+			if(res){
+				alert("验证正确");
+			}else{
+				alert("验证码错误");
+			}
+		}
     </script>
 </body>
 </html>

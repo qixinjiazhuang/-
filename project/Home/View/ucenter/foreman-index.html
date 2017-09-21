@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">工长管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>资料设置</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">资料设置</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>装修案例</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;">案例管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>在建工地</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;">工地管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>预约管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/ucenter/Yuyue">预约管理</a></li>
+							<li><a href="__MODULE__/ucenter/TenderIndex">我要投标</a></li>
+							<li><a href="__MODULE__/ucenter/TenderLook">我的竞标</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>评论管理</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;">查看评论</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li class="on"><a>资料设置</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<form>
+							<table cellspacing="0" cellpadding="0" class="form">
+								<tbody>
+									<tr>
+										<th>地区：</th>
+										<td>
+											<div class="address-li pos">
+												<div><span class="location" name="province2" id="province2">省</span><i></i></div>
+												<div class="select-item">
+													<select id="province" data-role="none" class="pro" name="province" onchange="">
+														<option>北京</option>
+														<option>上海</option>
+														<option>天津</option>
+														<option>重庆</option>
+														<option>安徽</option>
+														<option>福建</option>
+														<option>甘肃</option>
+														<option>广东</option>
+														<option>广西</option>
+														<option>贵州</option>
+														<option>海南</option>
+														<option>河北</option>
+														<option>河南</option>
+														<option>黑龙江</option>
+														<option>湖北</option>
+														<option>湖南</option>
+														<option>吉林</option>
+														<option>江苏</option>
+														<option>江西</option>
+														<option>辽宁</option>
+														<option>内蒙古</option>
+														<option>宁夏</option>
+														<option>青海</option>
+														<option>山东</option>
+														<option>山西</option>
+														<option>陕西</option>
+														<option>四川</option>
+														<option>西藏</option>
+														<option>新疆</option>
+														<option>云南</option>
+														<option>浙江</option>
+														<option>香港</option>
+														<option>澳门</option>
+														<option>台湾</option>
+													</select>
+												</div>
+											</div>
+											<div class="address-li pos">
+												<div><span class="location" name="city2" id="city2">市</span><i></i></div>
+												<div class="select-item">
+													<select id="city" data-role="none" class="city" name="city" onchange="">
+														<option id="sel-pro">--请选择城市--</option>
+													</select>
+												</div>
+											</div>
+											<div class="address-li pos">
+												<div><span class="location" name="area2" id="area2">区</span><i></i></div>
+												<div class="select-item">
+													<select id="area" data-role="none" class="area" name="area" onchange="">
+														<option id="sel-pro">--请选择区域--</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>名称：</th>
+										<td><input type="text" name="username" class="input"></td>
+									</tr>
+									<tr>
+										<th>联系QQ：</th>
+										<td><input type="text" name="qq" class="input"></td>
+									</tr>
+									<tr>
+										<th>手机：</th>
+										<td><input type="text" name="phone" class="input"></td>
+									</tr>
+									<tr>
+										<th>服务理念：</th>
+										<td><input type="text" name="service" class="input"></td>
+									</tr>
+									<tr>
+										<th>个人简介：</th>
+										<td>
+											<textarea class="textarea"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="submit" name="refer" class="green_btn" value="保存"></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">设计师管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="ucenter_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>资料设置</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">资料设置</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>装修案例</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/designerCaseIndex">案例管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>文章管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/blogIndex">文章管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>预约管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/Yuyue">预约管理</a></li>
+							<li><a href="__MODULE__/member/TenderIndex">我要投标</a></li>
+							<li><a href="__MODULE__/member/TenderLook">我的竞标</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li><a href="__MODULE__/member/designerIndex">资料设置</a></li>
+							<li class="on"><a>属性设置</a></li>
+						</ul>
+					</div>
+					<div class="ucenter_c">
+						<form action="__MODULE__/member/saveattr" method="post">
+							<table cellspacing="0" cellpadding="0" class="form">
+								<tbody>
+									<tr>
+										<th>名称：</th>
+										<td>{$res.truename}</td>
+									</tr>
+									<tr>
+										<th>经验：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="0-1年">
+														<input type="radio" <?php if($res['experience'] == 1){?> checked="true" <?php } ?> value="1" name="experience">&nbsp;0-1年
+													</label>
+												</li>
+												<li>
+													<label title="1-3年">
+														<input type="radio" <?php if($res['experience'] == 2){?> checked="true" <?php } ?> value="2" name="experience">&nbsp;1-3年
+													</label>
+												</li>
+												<li>
+													<label title="3-5年">
+														<input type="radio" <?php if($res['experience'] == 3){?> checked="true" <?php } ?> value="3" name="experience">&nbsp;3-5年
+													</label>
+												</li>
+												<li>
+													<label title="5-8年">
+														<input type="radio" <?php if($res['experience'] == 4){?> checked="true" <?php } ?> value="4" name="experience">&nbsp;5-8年
+													</label>
+												</li>
+												<li>
+													<label title="8年以上">
+														<input type="radio" <?php if($res['experience'] == 5){?> checked="true" <?php } ?> value="5" name="experience">&nbsp;8年以上
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>职位：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="见习设计师">
+														<input type="radio" <?php if($res['position'] == 1){?> checked="true" <?php } ?> value="1" name="position">&nbsp;见习设计师
+													</label>
+												</li>
+												<li>
+													<label title="实习设计师">
+														<input type="radio" <?php if($res['position'] == 2){?> checked="true" <?php } ?> value="2" name="position">&nbsp;实习设计师
+													</label>
+												</li>
+												<li>
+													<label title="设计助理">
+														<input type="radio" <?php if($res['position'] == 3){?> checked="true" <?php } ?> value="3" name="position">&nbsp;设计助理
+													</label>
+												</li>
+												<li>
+													<label title="资深设计师">
+														<input type="radio" <?php if($res['position'] == 4){?> checked="true" <?php } ?> value="4" name="position">&nbsp;资深设计师
+													</label>
+												</li>
+												<li>
+													<label title="设计总监">
+														<input type="radio" <?php if($res['position'] == 5){?> checked="true" <?php } ?> value="5" name="position">&nbsp;设计总监
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="submit" class="green_btn" value="保存"></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+</body>
+</html>

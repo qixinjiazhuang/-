@@ -17,17 +17,17 @@ class CompanyController extends Controller {
 
 		$res = $model->join('__VCOMPANY__ ON __COMPANY__.id = __VCOMPANY__.gid')->join('__USERS__ ON __COMPANY__.uid = __USERS__.id')->field('company.id,audit,banner,c_name,introduce,m_value,praise,delete,audit')->where('users.delete=1 AND users.audit=2')->order('m_value desc,praise desc')->select();
 	
-		$count = count($res);
+		// $count = count($res);
 
-		//实例化分页模型
-        $fors = new \Think\Page($count,10);
+		// //实例化分页模型
+  //       $fors = new \Think\Page($count,10);
 
-        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+  //       $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
 
-        $res = array_slice($res, $fors->firstRow,$fors->listRows);
+  //       $res = array_slice($res, $fors->firstRow,$fors->listRows);
 
-        //分页展示
-        $show = $fors->show();
+  //       //分页展示
+  //       $show = $fors->show();
 
 		$this->assign('res',$res);
 

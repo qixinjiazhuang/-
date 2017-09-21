@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/member.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<include file="./project/Home/View/head/head.html"/>
+	<div class="memberwrap">
+		<div class="head">
+			<h1 class="logo">管理中心</h1>
+			<div class="nav">
+				<ul class="lt">
+					<li><a href="__MODULE__/member/index">个人中心</a></li>
+					<li><a href="javascript:;" class="on">设计师管理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="cont_lt lt" id="member_left_lay">
+				<ul class="menu_lay">
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>资料设置</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/designerIndex">资料设置</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>装修案例</span>
+						<ol class="sub_menu">
+							<li><a href="javascript:;" class="on">案例管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>文章管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/blogIndex">文章管理</a></li>
+						</ol>
+					</li>
+					<li class="menu open">
+						<font class="menu_open_icon"></font>
+						<span>预约管理</span>
+						<ol class="sub_menu">
+							<li><a href="__MODULE__/member/Yuyue">预约管理</a></li>
+							<li><a href="__MODULE__/member/TenderIndex">我要投标</a></li>
+							<li><a href="__MODULE__/member/TenderLook">我的竞标</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="cont_rt rt">
+				<div style="width:997px;margin:0 auto;" class="clearfix">
+					<div class="ucenter_t">
+						<ul>
+							<li class="on"><a>修改案例</a></li>
+						</ul>
+						<span class="r"><a href="__MODULE__/member/designerCaseIndex">案例管理</a></span>
+					</div>
+					<div class="ucenter_c">
+						<form>
+							<table cellspacing="0" cellpadding="0" class="form">
+								<tbody>
+									<tr>
+										<th><span class="red">*</span>标题：</th>
+										<td><input type="text" name="title" class="input" value="{$data.title}"></td>
+									</tr>
+									<tr>
+										<th>小区：</th>
+										<td>
+											<input type="text" name="xiaoqu" class="input" value="{$data.cellname}">
+										</td>
+									</tr>
+							<!-- 		<tr id="huxing">
+										<th>户型图：</th>
+										<td>
+											<input type="text" name="huxing" class="input" value="恒大未来城：户型图">
+											<img src="__PUBLIC__/images/jj.jpg" id="select_huxing_photo" class="wh-30">
+											<a class="sbtn" id="select_huxing_btn">选择户型图</a>
+											<span class="text">
+												<a onclick="choose(1)" class="blue">切换自己上传</a>
+											</span>
+										</td>
+									</tr> -->
+									<tr id="upload">
+										<th>上传户型图：</th>
+										<td>
+											<img src="__ROOT__/Uploads{$data.logo}" class="wh-30">
+											<input type="file" name="file" class="input">
+											<span class="text">
+											<!-- 	<a onclick="choose(2)" class="blue">切换选择户型</a> -->
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>户型：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="小户型">
+														<input type="radio" value="1" name="type" <?php if($data['type'] == 1){ ?> checked="checked" <?php } ?> >&nbsp;小户型
+													</label>
+												</li>
+												<li>
+													<label title="二居">
+														<input type="radio" value="2" <?php if($data['type'] == 2){ ?> checked="checked" <?php } ?> name="type">&nbsp;二居
+													</label>
+												</li>
+												<li>
+													<label title="三居">
+														<input type="radio" value="3" <?php if($data['type'] == 3){ ?> checked="checked" <?php } ?> name="type">&nbsp;三居
+													</label>
+												</li>
+												<li>
+													<label title="四居">
+														<input type="radio" value="4" <?php if($data['type'] == 4){ ?> checked="checked" <?php } ?> name="type">&nbsp;四居
+													</label>
+												</li>
+												<li>
+													<label title="复式">
+														<input type="radio" value="5" <?php if($data['type'] == 5){ ?> checked="checked" <?php } ?> name="type">&nbsp;复式
+													</label>
+												</li>
+												<li>
+													<label title="别墅">
+														<input type="radio" value="6" <?php if($data['type'] == 6){ ?> checked="checked" <?php } ?> name="type">&nbsp;别墅
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>风格：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="简约">
+														<input type="radio" value="1" name="style" checked="checked">&nbsp;简约
+													</label>
+												</li>
+												<li>
+													<label title="现代">
+														<input type="radio" value="2" name="style" checked="checked">&nbsp;现代
+													</label>
+												</li>
+												<li>
+													<label title="中式">
+														<input type="radio" value="3" name="style" checked="checked">&nbsp;中式
+													</label>
+												</li>
+												<li>
+													<label title="欧式">
+														<input type="radio" value="3" name="style">&nbsp;欧式
+													</label>
+												</li>
+												<li>
+													<label title="美式">
+														<input type="radio" value="4" name="style">&nbsp;美式
+													</label>
+												</li>
+												<li>
+													<label title="田园">
+														<input type="radio" value="5" name="style">&nbsp;田园
+													</label>
+												</li>
+												<li>
+													<label title="地中海">
+														<input type="radio" value="6" name="style">&nbsp;地中海
+													</label>
+												</li>
+												<li>
+													<label title="东南亚">
+														<input type="radio" value="7" name="style">&nbsp;东南亚
+													</label>
+												</li>
+												<li>
+													<label title="新古典主义">
+														<input type="radio" value="8" name="style">&nbsp;新古典主义
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>价格：</th>
+										<td>
+											<ul class="group-list">
+												<li>
+													<label title="1-5万">
+														<input type="radio" name="page" checked="checked">&nbsp;1-5万
+													</label>
+												</li>
+												<li>
+													<label title="5-10万">
+														<input type="radio" name="page">&nbsp;5-10万
+													</label>
+												</li>
+												<li>
+													<label title="10-20万">
+														<input type="radio" name="page">&nbsp;10-20万
+													</label>
+												</li>
+												<li>
+													<label title="20-50万">
+														<input type="radio" name="page">&nbsp;20-50万
+													</label>
+												</li>
+												<li>
+													<label title="50-100万">
+														<input type="radio" name="page">&nbsp;50-100万
+													</label>
+												</li>
+												<li>
+													<label title="100-200万">
+														<input type="radio" name="page">&nbsp;100-200万
+													</label>
+												</li>
+												<li>
+													<label title="200万以上">
+														<input type="radio" name="page">&nbsp;200万以上
+													</label>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>设计思路：</th>
+										<td>
+											<textarea class="textarea">{$data.idea}</textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>标题：</th>
+										<td><input type="text" value="{$data.title}" class="input"></td>
+									</tr>
+									<!-- <tr>
+										<th>关键字：</th>
+										<td><input type="text" class="input"></td>
+									</tr> -->
+								<!-- 	<tr>
+										<th>描述：</th>
+										<td>
+											<textarea class="textarea"></textarea>
+										</td>
+									</tr> -->
+									<tr>
+										<th></th>
+										<td><input type="submit" name="refer" class="green_btn" value="提交数据"></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<include file="./project/Home/View/foot/foot.html"/>
+	<script type="text/javascript" src="__ROOT__/Public/js/common.js"></script>
+	<script type="text/javascript">
+		function choose(val){
+			if(val == 1){
+				$("#upload").removeAttr("style");
+				$("#huxing").css('display','none'); 
+			}else if(val == 2){
+				$("#huxing").removeAttr("style");
+				$("#upload").css('display','none'); 
+			}
+		}
+	</script>
+</body>
+</html>

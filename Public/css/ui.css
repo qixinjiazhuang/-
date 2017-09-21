@@ -1,0 +1,43 @@
+.ui-widget-overlay{position: fixed;top: 0;left: 0; width: 100%;height: 100%;background-image:none;background-color:#000000;opacity:.3;filter:Alpha(Opacity=30);z-index: 10002;display: none;}
+.ui-dialog{background: #fff; border:none; padding:15px 25px; box-shadow:0px 0px 10px #333;position: fixed;height: auto;width: 500px;top:100px;left:50%;margin-left: -250px;z-index:10003;display: none;}
+.ui-dialog .ui-dialog-header{ padding:8px 5px; background:#fff; margin:0px; border:none; border-bottom:2px dotted #e0e0e0; font-weight:normal;position: relative;}
+.ui-dialog .ui-dialog-header .ui-dialog-title{float: left;margin:2px 0;font-size: 20px;color: #333;line-height: 30px;}
+.ui-dialog .ui-dialog-header .ui-button{position: absolute;right: 5px;width: 21px;height: 20px;top: 50%;margin:-10px 0 0;padding: 1px;cursor: pointer;}
+.ui-button .ui-icon{background: url(../images/close_red.png) 0 0 no-repeat;transition: all .3s ease-in-out;width: 16px;height: 16px;display: block;}
+.ui-dialog-content{padding: 10px 10px 20px 10px;}
+.ui-dialog-content h2{font-size:14px; margin-bottom:4px; color:#666; margin:0px;}
+.red{color: #ff0000;}
+.yuyBook dt,.yuyBook dd{ float:left; height:35px; line-height:35px; display:inline-block; border:1px solid #ddd;}
+.yuyBook dt{ background:#f0f0f0; width:70px; padding-left:30px; border-right:none;}
+.yuyBook dd{ border-left:none; width:70%;}
+.yuyBook dd.short{ width:40%;}
+.yuyBook dd input.text{ border:none; width:90%; padding-top:0px;}
+.yuyBook dd input.short{ width:50%;}
+.yuyBook dl{ overflow:hidden; margin:15px 0px 0px;}
+.yuyBook dt.name{ background-position:0px 0px;}
+.yuyBook dt.tel{ background-position:0px -40px;}
+.yuyBook dt.yzm{ background-position:0px -80px;}
+.yuyBook .yuyue_tel{ color:#555; margin-left:10px; font-size:14px;}
+.yuyue_bottom{ margin-top:15px;}
+.yuyue_bottom .btn{ font-size:16px; width:150px;}
+.btn{border-radius: 0px;border:none;}
+.btn_sub_big{line-height: 36px;background: #e7691e;}
+input{outline: none;border: none;}
+input.text{height: 26px;line-height: 26px;padding-left: 5px;font-size: 12px;color: #555;}
+#v_container #verifyCanvas{width: 100%;height: 100%;}
+.ui-close{border: none;background: none;outline: none;}
+.ui-icon:hover{transform:rotate(180deg);}
+.load{position: fixed;text-align: center;}
+.load .icon{width: 30px;height: 30px;border: 2px solid #d00;border-left:none;border-bottom:none;border-radius: 100%;display: block;margin:0 auto 10px;}
+.loading{animation: load .8s infinite ease;}
+@keyframes load{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}

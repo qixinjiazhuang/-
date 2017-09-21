@@ -21,18 +21,18 @@ class ForemanController extends controller {
 			$data[$key]['count'] = $case->where('fid='.$v['id'])->count();
 		}
 				
-		$count = count($data);
+		// $count = count($data);
 
-		//实例化分页模型
-        $fors = new \Think\Page($count,5);
+		// //实例化分页模型
+  //       $fors = new \Think\Page($count,5);
 
-        //配置分页样式
-        $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
+  //       //配置分页样式
+  //       $fors->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE%  %DOWN_PAGE% %END% %HEADER%');
 
-        $data = array_slice($data, $fors->firstRow,$fors->listRows);
+  //       $data = array_slice($data, $fors->firstRow,$fors->listRows);
 
-         //分页展示
-        $show = $fors->show();
+  //        //分页展示
+  //       $show = $fors->show();
 
         //发送分页
         $this->assign('show',$show);

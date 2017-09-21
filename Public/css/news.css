@@ -1,0 +1,126 @@
+.news-main{
+	width: 1160px;
+	margin:0 auto;
+	padding: 20px 0 45px;
+	overflow: hidden;
+}
+.crumbs{
+	padding: 0 0 20px;
+	font-size: 14px;
+}
+.crumbs .last_child{
+	color: #b0b0b0;
+}
+.side_left{
+	width: 890px;
+}
+.link_detail{
+	border-top: 1px solid #ddd;
+}
+.link_detail li{
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	padding: 18px 0;
+}
+.link_detail li:hover{
+	background: url(../pic/com_repeat.png) repeat;
+	border-bottom: 2px solid #dd0000;
+	padding: 18px 0 17px; 
+}
+.link_detail li dt{
+	background: #f5f5f5 url(../pic/logo_lian.png) center center no-repeat;
+	float: left;
+	height: 134px;
+	width: 208px;
+	overflow: hidden;
+}
+.link_detail dt img{
+	width: 100%;
+	max-height: 134px;
+}
+.link_detail li dd{
+	height: 134px;
+	margin-right: 50px;
+	position: relative;
+	width: 600px;
+	color: #999;
+}
+.link_detail li h4{
+	font-weight: 700;
+	height: 24px;
+	overflow: hidden;
+	position: relative;
+	font-size: 22px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.link_detail li h4 a{
+	color: #333;
+}
+.link_detail li:hover h4 a{
+	color: #d00;
+}
+.link_detail li .words{
+	font-size: 14px;
+	height: 63px;
+	line-height: 21px;
+	overflow: hidden;
+	position: relative;
+}
+.link_detail li .time_details{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font-size: 14px;
+}
+.link_detail li .time_details .fr{
+	margin-right:30px;
+	background: url(../pic/view.png) left center no-repeat;
+	padding-left: 22px;
+}
+.side_right{
+	width: 250px;
+}
+.details_page{
+	text-align: center;
+}
+.details_page h1{
+	color: #333;
+	font-size: 32px;
+	font-weight:bold;
+	margin:10px 0 20px;
+}
+.details_page .remark{
+	color: #9f9f9f;
+}
+.details_page .remark span{
+	display: inline-block;
+	margin-right: 40px;
+}
+.details_page .remark span.num{
+	margin-right: 30px;
+	background: url(../pic/view.png) left center no-repeat;
+	padding-left:22px; 
+}
+.ind_details{
+	color: #000;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	font-size: 16px;
+	line-height: 30px;
+	margin:20px 0 30px;
+	padding:10px 0 30px;
+	text-align: left;
+	text-indent: 16px;
+}
+.ind_details .inner{
+	padding: 0 20px;
+	width: 850px;
+}
+.ind_details img{
+	max-width: 800px;
+	margin:10px auto;
+	height: auto;
+	display: block;
+}
